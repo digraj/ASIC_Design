@@ -1,0 +1,42 @@
+// $Id: $
+// File name:   adder_16bit.sv
+// Created:     1/26/2017
+// Author:      Kunwar Digraj Singh Jain
+// Lab Section: 5
+// Version:     1.0  Initial Design Entry
+// Description: 16 bit adder
+
+module adder_16bit
+(
+	input wire [15:0] a,
+	input wire [15:0] b,
+	input wire carry_in,
+	output wire [15:0] sum,
+	output wire overflow
+);
+	int i, j;
+/*
+	always @ (a) begin
+		for (i = 0; i < 16; i = i + 1)
+		begin
+			assert ((a[i] == 1'b1) || (a[i] == 1'b0))
+			else $error("Input value of a is incorrect");
+		end
+	end
+
+	always @ (b) begin
+		for (j = 0; j < 16; j = j + 1)
+		begin
+			assert ((b[j] == 1'b1) || (b[j] == 1'b0))
+			else $error("Input value of b is incorrect");
+		end
+	end
+
+	always @ (carry_in) begin
+		assert ((carry_in == 1'b1) || (carry_in == 1'b0))
+		else $error("Input value of carry_in is incorrect");
+	end
+*/
+	adder_nbit #(16) IZ (.a(a), .b(b), .carry_in(carry_in), .sum(sum), .overflow(overflow)) ;
+
+endmodule

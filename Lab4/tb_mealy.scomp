@@ -1,0 +1,10 @@
+QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+Start time: 15:21:46 on Feb 04,2017
+vlog -sv -work source_work source/tb_mealy.sv 
+-- Compiling module tb_mealy
+-- Compiling module tb_mealy_DUT
+
+Top level modules:
+	tb_mealy
+End time: 15:21:46 on Feb 04,2017, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0

@@ -1,0 +1,151 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : lab7_layout_design
+Version: K-2015.06-SP1
+Date   : Thu Mar  9 15:19:24 2017
+****************************************
+
+Operating Conditions: typical   Library: osu05_stdcells
+Wire Load Model Mode: top
+
+  Startpoint: LD/CTRL/curr_state_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: LD/T_FIFO/IP_FIFO/URFC/empty_flag_r_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  LD/CTRL/curr_state_reg[1]/CLK (DFFSR)                   0.00       0.00 r
+  LD/CTRL/curr_state_reg[1]/Q (DFFSR)                     0.68       0.68 r
+  LD/CTRL/U93/Y (INVX2)                                   0.34       1.02 f
+  LD/CTRL/U87/Y (NAND2X1)                                 0.26       1.28 r
+  LD/CTRL/U55/Y (INVX2)                                   0.17       1.44 f
+  LD/CTRL/U85/Y (NAND3X1)                                 0.17       1.62 r
+  LD/CTRL/U84/Y (NAND2X1)                                 0.53       2.15 f
+  LD/CTRL/U52/Y (INVX2)                                   0.19       2.34 r
+  LD/CTRL/U82/Y (NAND2X1)                                 0.16       2.49 f
+  LD/CTRL/read_done (lab7_tcu)                            0.00       2.49 f
+  LD/T_FIFO/read_done (lab7_tx_fifo)                      0.00       2.49 f
+  LD/T_FIFO/IP_FIFO/r_enable (fifo)                       0.00       2.49 f
+  LD/T_FIFO/IP_FIFO/URFC/renable (read_fifo_ctrl)         0.00       2.49 f
+  LD/T_FIFO/IP_FIFO/URFC/U15/Y (INVX2)                    0.09       2.59 r
+  LD/T_FIFO/IP_FIFO/URFC/U16/Y (NOR2X1)                   0.26       2.85 f
+  LD/T_FIFO/IP_FIFO/URFC/RPU1/renable (read_ptr)          0.00       2.85 f
+  LD/T_FIFO/IP_FIFO/URFC/RPU1/U20/Y (NAND2X1)             0.29       3.14 r
+  LD/T_FIFO/IP_FIFO/URFC/RPU1/U18/Y (NOR2X1)              0.30       3.44 f
+  LD/T_FIFO/IP_FIFO/URFC/RPU1/U14/Y (NAND2X1)             0.22       3.66 r
+  LD/T_FIFO/IP_FIFO/URFC/RPU1/U13/Y (XNOR2X1)             0.44       4.10 r
+  LD/T_FIFO/IP_FIFO/URFC/RPU1/U12/Y (XOR2X1)              0.33       4.43 f
+  LD/T_FIFO/IP_FIFO/URFC/RPU1/rptr_nxt[2] (read_ptr)      0.00       4.43 f
+  LD/T_FIFO/IP_FIFO/URFC/U20/Y (XOR2X1)                   0.29       4.73 f
+  LD/T_FIFO/IP_FIFO/URFC/U19/Y (XOR2X1)                   0.19       4.92 r
+  LD/T_FIFO/IP_FIFO/URFC/U18/Y (NAND2X1)                  0.08       5.00 f
+  LD/T_FIFO/IP_FIFO/URFC/U17/Y (NOR2X1)                   0.08       5.08 r
+  LD/T_FIFO/IP_FIFO/URFC/empty_flag_r_reg/D (DFFSR)       0.00       5.08 r
+  data arrival time                                                  5.08
+
+  clock clk (rise edge)                                  10.40      10.40
+  clock network delay (ideal)                             0.00      10.40
+  LD/T_FIFO/IP_FIFO/URFC/empty_flag_r_reg/CLK (DFFSR)     0.00      10.40 r
+  library setup time                                     -0.21      10.19
+  data required time                                                10.19
+  --------------------------------------------------------------------------
+  data required time                                                10.19
+  data arrival time                                                 -5.08
+  --------------------------------------------------------------------------
+  slack (MET)                                                        5.11
+
+
+1
+ 
+****************************************
+Report : area
+Design : lab7_layout_design
+Version: K-2015.06-SP1
+Date   : Thu Mar  9 15:19:24 2017
+****************************************
+
+Library(s) Used:
+
+    osu05_stdcells (File: /package/eda/cells/OSU/v2.7/synopsys/lib/ami05/osu05_stdcells.db)
+
+Number of ports:                          215
+Number of nets:                           948
+Number of cells:                          751
+Number of combinational cells:            531
+Number of sequential cells:               206
+Number of macros/black boxes:               0
+Number of buf/inv:                         80
+Number of references:                       1
+
+Combinational area:             137421.000000
+Buf/Inv area:                    11664.000000
+Noncombinational area:          167760.000000
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                305181.000000
+Total area:                 undefined
+1
+Loading db file '/package/eda/cells/OSU/v2.7/synopsys/lib/ami05/osu05_stdcells.db'
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -hier
+        -analysis_effort low
+Design : lab7_layout_design
+Version: K-2015.06-SP1
+Date   : Thu Mar  9 15:19:24 2017
+****************************************
+
+
+Library(s) Used:
+
+    osu05_stdcells (File: /package/eda/cells/OSU/v2.7/synopsys/lib/ami05/osu05_stdcells.db)
+
+
+Operating Conditions: typical   Library: osu05_stdcells
+Wire Load Model Mode: top
+
+
+Global Operating Voltage = 5    
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+--------------------------------------------------------------------------------
+                                       Switch   Int      Leak     Total
+Hierarchy                              Power    Power    Power    Power    %
+--------------------------------------------------------------------------------
+lab7_layout_design                        1.947   26.318   92.580   28.265 100.0
+  LD (lab7_usb_transmitter)               1.947   26.318   92.580   28.265 100.0
+    CTRL (lab7_tcu)                       0.243    1.617    9.626    1.860   6.6
+    TIM (lab7_timer)                      0.174    1.277    4.205    1.451   5.1
+    T_FIFO (lab7_tx_fifo)                 1.265   19.441   62.919   20.707  73.3
+      IP_FIFO (fifo)                      1.265   19.441   62.919   20.707  73.3
+        URFC (read_fifo_ctrl)          3.67e-02    4.140   13.437    4.176  14.8
+          RPU1 (read_ptr)              1.98e-05    1.575    5.717    1.575   5.6
+        UWFC (write_fifo_ctrl)            0.287    4.442   13.437    4.730  16.7
+          WPU1 (write_ptr)                0.156    1.926    5.717    2.083   7.4
+        UFIFORAM (fiforam)                0.941   10.859   36.044   11.801  41.8
+    T_SR_1 (lab7_tx_sr_0)              4.85e-02    1.588    6.111    1.637   5.8
+    T_SR_0 (lab7_tx_sr_1)                 0.132    1.672    6.111    1.804   6.4
+    ENC (lab7_encoder)                 7.71e-03    0.217    0.866    0.224   0.8
+    OCTRL (lab7_out_ctrl)              1.61e-02    0.453    1.630    0.469   1.7
+1

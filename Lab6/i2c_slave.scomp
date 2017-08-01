@@ -1,0 +1,9 @@
+QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+Start time: 19:31:46 on Feb 28,2017
+vlog -sv -work source_work source/i2c_slave.sv 
+-- Compiling module i2c_slave
+
+Top level modules:
+	i2c_slave
+End time: 19:31:46 on Feb 28,2017, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0

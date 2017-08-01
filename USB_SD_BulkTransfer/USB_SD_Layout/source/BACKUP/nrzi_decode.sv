@@ -1,0 +1,65 @@
+// $Id: $
+// File name:   encode.sv
+// Created:     4/18/2017
+// Author:      Apoorv Sharma
+// Lab Section: 5
+// Version:     1.0  Initial Design Entry
+// Description: NRZi Encoder
+
+module nrzi_decode (
+	input wire 	clk, 
+			n_rst,
+			d_plus,
+			d_minus,
+			bit_rcvd,			
+	output reg	d_orig,
+			eop
+);
+
+	reg 	next_d_plus,
+		temp_eop,
+		prev_d, 
+		curr_d; 
+
+	always_ff @(posedge clk, negedge n_rst)
+	begin
+		if (n_rst == 1'b0) begin	
+			d_orig <= 1'b1; 
+			prev_d <= 1'b1; 
+			eop <= 0;
+		end else begin
+			d_orig <= curr_d; 		
+			prev_d <= curr_d; 
+			eop <= temp_eop;
+		end
+
+	end
+
+	always_comb begin
+		curr_d = d_orig;
+		if (bit_rcvd) begin
+			if (d_plus == d_minus)
+				temp_eop = 1;
+			else begin	
+				temp_eop = 0;
+				if (d_plus == 1'b0)
+					curr_d = !prev_d ; 
+				else
+					curr_d = prev_d ;
+			end
+		end 
+		else begin
+			curr_d = d_orig;
+			if (d_plus == d_minus)
+				temp_eop = 1;
+			else
+				temp_eop = 0;
+		end	
+	end
+
+endmodule
+
+
+
+
+

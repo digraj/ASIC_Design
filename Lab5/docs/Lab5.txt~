@@ -1,0 +1,14 @@
+What is the minimum amount of time that data_ready must remain asserted to ensure correct operation? 
+	Ans: 21 ns	
+
+What is the minimum amount of time, in clock cycles, that data must remain valid after data_ready is asserted in order to ensure correct operation?
+	Ans: 3 clock cycles
+
+How are the image files different? Does this make sense given the filter design built in the lab? Why or why not?
+	Ans: The amount of filteration is different. Only lets colors with less value (Black: 0000, white: FFFF) to pass through. Colors with high values are filtered. As we change the coefficients, the tolerance of the high-pass 		     filter changes. Therefore, it makes sense.
+
+What is the general syntax for each of the file IO functions used in the provided test bench (tb_fir_filter_image.sv)?
+	Ans: $fwrite(<filename>, <specifier>, <value>);
+	
+What are the different format specifiers available for use in file functions like $fscanf(...)?
+	Ans: %c, %d, %e, %f, %g, %h, %l, %m, %o, %s, %t, %u, %v, %z

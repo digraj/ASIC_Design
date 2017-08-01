@@ -1,0 +1,141 @@
+// $Id: $
+// File name:   tb_decode.sv
+// Created:     2/22/2017
+// Author:      Kunwar Digraj Singh Jain
+// Lab Section: 5
+// Version:     1.0  Initial Design Entry
+// Description: Testbench for Decoder
+
+`timescale 1ns / 10ps
+
+module tb_decode () ;
+
+	// Define parameters
+	// basic test bench parameters
+	localparam	CLK_PERIOD	= 2.5;
+	localparam	CHECK_DELAY = 10; // Check 1ns after the rising edge to allow for propagation delay
+	localparam 	SCL_PERIOD = 300 ;
+	// Shared Test Variables
+	reg tb_clk, tb_scl;
+
+	always
+	begin
+		tb_clk = 1'b0;
+		#(CLK_PERIOD/0.5);
+		tb_clk = 1'b1;
+		#(CLK_PERIOD/0.5);
+	end	
+	
+	always
+	begin
+		tb_scl = 1'b0;
+		#(2 * SCL_PERIOD/3);
+		tb_scl = 1'b1;
+		#(SCL_PERIOD/3.0);
+	end
+
+
+	tb_decode_DUT testbench(.tb_clk, .tb_scl);
+	
+endmodule
+
+module tb_decode_DUT (input wire tb_clk, tb_scl) ;
+
+	reg	tb_n_rst,
+		tb_sda_in;
+	reg	[7:0] tb_starting_byte;
+	reg 	tb_rw_mode,
+		tb_address_match,
+		tb_start_found,
+		tb_stop_found ;
+
+	decode DUT
+		(
+		 	.clk(tb_clk),
+			.n_rst(tb_n_rst),
+			.scl(tb_scl),
+			.sda_in(tb_sda_in),
+			.starting_byte(tb_starting_byte),
+		 	.rw_mode(tb_rw_mode),
+			.address_match(tb_address_match),
+			.start_found(tb_start_found),
+			.stop_found(tb_stop_found)
+		);	
+
+	initial 
+	begin
+		//TEST CASE 1
+		$display ("-----Test Case 1-----") ;
+		tb_n_rst = 1'b1 ;
+		tb_starting_byte = 8'b11110000 ;
+		tb_sda_in = 0 ;	
+		#10
+
+		@(negedge tb_clk)
+		tb_n_rst = 1'b0 ;
+		
+		@(negedge tb_clk)
+		tb_n_rst = 1'b1 ;
+		#200
+	
+		@(negedge tb_clk)
+		tb_sda_in = 1 ;
+		
+		@(negedge tb_clk)
+		tb_starting_byte = 8'b10101010 ;
+
+		@(negedge tb_clk)
+		tb_starting_byte = 8'b11110001 ;
+	
+		@(negedge tb_clk) 
+		tb_sda_in = 0 ;
+		 	
+		@(negedge tb_clk)
+		tb_starting_byte = 8'b00001110 ;
+
+		@(negedge tb_clk)
+		tb_starting_byte = 8'b11110001 ;
+	
+		@(negedge tb_clk) 
+		tb_sda_in = 0 ;
+
+		tb_sda_in = 0 ;	
+		#100
+	
+		@(negedge tb_clk)
+		tb_sda_in = 1 ;
+
+		@(negedge tb_clk);
+		@(negedge tb_clk);		
+		@(negedge tb_clk)
+		tb_sda_in = 0 ;		
+
+		@(negedge tb_clk);
+		@(negedge tb_clk);
+		@(negedge tb_clk)
+		tb_sda_in = 1 ;
+
+		$display("------END------") ;
+	end
+endmodule	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

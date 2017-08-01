@@ -1,0 +1,9 @@
+QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+Start time: 20:14:14 on Apr 20,2017
+vlog -sv -work source_work source/stp_sr_8_msb.sv 
+-- Compiling module stp_sr_8_msb
+
+Top level modules:
+	stp_sr_8_msb
+End time: 20:14:14 on Apr 20,2017, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0

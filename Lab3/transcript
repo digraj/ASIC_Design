@@ -1,0 +1,115 @@
+# //  Questa Sim-64
+# //  Version 10.3b linux_x86_64 May 29 2014
+# //
+# //  Copyright 1991-2014 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# vsim -Lf /home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Vsim -L /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work -L /home/ecegrid/a/ece337/Class0.5u/GOLD_LIB "+no_glitch_msg" -coverage -voptargs="+acc" -i -t ps source_work.tb_flex_stp_sr 
+# Start time: 20:14:17 on Apr 20,2017
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading sv_std.std
+# Loading work.tb_flex_stp_sr(fast)
+# Loading work.tb_flex_stp_sr_DUT(fast)
+# Loading work.flex_stp_sr(fast)
+# Loading work.tb_flex_stp_sr_DUT(fast__1)
+# Loading work.stp_sr_8_msb(fast)
+# Loading work.flex_stp_sr(fast__1)
+# Loading work.tb_flex_stp_sr_DUT(fast__2)
+# Loading work.stp_sr_4_lsb(fast)
+# Loading work.flex_stp_sr(fast__2)
+add wave *
+run 200 ns
+# ** Info: config2 Case 1:: PASSED
+#    Time: 11250 ps  Scope: tb_flex_stp_sr.stp_config2 File: source/tb_flex_stp_sr.sv Line: 129
+# ** Info: config1 Case 1:: PASSED
+#    Time: 11250 ps  Scope: tb_flex_stp_sr.stp_config1 File: source/tb_flex_stp_sr.sv Line: 129
+# ** Info: default Case 1:: PASSED
+#    Time: 11250 ps  Scope: tb_flex_stp_sr.stp_default File: source/tb_flex_stp_sr.sv Line: 129
+# ** Info: config2 Case 2:: PASSED
+#    Time: 16250 ps  Scope: tb_flex_stp_sr.stp_config2 File: source/tb_flex_stp_sr.sv Line: 146
+# ** Info: config1 Case 2:: PASSED
+#    Time: 16250 ps  Scope: tb_flex_stp_sr.stp_config1 File: source/tb_flex_stp_sr.sv Line: 146
+# ** Info: default Case 2:: PASSED
+#    Time: 16250 ps  Scope: tb_flex_stp_sr.stp_default File: source/tb_flex_stp_sr.sv Line: 146
+# ** Info: config2 Case 3:: PASSED
+#    Time: 26250 ps  Scope: tb_flex_stp_sr.stp_config2 File: source/tb_flex_stp_sr.sv Line: 167
+# ** Info: config1 Case 3:: PASSED
+#    Time: 26250 ps  Scope: tb_flex_stp_sr.stp_config1 File: source/tb_flex_stp_sr.sv Line: 167
+# ** Info: default Case 3:: PASSED
+#    Time: 26250 ps  Scope: tb_flex_stp_sr.stp_default File: source/tb_flex_stp_sr.sv Line: 167
+# ** Info: config2 Case 4:: PASSED
+#    Time: 36250 ps  Scope: tb_flex_stp_sr.stp_config2.run_shift_test File: source/tb_flex_stp_sr.sv Line: 247
+# ** Info: config1 Case 4:: PASSED
+#    Time: 36250 ps  Scope: tb_flex_stp_sr.stp_config1.run_shift_test File: source/tb_flex_stp_sr.sv Line: 247
+# ** Info: default Case 4:: PASSED
+#    Time: 36250 ps  Scope: tb_flex_stp_sr.stp_default.run_shift_test File: source/tb_flex_stp_sr.sv Line: 247
+# ** Info: config2 Case 5:: PASSED
+#    Time: 53750 ps  Scope: tb_flex_stp_sr.stp_config2.run_shift_test File: source/tb_flex_stp_sr.sv Line: 247
+# ** Info: default Case 5:: PASSED
+#    Time: 53750 ps  Scope: tb_flex_stp_sr.stp_default.run_shift_test File: source/tb_flex_stp_sr.sv Line: 247
+# ** Info: config1 Case 5:: PASSED
+#    Time: 63750 ps  Scope: tb_flex_stp_sr.stp_config1.run_shift_test File: source/tb_flex_stp_sr.sv Line: 247
+# ** Info: config2 Case 6:: PASSED
+#    Time: 71250 ps  Scope: tb_flex_stp_sr.stp_config2.run_shift_test File: source/tb_flex_stp_sr.sv Line: 247
+# ** Info: default Case 6:: PASSED
+#    Time: 71250 ps  Scope: tb_flex_stp_sr.stp_default.run_shift_test File: source/tb_flex_stp_sr.sv Line: 247
+# ** Info: config1 Case 6:: PASSED
+#    Time: 91250 ps  Scope: tb_flex_stp_sr.stp_config1.run_shift_test File: source/tb_flex_stp_sr.sv Line: 247
+add wave *
+restart -f
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading sv_std.std
+# Loading work.tb_flex_stp_sr(fast)
+# Loading work.tb_flex_stp_sr_DUT(fast)
+# Loading work.flex_stp_sr(fast)
+# Loading work.tb_flex_stp_sr_DUT(fast__1)
+# Loading work.stp_sr_8_msb(fast)
+# Loading work.flex_stp_sr(fast__1)
+# Loading work.tb_flex_stp_sr_DUT(fast__2)
+# Loading work.stp_sr_4_lsb(fast)
+# Loading work.flex_stp_sr(fast__2)
+clear
+# [H[2J
+run 200 ns
+# ** Info: config2 Case 1:: PASSED
+#    Time: 11250 ps  Scope: tb_flex_stp_sr.stp_config2 File: source/tb_flex_stp_sr.sv Line: 129
+# ** Info: config1 Case 1:: PASSED
+#    Time: 11250 ps  Scope: tb_flex_stp_sr.stp_config1 File: source/tb_flex_stp_sr.sv Line: 129
+# ** Info: default Case 1:: PASSED
+#    Time: 11250 ps  Scope: tb_flex_stp_sr.stp_default File: source/tb_flex_stp_sr.sv Line: 129
+# ** Info: config2 Case 2:: PASSED
+#    Time: 16250 ps  Scope: tb_flex_stp_sr.stp_config2 File: source/tb_flex_stp_sr.sv Line: 146
+# ** Info: config1 Case 2:: PASSED
+#    Time: 16250 ps  Scope: tb_flex_stp_sr.stp_config1 File: source/tb_flex_stp_sr.sv Line: 146
+# ** Info: default Case 2:: PASSED
+#    Time: 16250 ps  Scope: tb_flex_stp_sr.stp_default File: source/tb_flex_stp_sr.sv Line: 146
+# ** Info: config2 Case 3:: PASSED
+#    Time: 26250 ps  Scope: tb_flex_stp_sr.stp_config2 File: source/tb_flex_stp_sr.sv Line: 167
+# ** Info: config1 Case 3:: PASSED
+#    Time: 26250 ps  Scope: tb_flex_stp_sr.stp_config1 File: source/tb_flex_stp_sr.sv Line: 167
+# ** Info: default Case 3:: PASSED
+#    Time: 26250 ps  Scope: tb_flex_stp_sr.stp_default File: source/tb_flex_stp_sr.sv Line: 167
+# ** Info: config2 Case 4:: PASSED
+#    Time: 36250 ps  Scope: tb_flex_stp_sr.stp_config2.run_shift_test File: source/tb_flex_stp_sr.sv Line: 247
+# ** Info: config1 Case 4:: PASSED
+#    Time: 36250 ps  Scope: tb_flex_stp_sr.stp_config1.run_shift_test File: source/tb_flex_stp_sr.sv Line: 247
+# ** Info: default Case 4:: PASSED
+#    Time: 36250 ps  Scope: tb_flex_stp_sr.stp_default.run_shift_test File: source/tb_flex_stp_sr.sv Line: 247
+# ** Info: config2 Case 5:: PASSED
+#    Time: 53750 ps  Scope: tb_flex_stp_sr.stp_config2.run_shift_test File: source/tb_flex_stp_sr.sv Line: 247
+# ** Info: default Case 5:: PASSED
+#    Time: 53750 ps  Scope: tb_flex_stp_sr.stp_default.run_shift_test File: source/tb_flex_stp_sr.sv Line: 247
+# ** Info: config1 Case 5:: PASSED
+#    Time: 63750 ps  Scope: tb_flex_stp_sr.stp_config1.run_shift_test File: source/tb_flex_stp_sr.sv Line: 247
+# ** Info: config2 Case 6:: PASSED
+#    Time: 71250 ps  Scope: tb_flex_stp_sr.stp_config2.run_shift_test File: source/tb_flex_stp_sr.sv Line: 247
+# ** Info: default Case 6:: PASSED
+#    Time: 71250 ps  Scope: tb_flex_stp_sr.stp_default.run_shift_test File: source/tb_flex_stp_sr.sv Line: 247
+# ** Info: config1 Case 6:: PASSED
+#    Time: 91250 ps  Scope: tb_flex_stp_sr.stp_config1.run_shift_test File: source/tb_flex_stp_sr.sv Line: 247
+# End time: 20:32:27 on Apr 20,2017, Elapsed time: 0:18:10
+# Errors: 0, Warnings: 0

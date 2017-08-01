@@ -1,0 +1,104 @@
+// $Id: $
+// File name:   USB.sv
+// Created:     4/26/2017
+// Author:      Kunwar Digraj Singh Jain
+// Lab Section: 5
+// Version:     1.0  Initial Design Entry
+// Description: Top level file for USB
+
+module USB (
+	input wire	clk,
+			n_rst,
+			rx_en_host,
+			crc_status,
+			write_enable_fifo,
+			read_done,
+			write_done,
+	input wire	[7:0] fifo_data,
+	inout wire	d_plus,
+			d_minus,
+			sd_rx_en_read
+);
+
+	reg 	trans,
+		rcvd_exp_hs,
+		rcving,
+		txing,
+		send_nack_out,
+		send_nack_in,
+		send_data,
+		send_ack,
+		rx_en,
+		tx_en,
+		fifo_empty,
+		fifo_full,
+		hs_rcv;
+
+
+	reg [7:0] parallel_in;
+	reg [1:0] pckt_rcvd;
+	reg addr_dne;
+
+	writeFIFO FIFO (
+			.clk,
+			.n_rst,
+			.write_enable(write_enable_fifo),
+			.read_enable(fifo_en),
+			.write_data(fifo_data),
+			.read_data(parallel_in),
+			.fifo_empty,
+			.fifo_full
+	) ;
+
+	bd_controller BD (
+			.clk,
+			.n_rst,
+			.rcving,
+			.trans(txing),
+			.rcvd_exp_hs,
+			.send_nack_in(send_nack_in),
+			.addr_dne,
+			.pckt_rcvd,
+
+			.rx_en,
+			.tx_en,
+			.send_data,
+			.send_ack,
+			.send_nack_out(send_nack_out),
+			.rx_exp_hs(hs_rcv)
+	) ;
+
+	usb_transmitter TX (
+		      	.clk,
+		      	.n_rst,
+		       	.send_data,   
+		        .tx_ena(tx_en),
+		        .buff_empty(fifo_empty),
+			.tx_nack(send_nack_out), 
+			.write_done(fifo_full), 
+			.tx_ack(send_ack),
+		 	.parallel_in, 
+			.d_plus,
+			.d_minus,
+			.trans(txing)     
+	);
+
+	USB_rx	RX (
+	 		.clk,				
+			.n_rst,				
+			.d_plus, 			
+			.d_minus,							
+			.read_done,				
+			.rx_en(rx_en | rx_en_host),				
+			.hs_rcv,				
+			.crc_status,			
+			.rcving,				
+			.send_nack(send_nack_in),			
+			.rcvd_exp_hs,			
+			.sd_rx_en_read,			
+			.addr_dne,			
+			.fifo_full,			
+			.pckt_rcvd			
+	);
+
+endmodule

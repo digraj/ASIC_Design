@@ -1,0 +1,35 @@
+// $Id: $
+// File name:   start_bit_det.sv
+// Created:     2/7/2017
+// Author:      Kunwar Digraj Singh Jain
+// Lab Section: 5
+// Version:     1.0  Initial Design Entry
+// Description: Start bit detector
+
+module start_bit_det (
+	input wire 	clk,
+			n_rst,
+			serial_in,
+	output wire	start_bit_detected
+)
+
+	always_ff @(posedge clk, negedge n_rst) 
+	begin
+		bit_0 <= 0; 
+		if (n_rst == 1'b0)
+			bit_0 <= 0 ;	
+		else
+			bit_0 <= bit_1 ;
+	end
+
+	always_ff @(posedge clk, negedge n_rst)
+	begin
+		if (n_rst == 1'b0)
+			bit_1 <= 0 ;
+		else
+			bit_1 <= serial_in ; 
+
+
+	start_bit_detected = bit_0 & ~bit_1 ;
+
+endmodule

@@ -1,0 +1,108 @@
+# 
+# 
+# 
+# 
+# //  Questa Sim-64
+# //  Version 10.3b linux_x86_64 May 29 2014
+# //
+# //  Copyright 1991-2014 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# vsim -Lf /home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Vsim -L /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work "+no_glitch_msg" -coverage -voptargs="+acc" -i -t ps source_work.tb_i2c_slave 
+# Start time: 01:15:21 on Apr 25,2017
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "controller(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "timer(fast)".
+# Loading sv_std.std
+# Loading work.tb_i2c_slave(fast)
+# Loading work.tb_i2c_slave_DUT(fast)
+# Loading work.i2c_slave(fast)
+# Loading work.sync_low(fast)
+# Loading work.controller(fast)
+# Loading work.decode(fast)
+# Loading work.rx_sr(fast)
+# Loading work.flex_stp_sr(fast)
+# Loading work.tx_sr(fast)
+# Loading work.flex_pts_sr(fast)
+# Loading work.timer(fast)
+# Loading work.flex_counter(fast)
+# Loading work.scl_edge(fast)
+# Loading work.sda_sel(fast)
+# Loading work.tx_fifo(fast)
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading /home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Vsim.fifo(rtl)#1
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading /home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Vsim.fiforam(rtl)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Vsim.write_fifo_ctrl(rtl)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Vsim.write_ptr(rtl)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Vsim.read_fifo_ctrl(rtl)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Vsim.read_ptr(rtl)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Vsim.i2c_bus(true_bus)#1
+# ** Warning: (vsim-3839) source/tb_i2c_slave.sv(84): Variable '/tb_i2c_slave/testbench/tb_sda_in', driven via a port connection, is multiply driven. See source/tb_i2c_slave.sv(68).
+#         Region: /tb_i2c_slave/testbench
+do wave1.do
+do wave2.do
+run 12000 ns
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_i2c_slave/testbench/DUT/F1/F1/URFC
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_i2c_slave/testbench/DUT/F1/F1/URFC
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_i2c_slave/testbench/DUT/F1/F1/URFC/RPU1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_i2c_slave/testbench/DUT/F1/F1/UWFC
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_i2c_slave/testbench/DUT/F1/F1/UWFC
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_i2c_slave/testbench/DUT/F1/F1/UWFC/WPU1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_i2c_slave/testbench/DUT/F1/F1/UFIFORAM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_i2c_slave/testbench/DUT/F1/F1/UFIFORAM
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_i2c_slave/testbench/DUT/F1/F1/UFIFORAM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_i2c_slave/testbench/DUT/F1/F1/UFIFORAM
+# -----Test Case 1-----
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /tb_i2c_slave/testbench/DUT/F1/F1/UFIFORAM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 1  Instance: /tb_i2c_slave/testbench/DUT/F1/F1/UFIFORAM
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /tb_i2c_slave/testbench/DUT/F1/F1/UFIFORAM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 2  Instance: /tb_i2c_slave/testbench/DUT/F1/F1/UFIFORAM
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 5 ns  Iteration: 1  Instance: /tb_i2c_slave/testbench/DUT/F1/F1/UFIFORAM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 5 ns  Iteration: 1  Instance: /tb_i2c_slave/testbench/DUT/F1/F1/UFIFORAM
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 3  Instance: /tb_i2c_slave/testbench/DUT/F1/F1/UWFC
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 3  Instance: /tb_i2c_slave/testbench/DUT/F1/F1/UWFC
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 4  Instance: /tb_i2c_slave/testbench/DUT/F1/F1/UWFC
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 4  Instance: /tb_i2c_slave/testbench/DUT/F1/F1/UWFC
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 4  Instance: /tb_i2c_slave/testbench/DUT/F1/F1/URFC
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 4  Instance: /tb_i2c_slave/testbench/DUT/F1/F1/URFC
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 5  Instance: /tb_i2c_slave/testbench/DUT/F1/F1/UWFC
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 5  Instance: /tb_i2c_slave/testbench/DUT/F1/F1/URFC
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 6  Instance: /tb_i2c_slave/testbench/DUT/F1/F1/UWFC
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 7  Instance: /tb_i2c_slave/testbench/DUT/F1/F1/URFC
+# -----END-----
+# End time: 01:16:54 on Apr 25,2017, Elapsed time: 0:01:33
+# Errors: 0, Warnings: 27

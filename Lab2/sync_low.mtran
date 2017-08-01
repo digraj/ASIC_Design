@@ -1,0 +1,910 @@
+# //  Questa Sim-64
+# //  Version 10.3b linux_x86_64 May 29 2014
+# //
+# //  Copyright 1991-2014 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# vsim -Lf /home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Vsim -L /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work -L /home/ecegrid/a/ece337/Class0.5u/GOLD_LIB "+no_glitch_msg" -coverage -voptargs="+acc" -i -t ps mapped_work.tb_sync_low 
+# Start time: 17:02:31 on Jan 25,2017
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading sv_std.std
+# Loading work.tb_sync_low(fast)
+# Loading work.sync_low(fast)
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.math_real(body)
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.dffsr(metastabilitywrapperarch)#1
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.prim(body)
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.dffsr_core(behavioral)#1
+add wave *
+run 200 ns
+# ** Info: Correct synchronizer output after reset applied in Power on Reset test case
+#    Time: 700 ps  Scope: tb_sync_low File: source/tb_sync_low.sv Line: 66
+# ** Info: Correct synchronizer output after clock cycle while in reset applied in Power on Reset test case
+#    Time: 1700 ps  Scope: tb_sync_low File: source/tb_sync_low.sv Line: 76
+# ** Warning: */DFFSR_CORE REMOVAL  Low VIOLATION ON R WITH RESPECT TO CLK;
+#   Expected := 0.093 ns; Observed := 0.012 ns; At : 2.7 ns
+#    Time: 2700 ps  Iteration: 1  Instance: /tb_sync_low/DUT/mid_out_reg/CELL_CORE
+# ** Info: Correct synchronizer output after reset was released in Power on Reset test case
+#    Time: 2800 ps  Scope: tb_sync_low File: source/tb_sync_low.sv Line: 91
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 3300 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Info: Correct synchronizer output for Normal Operation with Input as a '1' test case
+#    Time: 5310 ps  Scope: tb_sync_low File: source/tb_sync_low.sv Line: 108
+# ** Warning: */DFFSR_CORE SETUP  Low VIOLATION ON D WITH RESPECT TO CLK;
+#   Expected := 0.094 ns; Observed := 0.09 ns; At : 7.688 ns
+#    Time: 7688 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg/CELL_CORE
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 8198 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Info: Correct synchronizer output for Setup Violation with Input as a '0' test case
+#    Time: 9310 ps  Scope: tb_sync_low File: source/tb_sync_low.sv Line: 127
+# ** Info: Correct synchronizer output for Hold Violation with Input as a '1' test case
+#    Time: 13310 ps  Scope: tb_sync_low File: source/tb_sync_low.sv Line: 146
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 16160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 16296 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 17160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 17195 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Info: Correct synchronizer output for Steady Stream of Metastable inputs test case iteration           0
+#    Time: 17310 ps  Scope: tb_sync_low File: source/tb_sync_low.sv Line: 166
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 18160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 18277 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 19160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 19259 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 20160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 20269 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Info: Correct synchronizer output for Steady Stream of Metastable inputs test case iteration           1
+#    Time: 20310 ps  Scope: tb_sync_low File: source/tb_sync_low.sv Line: 166
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 21160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 21181 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 22160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 22294 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 23160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 23286 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Info: Correct synchronizer output for Steady Stream of Metastable inputs test case iteration           2
+#    Time: 23310 ps  Scope: tb_sync_low File: source/tb_sync_low.sv Line: 166
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 24160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 24268 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 25160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 25239 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 26160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 26275 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Info: Correct synchronizer output for Steady Stream of Metastable inputs test case iteration           3
+#    Time: 26310 ps  Scope: tb_sync_low File: source/tb_sync_low.sv Line: 166
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 27160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 27227 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 28160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 28289 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 29160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 29189 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Info: Correct synchronizer output for Steady Stream of Metastable inputs test case iteration           4
+#    Time: 29310 ps  Scope: tb_sync_low File: source/tb_sync_low.sv Line: 166
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 30160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 30249 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 31160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 31253 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 32160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 32188 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Info: Correct synchronizer output for Steady Stream of Metastable inputs test case iteration           5
+#    Time: 32310 ps  Scope: tb_sync_low File: source/tb_sync_low.sv Line: 166
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 33160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 33252 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 34160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 34256 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 35160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 35241 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Info: Correct synchronizer output for Steady Stream of Metastable inputs test case iteration           6
+#    Time: 35310 ps  Scope: tb_sync_low File: source/tb_sync_low.sv Line: 166
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 36160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 36271 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 37160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 37246 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 38160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 38246 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Info: Correct synchronizer output for Steady Stream of Metastable inputs test case iteration           7
+#    Time: 38310 ps  Scope: tb_sync_low File: source/tb_sync_low.sv Line: 166
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 39160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 39200 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 40160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 40284 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 41160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 41283 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Info: Correct synchronizer output for Steady Stream of Metastable inputs test case iteration           8
+#    Time: 41310 ps  Scope: tb_sync_low File: source/tb_sync_low.sv Line: 166
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 42160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 42249 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 43160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 43281 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 44160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 44300 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Info: Correct synchronizer output for Steady Stream of Metastable inputs test case iteration           9
+#    Time: 44310 ps  Scope: tb_sync_low File: source/tb_sync_low.sv Line: 166
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 45160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 45278 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 46160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 46191 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 47160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 47253 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Info: Correct synchronizer output for Steady Stream of Metastable inputs test case iteration          10
+#    Time: 47310 ps  Scope: tb_sync_low File: source/tb_sync_low.sv Line: 166
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 48160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 48201 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 49160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 49294 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 50160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 50275 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Info: Correct synchronizer output for Steady Stream of Metastable inputs test case iteration          11
+#    Time: 50310 ps  Scope: tb_sync_low File: source/tb_sync_low.sv Line: 166
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 51160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 51286 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 52160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 52203 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 53160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 53213 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Info: Correct synchronizer output for Steady Stream of Metastable inputs test case iteration          12
+#    Time: 53310 ps  Scope: tb_sync_low File: source/tb_sync_low.sv Line: 166
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 54160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 54296 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 55160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 55242 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 56160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 56243 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Info: Correct synchronizer output for Steady Stream of Metastable inputs test case iteration          13
+#    Time: 56310 ps  Scope: tb_sync_low File: source/tb_sync_low.sv Line: 166
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 57160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 57188 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 58160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 58193 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 59160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 59192 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Info: Correct synchronizer output for Steady Stream of Metastable inputs test case iteration          14
+#    Time: 59310 ps  Scope: tb_sync_low File: source/tb_sync_low.sv Line: 166
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 60160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 60240 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 61160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 61240 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 62160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 62283 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Info: Correct synchronizer output for Steady Stream of Metastable inputs test case iteration          15
+#    Time: 62310 ps  Scope: tb_sync_low File: source/tb_sync_low.sv Line: 166
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 63160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 63262 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 64160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 64288 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 65160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 65242 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Info: Correct synchronizer output for Steady Stream of Metastable inputs test case iteration          16
+#    Time: 65310 ps  Scope: tb_sync_low File: source/tb_sync_low.sv Line: 166
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 66160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 66207 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 67160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 67290 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 68160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 68190 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Info: Correct synchronizer output for Steady Stream of Metastable inputs test case iteration          17
+#    Time: 68310 ps  Scope: tb_sync_low File: source/tb_sync_low.sv Line: 166
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 69160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 69197 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 70160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 70288 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 71160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 71221 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Info: Correct synchronizer output for Steady Stream of Metastable inputs test case iteration          18
+#    Time: 71310 ps  Scope: tb_sync_low File: source/tb_sync_low.sv Line: 166
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 72160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 72224 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 73160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 73285 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 74160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 74276 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Info: Correct synchronizer output for Steady Stream of Metastable inputs test case iteration          19
+#    Time: 74310 ps  Scope: tb_sync_low File: source/tb_sync_low.sv Line: 166
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 75160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 75202 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 76160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 76279 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 77160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 77232 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Info: Correct synchronizer output for Steady Stream of Metastable inputs test case iteration          20
+#    Time: 77310 ps  Scope: tb_sync_low File: source/tb_sync_low.sv Line: 166
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 78160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 78252 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 79160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 79216 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 80160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 80203 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Info: Correct synchronizer output for Steady Stream of Metastable inputs test case iteration          21
+#    Time: 80310 ps  Scope: tb_sync_low File: source/tb_sync_low.sv Line: 166
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 81160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 81265 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 82160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 82291 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 83160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 83183 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Info: Correct synchronizer output for Steady Stream of Metastable inputs test case iteration          22
+#    Time: 83310 ps  Scope: tb_sync_low File: source/tb_sync_low.sv Line: 166
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 84160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 84250 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 85160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 85229 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 86160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 86269 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Info: Correct synchronizer output for Steady Stream of Metastable inputs test case iteration          23
+#    Time: 86310 ps  Scope: tb_sync_low File: source/tb_sync_low.sv Line: 166
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 87160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 87264 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 88160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 88231 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 89160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 89207 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Info: Correct synchronizer output for Steady Stream of Metastable inputs test case iteration          24
+#    Time: 89310 ps  Scope: tb_sync_low File: source/tb_sync_low.sv Line: 166
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 90160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 90197 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 91160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 91208 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 92160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 92256 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Info: Correct synchronizer output for Steady Stream of Metastable inputs test case iteration          25
+#    Time: 92310 ps  Scope: tb_sync_low File: source/tb_sync_low.sv Line: 166
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 93160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 93283 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 94160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 94195 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 95160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 95295 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Info: Correct synchronizer output for Steady Stream of Metastable inputs test case iteration          26
+#    Time: 95310 ps  Scope: tb_sync_low File: source/tb_sync_low.sv Line: 166
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 96160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 96276 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 97160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 97255 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 98160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 98292 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Info: Correct synchronizer output for Steady Stream of Metastable inputs test case iteration          27
+#    Time: 98310 ps  Scope: tb_sync_low File: source/tb_sync_low.sv Line: 166
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 99160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 99282 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 100160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 100268 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 101160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 101290 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Info: Correct synchronizer output for Steady Stream of Metastable inputs test case iteration          28
+#    Time: 101310 ps  Scope: tb_sync_low File: source/tb_sync_low.sv Line: 166
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 102160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 102210 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 103160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 103268 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 104160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 104295 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Info: Correct synchronizer output for Steady Stream of Metastable inputs test case iteration          29
+#    Time: 104310 ps  Scope: tb_sync_low File: source/tb_sync_low.sv Line: 166
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 105160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 105270 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 106160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 106201 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 107160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 107228 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Info: Correct synchronizer output for Steady Stream of Metastable inputs test case iteration          30
+#    Time: 107310 ps  Scope: tb_sync_low File: source/tb_sync_low.sv Line: 166
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 108160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 108246 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 109160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 109205 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 110160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 110258 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Info: Correct synchronizer output for Steady Stream of Metastable inputs test case iteration          31
+#    Time: 110310 ps  Scope: tb_sync_low File: source/tb_sync_low.sv Line: 166
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 111160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 111230 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 112160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 112224 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 113160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 113228 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Info: Correct synchronizer output for Steady Stream of Metastable inputs test case iteration          32
+#    Time: 113310 ps  Scope: tb_sync_low File: source/tb_sync_low.sv Line: 166
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 114160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 114228 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 115160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 115233 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 116160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 116246 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Info: Correct synchronizer output for Steady Stream of Metastable inputs test case iteration          33
+#    Time: 116310 ps  Scope: tb_sync_low File: source/tb_sync_low.sv Line: 166
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 117160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 117249 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 118160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 118258 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 119160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 119186 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Info: Correct synchronizer output for Steady Stream of Metastable inputs test case iteration          34
+#    Time: 119310 ps  Scope: tb_sync_low File: source/tb_sync_low.sv Line: 166
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 120160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 120237 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 121160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 121255 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 122160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 122193 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Info: Correct synchronizer output for Steady Stream of Metastable inputs test case iteration          35
+#    Time: 122310 ps  Scope: tb_sync_low File: source/tb_sync_low.sv Line: 166
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 123160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 123283 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 124160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 124228 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 125160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 125291 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Info: Correct synchronizer output for Steady Stream of Metastable inputs test case iteration          36
+#    Time: 125310 ps  Scope: tb_sync_low File: source/tb_sync_low.sv Line: 166
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 126160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 126286 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 127160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 127251 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 128160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 128247 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Info: Correct synchronizer output for Steady Stream of Metastable inputs test case iteration          37
+#    Time: 128310 ps  Scope: tb_sync_low File: source/tb_sync_low.sv Line: 166
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 129160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 129211 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 130160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 130182 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 131160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 131267 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Info: Correct synchronizer output for Steady Stream of Metastable inputs test case iteration          38
+#    Time: 131310 ps  Scope: tb_sync_low File: source/tb_sync_low.sv Line: 166
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 132160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 132284 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 133160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 133211 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 134160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 134299 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Info: Correct synchronizer output for Steady Stream of Metastable inputs test case iteration          39
+#    Time: 134310 ps  Scope: tb_sync_low File: source/tb_sync_low.sv Line: 166
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 135160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 135206 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 136160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 136193 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 137160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 137246 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Info: Correct synchronizer output for Steady Stream of Metastable inputs test case iteration          40
+#    Time: 137310 ps  Scope: tb_sync_low File: source/tb_sync_low.sv Line: 166
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 138160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 138277 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 139160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 139196 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 140160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 140205 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Info: Correct synchronizer output for Steady Stream of Metastable inputs test case iteration          41
+#    Time: 140310 ps  Scope: tb_sync_low File: source/tb_sync_low.sv Line: 166
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 141160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 141190 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 142160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 142184 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 143160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 143274 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Info: Correct synchronizer output for Steady Stream of Metastable inputs test case iteration          42
+#    Time: 143310 ps  Scope: tb_sync_low File: source/tb_sync_low.sv Line: 166
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 144160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 144251 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 145160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 145278 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 146160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 146262 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Info: Correct synchronizer output for Steady Stream of Metastable inputs test case iteration          43
+#    Time: 146310 ps  Scope: tb_sync_low File: source/tb_sync_low.sv Line: 166
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 147160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 147281 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 148160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 148203 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 149160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 149201 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Info: Correct synchronizer output for Steady Stream of Metastable inputs test case iteration          44
+#    Time: 149310 ps  Scope: tb_sync_low File: source/tb_sync_low.sv Line: 166
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 150160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 150203 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 151160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 151267 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 152160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 152286 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Info: Correct synchronizer output for Steady Stream of Metastable inputs test case iteration          45
+#    Time: 152310 ps  Scope: tb_sync_low File: source/tb_sync_low.sv Line: 166
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 153160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 153259 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 154160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 154212 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 155160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 155227 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Info: Correct synchronizer output for Steady Stream of Metastable inputs test case iteration          46
+#    Time: 155310 ps  Scope: tb_sync_low File: source/tb_sync_low.sv Line: 166
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 156160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 156181 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 157160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 157204 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 158160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 158208 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Info: Correct synchronizer output for Steady Stream of Metastable inputs test case iteration          47
+#    Time: 158310 ps  Scope: tb_sync_low File: source/tb_sync_low.sv Line: 166
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 159160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 159211 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 160160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 160242 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 161160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 161231 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Info: Correct synchronizer output for Steady Stream of Metastable inputs test case iteration          48
+#    Time: 161310 ps  Scope: tb_sync_low File: source/tb_sync_low.sv Line: 166
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 162160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 162217 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 163160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 163258 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 164160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 164215 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Info: Correct synchronizer output for Steady Stream of Metastable inputs test case iteration          49
+#    Time: 164310 ps  Scope: tb_sync_low File: source/tb_sync_low.sv Line: 166
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 165160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 165193 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 166160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 166183 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 167160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 167280 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Info: Correct synchronizer output for Steady Stream of Metastable inputs test case iteration          50
+#    Time: 167310 ps  Scope: tb_sync_low File: source/tb_sync_low.sv Line: 166
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 168160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 168254 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 169160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 169237 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 170160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 170283 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Info: Correct synchronizer output for Steady Stream of Metastable inputs test case iteration          51
+#    Time: 170310 ps  Scope: tb_sync_low File: source/tb_sync_low.sv Line: 166
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 171160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 171200 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 172160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 172199 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 173160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 173223 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Info: Correct synchronizer output for Steady Stream of Metastable inputs test case iteration          52
+#    Time: 173310 ps  Scope: tb_sync_low File: source/tb_sync_low.sv Line: 166
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 174160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 174281 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 175160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 175220 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 176160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 176296 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Info: Correct synchronizer output for Steady Stream of Metastable inputs test case iteration          53
+#    Time: 176310 ps  Scope: tb_sync_low File: source/tb_sync_low.sv Line: 166
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 177160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 177266 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 178160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 178207 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 179160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 179226 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Info: Correct synchronizer output for Steady Stream of Metastable inputs test case iteration          54
+#    Time: 179310 ps  Scope: tb_sync_low File: source/tb_sync_low.sv Line: 166
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 180160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 180286 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 181160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 181205 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 182160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 182272 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Info: Correct synchronizer output for Steady Stream of Metastable inputs test case iteration          55
+#    Time: 182310 ps  Scope: tb_sync_low File: source/tb_sync_low.sv Line: 166
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 183160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 183198 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 184160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 184197 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 185160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 185201 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Info: Correct synchronizer output for Steady Stream of Metastable inputs test case iteration          56
+#    Time: 185310 ps  Scope: tb_sync_low File: source/tb_sync_low.sv Line: 166
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 186160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 186267 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 187160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 187283 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 188160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 188292 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Info: Correct synchronizer output for Steady Stream of Metastable inputs test case iteration          57
+#    Time: 188310 ps  Scope: tb_sync_low File: source/tb_sync_low.sv Line: 166
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 189160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 189215 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 190160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 190262 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 191160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 191212 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Info: Correct synchronizer output for Steady Stream of Metastable inputs test case iteration          58
+#    Time: 191310 ps  Scope: tb_sync_low File: source/tb_sync_low.sv Line: 166
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 192160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 192271 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 193160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 193188 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 194160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 194226 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Info: Correct synchronizer output for Steady Stream of Metastable inputs test case iteration          59
+#    Time: 194310 ps  Scope: tb_sync_low File: source/tb_sync_low.sv Line: 166
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 195160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 195249 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 196160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 196299 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 197160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 197279 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Info: Correct synchronizer output for Steady Stream of Metastable inputs test case iteration          60
+#    Time: 197310 ps  Scope: tb_sync_low File: source/tb_sync_low.sv Line: 166
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 198160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 198215 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 199160 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 199212 ps  Iteration: 0  Instance: /tb_sync_low/DUT/mid_out_reg
+# Causality operation skipped due to absence of debug database file
+# End time: 17:04:37 on Jan 25,2017, Elapsed time: 0:02:06
+# Errors: 0, Warnings: 373

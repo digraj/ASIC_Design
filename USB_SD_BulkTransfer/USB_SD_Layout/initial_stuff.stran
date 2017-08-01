@@ -1,0 +1,29 @@
+# //  Questa Sim-64
+# //  Version 10.3b linux_x86_64 May 29 2014
+# //
+# //  Copyright 1991-2014 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# vsim -Lf /home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Vsim -L /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work -L /home/ecegrid/a/ece337/Class0.5u/GOLD_LIB "+no_glitch_msg" -coverage -voptargs="+acc" -i -t ps source_work.tb_initial_stuff 
+# Start time: 03:27:59 on Apr 25,2017
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb_initial_stuff(fast)
+# Loading work.initial_stuff(fast)
+# Loading work.d_edge_det(fast)
+# Loading work.serial_2_parallel(fast)
+# Loading work.nrzi_decode(fast)
+# Loading work.bit_destuff(fast)
+# Loading work.flex_counter(fast)
+# Loading work.counter(fast)
+# Loading work.flex_counter(fast__1)
+# ** Warning: (vsim-3015) source/bit_destuff.sv(19): [PCDPC] - Port size (3) does not match connection size (4) for port 'count_out'. The port definition is at: /home/ecegrid/a/mg134/ece337/Project/source/flex_counter.sv(19).
+#         Region: /tb_initial_stuff/DUT/BIT_DE/IN1
+do wave_initial.do
+run 600 ns
+# End time: 03:42:43 on Apr 25,2017, Elapsed time: 0:14:44
+# Errors: 0, Warnings: 1

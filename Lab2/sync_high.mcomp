@@ -1,0 +1,9 @@
+QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+Start time: 17:05:04 on Jan 25,2017
+vlog -sv -work mapped_work source/tb_sync_high.sv 
+-- Compiling module tb_sync_high
+
+Top level modules:
+	tb_sync_high
+End time: 17:05:04 on Jan 25,2017, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0

@@ -1,0 +1,257 @@
+# //  Questa Sim-64
+# //  Version 10.3b linux_x86_64 May 29 2014
+# //
+# //  Copyright 1991-2014 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# vsim -Lf /home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Vsim -L /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work -L /home/ecegrid/a/ece337/Class0.5u/GOLD_LIB "+no_glitch_msg" -coverage -voptargs="+acc" -i -t ps source_work.tb_rcv_block 
+# Start time: 19:55:31 on Feb 07,2017
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 1 FSM in module "rcu(fast)".
+# Loading sv_std.std
+# Loading work.tb_rcv_block(fast)
+# Loading work.rcv_block(fast)
+# Loading work.timer(fast)
+# Loading work.flex_counter(fast)
+# Loading work.rcu(fast)
+# Loading work.sr_9bit(fast)
+# Loading work.flex_stp_sr(fast)
+# Loading work.rx_data_buff(fast)
+# Loading work.start_bit_det(fast)
+# Loading work.stop_bit_chk(fast)
+run 1000 ns
+# ** Info: Test case 0: Test data correctly received
+#    Time: 8750 ps  Scope: tb_rcv_block.check_outputs File: source/tb_rcv_block.sv Line: 118
+# ** Info: Test case 0: DUT correctly shows no framing error
+#    Time: 8750 ps  Scope: tb_rcv_block.check_outputs File: source/tb_rcv_block.sv Line: 124
+# ** Info: Test case 0: DUT correctly asserted the data ready flag
+#    Time: 8750 ps  Scope: tb_rcv_block.check_outputs File: source/tb_rcv_block.sv Line: 130
+# ** Info: Test case 0: DUT correctly shows no overrun error
+#    Time: 8750 ps  Scope: tb_rcv_block.check_outputs File: source/tb_rcv_block.sv Line: 138
+# ** Error: Test case 1: Test data was not correctly received
+#    Time: 320 ns  Scope: tb_rcv_block.check_outputs File: source/tb_rcv_block.sv Line: 120
+# ** Info: Test case 1: DUT correctly shows no framing error
+#    Time: 320 ns  Scope: tb_rcv_block.check_outputs File: source/tb_rcv_block.sv Line: 124
+# ** Error: Test case 1: DUT did not correctly assert the data ready flag
+#    Time: 320 ns  Scope: tb_rcv_block.check_outputs File: source/tb_rcv_block.sv Line: 132
+# ** Info: Test case 1: DUT correctly shows no overrun error
+#    Time: 320 ns  Scope: tb_rcv_block.check_outputs File: source/tb_rcv_block.sv Line: 138
+# ** Info: Test case 1: DUT correctly cleared the data ready flag
+#    Time: 322500 ps  Scope: tb_rcv_block.check_outputs File: source/tb_rcv_block.sv Line: 166
+# ** Error: Test case 2: Test data was not correctly received
+#    Time: 623 ns  Scope: tb_rcv_block.check_outputs File: source/tb_rcv_block.sv Line: 120
+# ** Info: Test case 2: DUT correctly shows no framing error
+#    Time: 623 ns  Scope: tb_rcv_block.check_outputs File: source/tb_rcv_block.sv Line: 124
+# ** Error: Test case 2: DUT did not correctly assert the data ready flag
+#    Time: 623 ns  Scope: tb_rcv_block.check_outputs File: source/tb_rcv_block.sv Line: 132
+# ** Info: Test case 2: DUT correctly shows no overrun error
+#    Time: 623 ns  Scope: tb_rcv_block.check_outputs File: source/tb_rcv_block.sv Line: 138
+# ** Info: Test case 2: DUT correctly cleared the data ready flag
+#    Time: 627500 ps  Scope: tb_rcv_block.check_outputs File: source/tb_rcv_block.sv Line: 166
+restart -f
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# Loading sv_std.std
+# Loading work.tb_rcv_block(fast)
+# Loading work.rcv_block(fast)
+# Loading work.timer(fast)
+# Loading work.flex_counter(fast)
+# Loading work.rcu(fast)
+# Loading work.sr_9bit(fast)
+# Loading work.flex_stp_sr(fast)
+# Loading work.rx_data_buff(fast)
+# Loading work.start_bit_det(fast)
+# Loading work.stop_bit_chk(fast)
+add wave *
+run 1000 ns
+# ** Info: Test case 0: Test data correctly received
+#    Time: 8750 ps  Scope: tb_rcv_block.check_outputs File: source/tb_rcv_block.sv Line: 118
+# ** Info: Test case 0: DUT correctly shows no framing error
+#    Time: 8750 ps  Scope: tb_rcv_block.check_outputs File: source/tb_rcv_block.sv Line: 124
+# ** Info: Test case 0: DUT correctly asserted the data ready flag
+#    Time: 8750 ps  Scope: tb_rcv_block.check_outputs File: source/tb_rcv_block.sv Line: 130
+# ** Info: Test case 0: DUT correctly shows no overrun error
+#    Time: 8750 ps  Scope: tb_rcv_block.check_outputs File: source/tb_rcv_block.sv Line: 138
+# ** Error: Test case 1: Test data was not correctly received
+#    Time: 320 ns  Scope: tb_rcv_block.check_outputs File: source/tb_rcv_block.sv Line: 120
+# ** Info: Test case 1: DUT correctly shows no framing error
+#    Time: 320 ns  Scope: tb_rcv_block.check_outputs File: source/tb_rcv_block.sv Line: 124
+# ** Error: Test case 1: DUT did not correctly assert the data ready flag
+#    Time: 320 ns  Scope: tb_rcv_block.check_outputs File: source/tb_rcv_block.sv Line: 132
+# ** Info: Test case 1: DUT correctly shows no overrun error
+#    Time: 320 ns  Scope: tb_rcv_block.check_outputs File: source/tb_rcv_block.sv Line: 138
+# ** Info: Test case 1: DUT correctly cleared the data ready flag
+#    Time: 322500 ps  Scope: tb_rcv_block.check_outputs File: source/tb_rcv_block.sv Line: 166
+# ** Error: Test case 2: Test data was not correctly received
+#    Time: 623 ns  Scope: tb_rcv_block.check_outputs File: source/tb_rcv_block.sv Line: 120
+# ** Info: Test case 2: DUT correctly shows no framing error
+#    Time: 623 ns  Scope: tb_rcv_block.check_outputs File: source/tb_rcv_block.sv Line: 124
+# ** Error: Test case 2: DUT did not correctly assert the data ready flag
+#    Time: 623 ns  Scope: tb_rcv_block.check_outputs File: source/tb_rcv_block.sv Line: 132
+# ** Info: Test case 2: DUT correctly shows no overrun error
+#    Time: 623 ns  Scope: tb_rcv_block.check_outputs File: source/tb_rcv_block.sv Line: 138
+# ** Info: Test case 2: DUT correctly cleared the data ready flag
+#    Time: 627500 ps  Scope: tb_rcv_block.check_outputs File: source/tb_rcv_block.sv Line: 166
+# Causality operation skipped due to absence of debug database file
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/ecegrid/a/mg134/ece337/Lab4/wave.do
+add wave -position insertpoint  \
+sim:/tb_rcv_block/DUT/load_buffer
+add wave -position insertpoint  \
+sim:/tb_rcv_block/DUT/packet_data
+restart -f
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# Loading sv_std.std
+# Loading work.tb_rcv_block(fast)
+# Loading work.rcv_block(fast)
+# Loading work.timer(fast)
+# Loading work.flex_counter(fast)
+# Loading work.rcu(fast)
+# Loading work.sr_9bit(fast)
+# Loading work.flex_stp_sr(fast)
+# Loading work.rx_data_buff(fast)
+# Loading work.start_bit_det(fast)
+# Loading work.stop_bit_chk(fast)
+restart -f ; run 1000 ns
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# Loading sv_std.std
+# Loading work.tb_rcv_block(fast)
+# Loading work.rcv_block(fast)
+# Loading work.timer(fast)
+# Loading work.flex_counter(fast)
+# Loading work.rcu(fast)
+# Loading work.sr_9bit(fast)
+# Loading work.flex_stp_sr(fast)
+# Loading work.rx_data_buff(fast)
+# Loading work.start_bit_det(fast)
+# Loading work.stop_bit_chk(fast)
+# ** Info: Test case 0: Test data correctly received
+#    Time: 8750 ps  Scope: tb_rcv_block.check_outputs File: source/tb_rcv_block.sv Line: 118
+# ** Info: Test case 0: DUT correctly shows no framing error
+#    Time: 8750 ps  Scope: tb_rcv_block.check_outputs File: source/tb_rcv_block.sv Line: 124
+# ** Info: Test case 0: DUT correctly asserted the data ready flag
+#    Time: 8750 ps  Scope: tb_rcv_block.check_outputs File: source/tb_rcv_block.sv Line: 130
+# ** Info: Test case 0: DUT correctly shows no overrun error
+#    Time: 8750 ps  Scope: tb_rcv_block.check_outputs File: source/tb_rcv_block.sv Line: 138
+# ** Error: Test case 1: Test data was not correctly received
+#    Time: 320 ns  Scope: tb_rcv_block.check_outputs File: source/tb_rcv_block.sv Line: 120
+# ** Info: Test case 1: DUT correctly shows no framing error
+#    Time: 320 ns  Scope: tb_rcv_block.check_outputs File: source/tb_rcv_block.sv Line: 124
+# ** Error: Test case 1: DUT did not correctly assert the data ready flag
+#    Time: 320 ns  Scope: tb_rcv_block.check_outputs File: source/tb_rcv_block.sv Line: 132
+# ** Info: Test case 1: DUT correctly shows no overrun error
+#    Time: 320 ns  Scope: tb_rcv_block.check_outputs File: source/tb_rcv_block.sv Line: 138
+# ** Info: Test case 1: DUT correctly cleared the data ready flag
+#    Time: 322500 ps  Scope: tb_rcv_block.check_outputs File: source/tb_rcv_block.sv Line: 166
+# ** Error: Test case 2: Test data was not correctly received
+#    Time: 623 ns  Scope: tb_rcv_block.check_outputs File: source/tb_rcv_block.sv Line: 120
+# ** Info: Test case 2: DUT correctly shows no framing error
+#    Time: 623 ns  Scope: tb_rcv_block.check_outputs File: source/tb_rcv_block.sv Line: 124
+# ** Error: Test case 2: DUT did not correctly assert the data ready flag
+#    Time: 623 ns  Scope: tb_rcv_block.check_outputs File: source/tb_rcv_block.sv Line: 132
+# ** Info: Test case 2: DUT correctly shows no overrun error
+#    Time: 623 ns  Scope: tb_rcv_block.check_outputs File: source/tb_rcv_block.sv Line: 138
+# ** Info: Test case 2: DUT correctly cleared the data ready flag
+#    Time: 627500 ps  Scope: tb_rcv_block.check_outputs File: source/tb_rcv_block.sv Line: 166
+add wave -position insertpoint  \
+sim:/tb_rcv_block/DUT/start_bit_detected
+add wave -position insertpoint  \
+sim:/tb_rcv_block/DUT/packet_done
+add wave -position insertpoint  \
+sim:/tb_rcv_block/DUT/framing_error
+restart -f ; run 1000 ns
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# Loading sv_std.std
+# Loading work.tb_rcv_block(fast)
+# Loading work.rcv_block(fast)
+# Loading work.timer(fast)
+# Loading work.flex_counter(fast)
+# Loading work.rcu(fast)
+# Loading work.sr_9bit(fast)
+# Loading work.flex_stp_sr(fast)
+# Loading work.rx_data_buff(fast)
+# Loading work.start_bit_det(fast)
+# Loading work.stop_bit_chk(fast)
+# ** Info: Test case 0: Test data correctly received
+#    Time: 8750 ps  Scope: tb_rcv_block.check_outputs File: source/tb_rcv_block.sv Line: 118
+# ** Info: Test case 0: DUT correctly shows no framing error
+#    Time: 8750 ps  Scope: tb_rcv_block.check_outputs File: source/tb_rcv_block.sv Line: 124
+# ** Info: Test case 0: DUT correctly asserted the data ready flag
+#    Time: 8750 ps  Scope: tb_rcv_block.check_outputs File: source/tb_rcv_block.sv Line: 130
+# ** Info: Test case 0: DUT correctly shows no overrun error
+#    Time: 8750 ps  Scope: tb_rcv_block.check_outputs File: source/tb_rcv_block.sv Line: 138
+# ** Error: Test case 1: Test data was not correctly received
+#    Time: 320 ns  Scope: tb_rcv_block.check_outputs File: source/tb_rcv_block.sv Line: 120
+# ** Info: Test case 1: DUT correctly shows no framing error
+#    Time: 320 ns  Scope: tb_rcv_block.check_outputs File: source/tb_rcv_block.sv Line: 124
+# ** Error: Test case 1: DUT did not correctly assert the data ready flag
+#    Time: 320 ns  Scope: tb_rcv_block.check_outputs File: source/tb_rcv_block.sv Line: 132
+# ** Info: Test case 1: DUT correctly shows no overrun error
+#    Time: 320 ns  Scope: tb_rcv_block.check_outputs File: source/tb_rcv_block.sv Line: 138
+# ** Info: Test case 1: DUT correctly cleared the data ready flag
+#    Time: 322500 ps  Scope: tb_rcv_block.check_outputs File: source/tb_rcv_block.sv Line: 166
+# ** Error: Test case 2: Test data was not correctly received
+#    Time: 623 ns  Scope: tb_rcv_block.check_outputs File: source/tb_rcv_block.sv Line: 120
+# ** Info: Test case 2: DUT correctly shows no framing error
+#    Time: 623 ns  Scope: tb_rcv_block.check_outputs File: source/tb_rcv_block.sv Line: 124
+# ** Error: Test case 2: DUT did not correctly assert the data ready flag
+#    Time: 623 ns  Scope: tb_rcv_block.check_outputs File: source/tb_rcv_block.sv Line: 132
+# ** Info: Test case 2: DUT correctly shows no overrun error
+#    Time: 623 ns  Scope: tb_rcv_block.check_outputs File: source/tb_rcv_block.sv Line: 138
+# ** Info: Test case 2: DUT correctly cleared the data ready flag
+#    Time: 627500 ps  Scope: tb_rcv_block.check_outputs File: source/tb_rcv_block.sv Line: 166
+vlog -sv -work source_work /home/ecegrid/a/mg134/ece337/Lab4/source/timer.sv
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 20:07:13 on Feb 07,2017
+# vlog -reportprogress 300 -sv -work source_work /home/ecegrid/a/mg134/ece337/Lab4/source/timer.sv 
+# -- Compiling module timer
+# 
+# Top level modules:
+# 	timer
+# End time: 20:07:13 on Feb 07,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart -f ; run 1000 ns
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb_rcv_block(fast)
+# Loading work.rcv_block(fast)
+# Loading work.timer(fast)
+# Loading work.flex_counter(fast)
+# Loading work.rcu(fast)
+# Loading work.sr_9bit(fast)
+# Loading work.flex_stp_sr(fast)
+# Loading work.rx_data_buff(fast)
+# Loading work.start_bit_det(fast)
+# Loading work.stop_bit_chk(fast)
+# ** Info: Test case 0: Test data correctly received
+#    Time: 8750 ps  Scope: tb_rcv_block.check_outputs File: source/tb_rcv_block.sv Line: 118
+# ** Info: Test case 0: DUT correctly shows no framing error
+#    Time: 8750 ps  Scope: tb_rcv_block.check_outputs File: source/tb_rcv_block.sv Line: 124
+# ** Info: Test case 0: DUT correctly asserted the data ready flag
+#    Time: 8750 ps  Scope: tb_rcv_block.check_outputs File: source/tb_rcv_block.sv Line: 130
+# ** Info: Test case 0: DUT correctly shows no overrun error
+#    Time: 8750 ps  Scope: tb_rcv_block.check_outputs File: source/tb_rcv_block.sv Line: 138
+# ** Info: Test case 1: Test data correctly received
+#    Time: 320 ns  Scope: tb_rcv_block.check_outputs File: source/tb_rcv_block.sv Line: 118
+# ** Info: Test case 1: DUT correctly shows no framing error
+#    Time: 320 ns  Scope: tb_rcv_block.check_outputs File: source/tb_rcv_block.sv Line: 124
+# ** Info: Test case 1: DUT correctly asserted the data ready flag
+#    Time: 320 ns  Scope: tb_rcv_block.check_outputs File: source/tb_rcv_block.sv Line: 130
+# ** Info: Test case 1: DUT correctly shows no overrun error
+#    Time: 320 ns  Scope: tb_rcv_block.check_outputs File: source/tb_rcv_block.sv Line: 138
+# ** Info: Test case 1: DUT correctly cleared the data ready flag
+#    Time: 322500 ps  Scope: tb_rcv_block.check_outputs File: source/tb_rcv_block.sv Line: 166
+# ** Info: Test case 2: Test data correctly received
+#    Time: 623 ns  Scope: tb_rcv_block.check_outputs File: source/tb_rcv_block.sv Line: 118
+# ** Info: Test case 2: DUT correctly shows no framing error
+#    Time: 623 ns  Scope: tb_rcv_block.check_outputs File: source/tb_rcv_block.sv Line: 124
+# ** Info: Test case 2: DUT correctly asserted the data ready flag
+#    Time: 623 ns  Scope: tb_rcv_block.check_outputs File: source/tb_rcv_block.sv Line: 130
+# ** Info: Test case 2: DUT correctly shows no overrun error
+#    Time: 623 ns  Scope: tb_rcv_block.check_outputs File: source/tb_rcv_block.sv Line: 138
+# ** Info: Test case 2: DUT correctly cleared the data ready flag
+#    Time: 627500 ps  Scope: tb_rcv_block.check_outputs File: source/tb_rcv_block.sv Line: 166
+# End time: 20:09:18 on Feb 07,2017, Elapsed time: 0:13:47
+# Errors: 0, Warnings: 1

@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+  <title>Questa Coverage Report</title>
+  <!-- original name: __home_ecegrid_a_ece337_Course_Prod_Cell_Libs_AMI_05_vhdl_work.dffsr(metastabilitywrapperarch)ContentFrame4.htm -->
+  <link rel="StyleSheet" media="print"  href="../css/ucdb2htmlP.css"/>
+  <link rel="StyleSheet" media="screen" href="../css/ucdb2html.css"/>
+  <link rel="StyleSheet" media="screen" href="../css/ucdb2html_newlook.css"/>
+  <script type="text/javascript" src="../scripts/jquery.js"></script>
+  <script type="text/javascript" src="../scripts/showhide.js"></script>
+  
+</head>
+<body id="ucdb2html_detail" onload="showLast()">
+  <h1><span class="strip">Questa</span> Condition Coverage Report</h1>
+  <h3>Scope: /<a href="z2579572652_2213510308_0.htm">/home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.dffsr(metastabilitywrapperarch)</a></h3>
+  <!-- use script block so buttons vanish when JavaScript is disabled -->
+  <script type="text/javascript">
+  <!--
+  document.write(
+    '<table class="buttons" cellspacing="2" cellpadding="2"><tr>' +
+       '<td id="showAll" width="100" onclick="showAll()" class="button_on" ' +
+           'title="Display all coverage scopes and bins.">Show All</td>' +
+       '<td id="showCov" width="100" onclick="showCov()" class="button_off" ' +
+           'title="Display only covered scopes and bins.">Show Covered</td>' +
+       '<td id="showMis" width="100" onclick="showMis()" class="button_off" ' +
+           'title="Display only uncovered scopes and bins.">Show Missing</td>' +
+    '</tr></table>');
+  //-->
+  </script>
+  <div class="excluded"><a name="cvg252"/><hr/><table>
+  <tr s="3" x="FC" lnk="__HDL_srcfile_1.htm#1504" z="(( /= NOW()) and (MIN_CLK_STABLE_TIME > (clk_high_end - clk_high_start)))" c="e" d="0" F="1"/>
+  <tr/>
+  <tr z="( /= NOW())" c="e"/>
+  <tr z="(MIN_CLK_STABLE_TIME > (clk_high_end - clk_high_start))" c="e"/>
+  <tr/>
+  <tr n="1" z="( /= NOW())_0" h1="E-Hit" t="c" c1="(MIN_CLK_STABLE_TIME > (clk_high_end - clk_high_start))"/>
+  <tr n="2" z="( /= NOW())_1" h1="E-Miss" t="c" c1="(MIN_CLK_STABLE_TIME > (clk_high_end - clk_high_start))"/>
+  <tr n="3" z="(MIN_CLK_STABLE_TIME > (clk_high_end - clk_high_start))_0" h1="E-Hit" t="c" c1="( /= NOW())"/>
+  <tr n="4" z="(MIN_CLK_STABLE_TIME > (clk_high_end - clk_high_start))_1" h1="E-Miss" t="c" c1="( /= NOW())"/>
+  </table>
+</div><div class="excluded"><a name="cvg254"/><hr/><table>
+  <tr s="3" x="FC" lnk="__HDL_srcfile_1.htm#1513" z="(('0' = Q_module) or ('1' = Q_module))" c="e" d="0" F="1"/>
+  <tr/>
+  <tr z="('0' = Q_module)" c="e"/>
+  <tr z="('1' = Q_module)" c="e"/>
+  <tr/>
+  <tr n="1" z="('0' = Q_module)_0" h1="E-Hit" t="c" c1="not ('1' = Q_module)"/>
+  <tr n="2" z="('0' = Q_module)_1" h1="E-Hit" t="c" c1="not ('1' = Q_module)"/>
+  <tr n="3" z="('1' = Q_module)_0" h1="E-Hit" t="c" c1="not ('0' = Q_module)"/>
+  <tr n="4" z="('1' = Q_module)_1" h1="E-Hit" t="c" c1="not ('0' = Q_module)"/>
+  </table>
+</div><div class="excluded"><a name="cvg256"/><hr/><table>
+  <tr s="3" x="FC" lnk="__HDL_srcfile_1.htm#1552" z="(((('1' /= D_tmp) and ('0' /= D_tmp)) or (('1' /= R_tmp) and ('0' /= R_tmp))) or (('1' /= S_tmp) and ('0' /= S_tmp)))" c="e" d="0" F="1"/>
+  <tr/>
+  <tr z="('1' /= D_tmp)" c="e"/>
+  <tr z="('0' /= D_tmp)" c="e"/>
+  <tr z="('1' /= R_tmp)" c="e"/>
+  <tr z="('0' /= R_tmp)" c="e"/>
+  <tr z="('1' /= S_tmp)" c="e"/>
+  <tr z="('0' /= S_tmp)" c="e"/>
+  <tr/>
+  <tr n="1" z="('1' /= D_tmp)_0" h1="E-Miss" t="c" c1="not (('1' /= S_tmp) and ('0' /= S_tmp)) && not (('1' /= R_tmp) and ('0' /= R_tmp)) && ('0' /= D_tmp)"/>
+  <tr n="2" z="('1' /= D_tmp)_1" h1="E-Hit" t="c" c1="not (('1' /= S_tmp) and ('0' /= S_tmp)) && not (('1' /= R_tmp) and ('0' /= R_tmp)) && ('0' /= D_tmp)"/>
+  <tr n="3" z="('0' /= D_tmp)_0" h1="E-Miss" t="c" c1="not (('1' /= S_tmp) and ('0' /= S_tmp)) && not (('1' /= R_tmp) and ('0' /= R_tmp)) && ('1' /= D_tmp)"/>
+  <tr n="4" z="('0' /= D_tmp)_1" h1="E-Hit" t="c" c1="not (('1' /= S_tmp) and ('0' /= S_tmp)) && not (('1' /= R_tmp) and ('0' /= R_tmp)) && ('1' /= D_tmp)"/>
+  <tr n="5" z="('1' /= R_tmp)_0" h1="E-Miss" t="c" c1="not (('1' /= S_tmp) and ('0' /= S_tmp)) && not (('1' /= D_tmp) and ('0' /= D_tmp)) && ('0' /= R_tmp)"/>
+  <tr n="6" z="('1' /= R_tmp)_1" h1="E-Miss" t="c" c1="not (('1' /= S_tmp) and ('0' /= S_tmp)) && not (('1' /= D_tmp) and ('0' /= D_tmp)) && ('0' /= R_tmp)"/>
+  <tr n="7" z="('0' /= R_tmp)_0" h1="E-Miss" t="c" c1="not (('1' /= S_tmp) and ('0' /= S_tmp)) && not (('1' /= D_tmp) and ('0' /= D_tmp)) && ('1' /= R_tmp)"/>
+  <tr n="8" z="('0' /= R_tmp)_1" h1="E-Miss" t="c" c1="not (('1' /= S_tmp) and ('0' /= S_tmp)) && not (('1' /= D_tmp) and ('0' /= D_tmp)) && ('1' /= R_tmp)"/>
+  <tr n="9" z="('1' /= S_tmp)_0" h1="E-Miss" t="c" c1="not ((('1' /= D_tmp) and ('0' /= D_tmp)) or (('1' /= R_tmp) and ('0' /= R_tmp))) && ('0' /= S_tmp)"/>
+  <tr n="10" z="('1' /= S_tmp)_1" h1="E-Miss" t="c" c1="not ((('1' /= D_tmp) and ('0' /= D_tmp)) or (('1' /= R_tmp) and ('0' /= R_tmp))) && ('0' /= S_tmp)"/>
+  <tr n="11" z="('0' /= S_tmp)_0" h1="E-Miss" t="c" c1="not ((('1' /= D_tmp) and ('0' /= D_tmp)) or (('1' /= R_tmp) and ('0' /= R_tmp))) && ('1' /= S_tmp)"/>
+  <tr n="12" z="('0' /= S_tmp)_1" h1="E-Miss" t="c" c1="not ((('1' /= D_tmp) and ('0' /= D_tmp)) or (('1' /= R_tmp) and ('0' /= R_tmp))) && ('1' /= S_tmp)"/>
+  </table>
+</div><script type="text/javascript" src="../scripts/buildecpage.js"></script>
+  <!-- make sure jumps to last few line nos work -->
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+  
+</body>
+</html>

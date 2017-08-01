@@ -1,0 +1,32 @@
+# //  Questa Sim-64
+# //  Version 10.3b linux_x86_64 May 29 2014
+# //
+# //  Copyright 1991-2014 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# vsim -Lf /home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Vsim -L /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work -L /home/ecegrid/a/ece337/Class0.5u/GOLD_LIB "+no_glitch_msg" -coverage -voptargs="+acc" -i -t ps source_work/.tb_flex_counter 
+# Start time: 16:31:53 on Feb 02,2017
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb_flex_counter(fast)
+# Loading work.tb_flex_counter_DUT(fast)
+# Loading work.flex_counter(fast)
+add wave *
+add wave -position insertpoint  \
+sim:/tb_flex_counter/testbench/DUT/n_rst \
+sim:/tb_flex_counter/testbench/DUT/clear \
+sim:/tb_flex_counter/testbench/DUT/count_enable \
+sim:/tb_flex_counter/testbench/DUT/rollover_val \
+sim:/tb_flex_counter/testbench/DUT/count_out \
+sim:/tb_flex_counter/testbench/DUT/rollover_flag \
+sim:/tb_flex_counter/testbench/DUT/intrim_count \
+sim:/tb_flex_counter/testbench/DUT/intrim_flag
+run 1000 ns
+# -----Test Case 1-----
+# Causality operation skipped due to absence of debug database file
+# End time: 16:33:19 on Feb 02,2017, Elapsed time: 0:01:26
+# Errors: 0, Warnings: 1

@@ -1,0 +1,221 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/ecegrid/a/mg134/ece337/Lab3
+T_opt
+!s110 1486071113
+VzR]mJgg7CWFk>]zYI<72W0
+04 15 4 work tb_flex_counter fast 0
+=1-3417ebad4b83-5893a549-295d7-221
+o-quiet -auto_acc_if_foreign -work source_work/ -L /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work -L /home/ecegrid/a/ece337/Class0.5u/GOLD_LIB -Lf /home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Vsim +acc
+n@_opt
+Z1 OL;O;10.3b;59
+R0
+T_opt1
+!s110 1492733657
+VoJ9Ih5NNE?[oXL^[D[K5k1
+04 14 4 work tb_flex_stp_sr fast 0
+=1-c81f66bd10e7-58f94ed9-7f1c6-7abf
+o-quiet -auto_acc_if_foreign -work source_work -L /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work -L /home/ecegrid/a/ece337/Class0.5u/GOLD_LIB -Lf /home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Vsim +acc
+n@_opt1
+R1
+vflex_counter
+Z2 DXx6 sv_std 3 std 0 22 <EOTafDcUY:cQeO^ICn]m3
+Z3 !s110 1486071109
+!i10b 1
+!s100 Xk=bY3F8;[X[m;`U>g<Y@0
+I1hKmLj=A]QW;IgaTMk6]60
+Z4 V`JN@9S9cnhjKRR_L]QIcM3
+!s105 flex_counter_sv_unit
+S1
+R0
+w1486071104
+8source/flex_counter.sv
+Fsource/flex_counter.sv
+L0 9
+Z5 OL;L;10.3b;59
+r1
+!s85 0
+31
+!s108 1486071109.749057
+!s107 source/flex_counter.sv|
+!s90 -##implicit##push_minusfile_path##|/home/ecegrid/a/mg134/ece337/Lab3/vlog.opt|-##implicit##pop_minusfile_path##|-sv|-work|source_work|source/flex_counter.sv|
+!i113 0
+Z6 o-sv -work source_work
+Z7 tCoverage 63 CoverExcludeDefault 1 CoverOpt 1 CoverShortCircuit 0
+vflex_stp_sr
+R2
+Z8 !s110 1492733654
+!i10b 1
+!s100 MG`<;Y31[ecGadBO1mjGM3
+I:gA]hUIR2AG]U1ZL[l==f2
+R4
+!s105 flex_stp_sr_sv_unit
+S1
+R0
+w1485470520
+8source/flex_stp_sr.sv
+Fsource/flex_stp_sr.sv
+L0 9
+R5
+r1
+!s85 0
+31
+!s108 1492733654.474432
+!s107 source/flex_stp_sr.sv|
+!s90 -##implicit##push_minusfile_path##|/home/ecegrid/a/mg134/ece337/Lab3/vlog.opt|-##implicit##pop_minusfile_path##|-sv|-work|source_work|source/flex_stp_sr.sv|
+!i113 0
+R6
+R7
+vstp_sr_4_lsb
+R2
+R8
+!i10b 1
+!s100 nc:_a?nL<LWKL0[WWnR9Q3
+I@B`;eA7S897O7n9JN=i>:2
+R4
+!s105 stp_sr_4_lsb_sv_unit
+S1
+R0
+Z9 w1485458805
+8source/stp_sr_4_lsb.sv
+Fsource/stp_sr_4_lsb.sv
+L0 9
+R5
+r1
+!s85 0
+31
+!s108 1492733654.594208
+!s107 source/stp_sr_4_lsb.sv|
+!s90 -##implicit##push_minusfile_path##|/home/ecegrid/a/mg134/ece337/Lab3/vlog.opt|-##implicit##pop_minusfile_path##|-sv|-work|source_work|source/stp_sr_4_lsb.sv|
+!i113 0
+R6
+R7
+vstp_sr_8_msb
+R2
+R8
+!i10b 1
+!s100 o0F@BIfm]3oEFeJ:hJI:X1
+Ij04HD^ITfB;0bn^ZTPFgc2
+R4
+!s105 stp_sr_8_msb_sv_unit
+S1
+R0
+R9
+8source/stp_sr_8_msb.sv
+Fsource/stp_sr_8_msb.sv
+L0 9
+R5
+r1
+!s85 0
+31
+!s108 1492733654.535372
+!s107 source/stp_sr_8_msb.sv|
+!s90 -##implicit##push_minusfile_path##|/home/ecegrid/a/mg134/ece337/Lab3/vlog.opt|-##implicit##pop_minusfile_path##|-sv|-work|source_work|source/stp_sr_8_msb.sv|
+!i113 0
+R6
+R7
+vtb_flex_counter
+R2
+R3
+!i10b 1
+!s100 ]o@G;j`finUQFBG0Yh`CI3
+IN0lbIeM:M^W0lQUQQaDEz0
+R4
+Z10 !s105 tb_flex_counter_sv_unit
+S1
+R0
+Z11 w1486071101
+Z12 8source/tb_flex_counter.sv
+Z13 Fsource/tb_flex_counter.sv
+Z14 L0 11
+R5
+r1
+!s85 0
+31
+Z15 !s108 1486071109.846060
+Z16 !s107 source/tb_flex_counter.sv|
+Z17 !s90 -##implicit##push_minusfile_path##|/home/ecegrid/a/mg134/ece337/Lab3/vlog.opt|-##implicit##pop_minusfile_path##|-sv|-work|source_work|source/tb_flex_counter.sv|
+!i113 0
+R6
+R7
+vtb_flex_counter_DUT
+R2
+R3
+!i10b 1
+!s100 FYWKSGKoNaUgj2Rjj0Xg63
+IQ^47WI^JJ8NQ@8o^:o6;c0
+R4
+R10
+S1
+R0
+R11
+R12
+R13
+L0 33
+R5
+r1
+!s85 0
+31
+R15
+R16
+R17
+!i113 0
+R6
+R7
+ntb_flex_counter_@d@u@t
+vtb_flex_stp_sr
+R2
+R8
+!i10b 1
+!s100 `b[lJgWn2RU6^S6^kjf<I2
+IhcdeJKaiNzNl4no20MY`L2
+R4
+Z18 !s105 tb_flex_stp_sr_sv_unit
+S1
+R0
+R9
+Z19 8source/tb_flex_stp_sr.sv
+Z20 Fsource/tb_flex_stp_sr.sv
+R14
+R5
+r1
+!s85 0
+31
+Z21 !s108 1492733654.394388
+Z22 !s107 source/tb_flex_stp_sr.sv|
+Z23 !s90 -##implicit##push_minusfile_path##|/home/ecegrid/a/mg134/ece337/Lab3/vlog.opt|-##implicit##pop_minusfile_path##|-sv|-work|source_work|source/tb_flex_stp_sr.sv|
+!i113 0
+R6
+R7
+vtb_flex_stp_sr_DUT
+R2
+R8
+!i10b 1
+!s100 ]Tj;>l`]PWKX]I`5Mag@U1
+I5IK6_V]^Pf@7hGI9``Wkj3
+R4
+R18
+S1
+R0
+R9
+R19
+R20
+L0 38
+R5
+r1
+!s85 0
+31
+R21
+R22
+R23
+!i113 0
+R6
+R7
+ntb_flex_stp_sr_@d@u@t

@@ -1,0 +1,166 @@
+// $Id: $
+// File name:   controller.sv
+// Created:     2/24/2017
+// Author:      Kunwar Digraj Singh Jain
+// Lab Section: 5
+// Version:     1.0  Initial Design Entry
+// Description: Controller Block
+
+module controller (
+	input wire	clk,
+			n_rst,
+			stop_found,
+			start_found, 
+			byte_received,
+			ack_prep,
+			check_ack,
+			ack_done,
+			rw_mode,
+			address_match,
+			sda_in,
+	output reg	rx_enable, 
+			tx_enable,
+			read_enable,
+			load_data,
+	output reg	[1:0] sda_mode
+) ;
+
+	typedef enum reg [3:0] {	IDLE,
+					BYTE_RCV,
+					CHK_ADDR_MODE,
+					WAIT_1,
+					SEND_ACK, 
+					SEND_NACK, 
+					WAIT_2,
+					LOAD,
+					TRANSMIT,
+					CHECK_ACK,
+					NACK_RCV,
+					ACK_RCV
+				} state_type ;
+	
+	state_type	next_state, 
+			curr_state ;
+
+	always_ff @ (posedge clk, negedge n_rst) begin
+		if (n_rst == 1'b0) 
+			curr_state <= IDLE ;
+		else
+			curr_state <= next_state ;
+	end
+
+//STATE DIAGRAM FOR OUTPUTS
+
+	always_comb begin
+		rx_enable = 1'b0 ;
+		tx_enable = 1'b0 ;
+		read_enable = 1'b0 ;
+		load_data = 1'b0 ;
+		sda_mode = 2'b00 ;
+
+		case (curr_state)
+		
+		BYTE_RCV: rx_enable = 1'b1 ;
+
+		SEND_NACK: sda_mode = 2'b10 ;
+
+		SEND_ACK: sda_mode = 2'b01 ;
+		
+		LOAD: load_data = 1'b1 ;
+
+		TRANSMIT: begin
+			tx_enable = 1'b1 ;
+			sda_mode = 2'b11 ;
+		end
+
+		DUMMY: read_enable = 1'b1 ;
+
+	endcase
+	end
+
+//STATE DIAGRAM FOR NEXT STATE
+
+	always_comb begin
+		next_state = curr_state ;
+		case (curr_state)
+		
+		IDLE: begin
+			if (start_found)
+				next_state = BYTE_RCV ;
+		end
+
+		BYTE_RCV: begin
+			if (byte_received) 
+				next_state = CHK_ADDR_MODE ;
+		end
+	
+		CHK_ADDR_MODE: begin
+			if (ack_prep)
+				next_state = WAIT_1 ;
+		end
+
+		WAIT_1: begin
+			if (address_match && rw_mode) 
+				next_state = SEND_ACK ;
+			else if (~address_match || ~rw_mode)
+				next_state = SEND_NACK ;
+		end
+
+		SEND_NACK: begin
+			if (ack_done)
+				next_state = IDLE ;
+		end
+
+		SEND_ACK: begin
+			if (ack_done)
+				next_state = LOAD ;
+		end
+		
+		LOAD: begin
+			next_state = TRANSMIT ;
+		end
+
+		TRANSMIT: begin
+			if (ack_prep) 
+				next_state = DUMMY ;
+		end
+
+		DUMMY: begin
+			next_state = CHECK_ACK ;
+		end
+
+		CHECK_ACK: begin
+			if (check_ack && sda_in)
+				next_state = NACK_RCV ;
+			else if (check_ack && ~sda_in)
+				next_state = WAIT_2 ;
+		end
+	
+		NACK_RCV: begin
+			if (ack_done)
+				next_state = IDLE ;
+		end
+
+		WAIT_2: begin
+			next_state = ACK_RCV ;
+		end
+	
+		ACK_RCV: begin
+			if (ack_done)
+				next_state = LOAD ;
+		end
+	endcase
+	end
+
+endmodule
+
+		
+		
+		
+		
+
+
+
+
+
+

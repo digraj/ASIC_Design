@@ -1,0 +1,689 @@
+Synthesizing design: USB.sv
+dc_shell-t -x "source -echo do_mapping.tcl"
+                                        
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+                                        
+               Version K-2015.06-SP1 for linux64 - Jul 21, 2015 
+                                        
+                    Copyright (c) 1988 - 2015 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+# Step 1:  Read in the source file
+analyze -format sverilog -lib WORK {serial_2_parallel.sv counter.sv usb_rcv_controller.sv writeFIFO.sv nrzi_decode.sv bit_destuff.sv flex_pts_sr.sv bit_stuffer.sv flex_counter.sv nrzi_encode.sv tx_timer.sv tcu.sv bd_controller.sv USB_rx.sv usb_transmitter.sv readFIFO.sv USB.sv}
+Running PRESTO HDLC
+Compiling source file ./source/serial_2_parallel.sv
+Compiling source file ./source/counter.sv
+Compiling source file ./source/usb_rcv_controller.sv
+Warning:  ./source/usb_rcv_controller.sv:88: The construct 'declaration initial assignment' is not supported in synthesis; it is ignored. (VER-708)
+Compiling source file ./source/writeFIFO.sv
+Compiling source file ./source/nrzi_decode.sv
+Compiling source file ./source/bit_destuff.sv
+Compiling source file ./source/flex_pts_sr.sv
+Warning:  ./source/flex_pts_sr.sv:38: The construct 'declaration initial assignment' is not supported in synthesis; it is ignored. (VER-708)
+Warning:  ./source/flex_pts_sr.sv:39: The construct 'declaration initial assignment' is not supported in synthesis; it is ignored. (VER-708)
+Compiling source file ./source/bit_stuffer.sv
+Warning:  ./source/bit_stuffer.sv:18: The construct 'declaration initial assignment' is not supported in synthesis; it is ignored. (VER-708)
+Warning:  ./source/bit_stuffer.sv:21: The construct 'declaration initial assignment' is not supported in synthesis; it is ignored. (VER-708)
+Compiling source file ./source/flex_counter.sv
+Compiling source file ./source/nrzi_encode.sv
+Compiling source file ./source/tx_timer.sv
+Compiling source file ./source/tcu.sv
+Compiling source file ./source/bd_controller.sv
+Compiling source file ./source/USB_rx.sv
+Compiling source file ./source/usb_transmitter.sv
+Warning:  ./source/usb_transmitter.sv:43: the undeclared symbol 'byte_rcvd' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ./source/usb_transmitter.sv:51: the undeclared symbol 'load_enable' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ./source/usb_transmitter.sv:66: the undeclared symbol 'shift_en' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ./source/usb_transmitter.sv:76: the undeclared symbol 'bit_out' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ./source/usb_transmitter.sv:84: the undeclared symbol 'flag_8' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ./source/usb_transmitter.sv:86: the undeclared symbol 'pause' assumed to have the default net type, which is 'wire'. (VER-936)
+Compiling source file ./source/readFIFO.sv
+Compiling source file ./source/USB.sv
+Presto compilation completed successfully.
+Loading db file '/package/eda/cells/OSU/v2.7/synopsys/lib/ami05/osu05_stdcells.db'
+Loading db file '/package/eda/synopsys/syn-K-2015.06-SP1/libraries/syn/dw_foundation.sldb'
+elaborate USB -lib WORK
+Loading db file '/package/eda/synopsys/syn-K-2015.06-SP1/libraries/syn/gtech.db'
+Loading db file '/package/eda/synopsys/syn-K-2015.06-SP1/libraries/syn/standard.sldb'
+  Loading link library 'osu05_stdcells'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'USB'.
+Information: Building the design 'readFIFO'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'bd_controller'. (HDL-193)
+
+Statistics for case statements in always block at line 75 in file
+	'./source/bd_controller.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            77            |     no/auto      |
+===============================================
+
+Statistics for case statements in always block at line 164 in file
+	'./source/bd_controller.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           172            |     no/auto      |
+===============================================
+
+Inferred memory devices in process
+	in routine bd_controller line 67 in file
+		'./source/bd_controller.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   curr_state_reg    | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'usb_transmitter'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'USB_rx'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'writeFIFO'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'fifo'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'tcu'. (HDL-193)
+
+Statistics for case statements in always block at line 72 in file
+	'./source/tcu.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            77            |     no/auto      |
+===============================================
+
+Statistics for case statements in always block at line 195 in file
+	'./source/tcu.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           212            |     no/auto      |
+===============================================
+
+Inferred memory devices in process
+	in routine tcu line 65 in file
+		'./source/tcu.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   curr_state_reg    | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'flex_pts_sr' instantiated from design 'usb_transmitter' with
+	the parameters "8,0". (HDL-193)
+
+Inferred memory devices in process
+	in routine flex_pts_sr_NUM_BITS8_SHIFT_MSB0 line 77 in file
+		'./source/flex_pts_sr.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   curr_state_reg    | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'bit_stuffer'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'tx_timer'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'nrzi_encode'. (HDL-193)
+
+Inferred memory devices in process
+	in routine nrzi_encode line 22 in file
+		'./source/nrzi_encode.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     prev_d_reg      | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|     d_plus_reg      | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|     d_minus_reg     | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'serial_2_parallel'. (HDL-193)
+
+Inferred memory devices in process
+	in routine serial_2_parallel line 45 in file
+		'./source/serial_2_parallel.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  parallel_out_reg   | Flip-flop |   8   |  Y  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'nrzi_decode'. (HDL-193)
+
+Inferred memory devices in process
+	in routine nrzi_decode line 24 in file
+		'./source/nrzi_decode.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       eop_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     d_orig_reg      | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|     prev_d_reg      | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'bit_destuff'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'counter'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'usb_rcv_controller'. (HDL-193)
+
+Statistics for case statements in always block at line 101 in file
+	'./source/usb_rcv_controller.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           103            |     no/auto      |
+===============================================
+
+Statistics for case statements in always block at line 291 in file
+	'./source/usb_rcv_controller.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           303            |     no/auto      |
+===============================================
+
+Inferred memory devices in process
+	in routine usb_rcv_controller line 92 in file
+		'./source/usb_rcv_controller.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   curr_state_reg    | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine usb_rcv_controller line 291 in file
+		'./source/usb_rcv_controller.sv'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+| pckt_rcvd_temp_reg  | Latch |   3   |  Y  | N  | N  | N  | -  | -  | -  |
+|    pckt_rcvd_reg    | Latch |   3   |  Y  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+Warning:  ./source/usb_rcv_controller.sv:291: Netlist for always_comb block contains a latch. (ELAB-974)
+Presto compilation completed successfully.
+Information: Building the design 'fiforam'. (HDL-193)
+
+Inferred memory devices in process
+	in routine fiforam line 48 in file
+		'/home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Source/fiforam.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     fiforeg_reg     | Flip-flop |  64   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+===========================================================
+| block name/line  | Inputs | Outputs | # sel inputs | MB |
+===========================================================
+|    fiforam/36    |   8    |    8    |      3       | N  |
+|    fiforam/43    |   8    |    8    |      3       | N  |
+===========================================================
+Presto compilation completed successfully.
+Information: Building the design 'write_fifo_ctrl'. (HDL-193)
+
+Inferred memory devices in process
+	in routine write_fifo_ctrl line 76 in file
+		'/home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Source/write_fifo_ctrl.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    wrptr_r1_reg     | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    wrptr_r2_reg     | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine write_fifo_ctrl line 102 in file
+		'/home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Source/write_fifo_ctrl.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   full_flag_r_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine write_fifo_ctrl line 115 in file
+		'/home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Source/write_fifo_ctrl.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      waddr_reg      | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'read_fifo_ctrl'. (HDL-193)
+
+Inferred memory devices in process
+	in routine read_fifo_ctrl line 75 in file
+		'/home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Source/read_fifo_ctrl.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    rwptr_r1_reg     | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    rwptr_r2_reg     | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine read_fifo_ctrl line 100 in file
+		'/home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Source/read_fifo_ctrl.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  empty_flag_r_reg   | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine read_fifo_ctrl line 114 in file
+		'/home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Source/read_fifo_ctrl.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      raddr_reg      | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'flex_counter' instantiated from design 'bit_stuffer' with
+	the parameters "3". (HDL-193)
+
+Inferred memory devices in process
+	in routine flex_counter_NUM_CNT_BITS3 line 70 in file
+		'./source/flex_counter.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    count_out_reg    | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine flex_counter_NUM_CNT_BITS3 line 80 in file
+		'./source/flex_counter.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  rollover_flag_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'flex_counter' instantiated from design 'tx_timer' with
+	the parameters "4". (HDL-193)
+
+Inferred memory devices in process
+	in routine flex_counter_NUM_CNT_BITS4 line 70 in file
+		'./source/flex_counter.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    count_out_reg    | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine flex_counter_NUM_CNT_BITS4 line 80 in file
+		'./source/flex_counter.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  rollover_flag_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'write_ptr'. (HDL-193)
+
+Inferred memory devices in process
+	in routine write_ptr line 79 in file
+		'/home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Source/write_ptr.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    binary_r_reg     | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine write_ptr line 89 in file
+		'/home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Source/write_ptr.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     gray_r_reg      | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'read_ptr'. (HDL-193)
+
+Inferred memory devices in process
+	in routine read_ptr line 79 in file
+		'/home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Source/read_ptr.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    binary_r_reg     | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine read_ptr line 89 in file
+		'/home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Source/read_ptr.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     gray_r_reg      | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+uniquify
+Information: Uniquified 2 instances of design 'fifo'. (OPT-1056)
+Information: Uniquified 2 instances of design 'fiforam'. (OPT-1056)
+Information: Uniquified 2 instances of design 'write_fifo_ctrl'. (OPT-1056)
+Information: Uniquified 2 instances of design 'read_fifo_ctrl'. (OPT-1056)
+Information: Uniquified 2 instances of design 'flex_counter_NUM_CNT_BITS3'. (OPT-1056)
+Information: Uniquified 4 instances of design 'flex_counter_NUM_CNT_BITS4'. (OPT-1056)
+Information: Uniquified 2 instances of design 'write_ptr'. (OPT-1056)
+Information: Uniquified 2 instances of design 'read_ptr'. (OPT-1056)
+# Step 2: Set design constraints
+# Uncomment below to set timing, area, power, etc. constraints
+# set_max_delay <delay> -from "<input>" -to "<output>"
+# set_max_area <area>
+# set_max_total_power <power> mW
+# Step 3: Compile the design
+compile -map_effort medium
+Information: Checking out the license 'DesignWare'. (SEC-104)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | K-2015.06-DWBB_201506.1 |     *     |
+| Licensed DW Building Blocks        | K-2015.06-DWBB_201506.1 |     *     |
+============================================================================
+
+
+Information: There are 71 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'read_ptr_0'
+  Processing 'read_fifo_ctrl_0'
+  Processing 'write_ptr_0'
+  Processing 'write_fifo_ctrl_0'
+  Processing 'fiforam_0'
+  Processing 'fifo_0'
+  Processing 'writeFIFO'
+  Processing 'usb_rcv_controller'
+  Processing 'flex_counter_NUM_CNT_BITS4_0'
+  Processing 'counter'
+  Processing 'flex_counter_NUM_CNT_BITS3_0'
+Information: Added key list 'DesignWare' to design 'flex_counter_NUM_CNT_BITS3_0'. (DDB-72)
+  Processing 'bit_destuff'
+  Processing 'nrzi_decode'
+  Processing 'serial_2_parallel'
+  Processing 'USB_rx'
+  Processing 'nrzi_encode'
+  Processing 'tx_timer'
+  Processing 'bit_stuffer'
+  Processing 'flex_pts_sr_NUM_BITS8_SHIFT_MSB0'
+  Processing 'tcu'
+  Processing 'usb_transmitter'
+  Processing 'bd_controller'
+  Processing 'readFIFO'
+  Processing 'USB'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: Design 'USB' has no optimization constraints set. (OPT-108)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Mapping 'flex_counter_NUM_CNT_BITS4_0_DW_mult_uns_0'
+  Mapping 'flex_counter_NUM_CNT_BITS4_1_DW_mult_uns_0'
+  Mapping 'flex_counter_NUM_CNT_BITS4_2_DW_mult_uns_0'
+  Mapping 'flex_counter_NUM_CNT_BITS4_3_DW_mult_uns_0'
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+Information: Added key list 'DesignWare' to design 'flex_counter_NUM_CNT_BITS4_0'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'flex_counter_NUM_CNT_BITS4_1'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'flex_counter_NUM_CNT_BITS4_2'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'flex_counter_NUM_CNT_BITS4_3'. (DDB-72)
+  Structuring 'read_ptr_0'
+  Mapping 'read_ptr_0'
+  Structuring 'write_ptr_0'
+  Mapping 'write_ptr_0'
+  Structuring 'flex_counter_NUM_CNT_BITS4_2'
+  Mapping 'flex_counter_NUM_CNT_BITS4_2'
+  Structuring 'flex_counter_NUM_CNT_BITS4_1'
+  Mapping 'flex_counter_NUM_CNT_BITS4_1'
+  Structuring 'flex_counter_NUM_CNT_BITS4_0'
+  Mapping 'flex_counter_NUM_CNT_BITS4_0'
+  Structuring 'flex_counter_NUM_CNT_BITS3_0'
+  Mapping 'flex_counter_NUM_CNT_BITS3_0'
+  Structuring 'read_fifo_ctrl_0'
+  Mapping 'read_fifo_ctrl_0'
+  Structuring 'write_fifo_ctrl_0'
+  Mapping 'write_fifo_ctrl_0'
+  Structuring 'fiforam_0'
+  Mapping 'fiforam_0'
+  Structuring 'read_ptr_1'
+  Mapping 'read_ptr_1'
+  Structuring 'write_ptr_1'
+  Mapping 'write_ptr_1'
+  Structuring 'flex_counter_NUM_CNT_BITS4_3'
+  Mapping 'flex_counter_NUM_CNT_BITS4_3'
+  Structuring 'flex_counter_NUM_CNT_BITS3_1'
+  Mapping 'flex_counter_NUM_CNT_BITS3_1'
+  Structuring 'read_fifo_ctrl_1'
+  Mapping 'read_fifo_ctrl_1'
+  Structuring 'write_fifo_ctrl_1'
+  Mapping 'write_fifo_ctrl_1'
+  Structuring 'fiforam_1'
+  Mapping 'fiforam_1'
+  Structuring 'usb_rcv_controller'
+  Mapping 'usb_rcv_controller'
+  Structuring 'counter'
+  Mapping 'counter'
+  Structuring 'bit_destuff'
+  Mapping 'bit_destuff'
+  Structuring 'nrzi_decode'
+  Mapping 'nrzi_decode'
+  Structuring 'serial_2_parallel'
+  Mapping 'serial_2_parallel'
+  Structuring 'nrzi_encode'
+  Mapping 'nrzi_encode'
+  Structuring 'tx_timer'
+  Mapping 'tx_timer'
+  Structuring 'bit_stuffer'
+  Mapping 'bit_stuffer'
+  Structuring 'flex_pts_sr_NUM_BITS8_SHIFT_MSB0'
+  Mapping 'flex_pts_sr_NUM_BITS8_SHIFT_MSB0'
+  Structuring 'tcu'
+  Mapping 'tcu'
+  Structuring 'bd_controller'
+  Mapping 'bd_controller'
+  Structuring 'USB'
+  Mapping 'USB'
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:03  723906.0      0.00       0.0       2.1                          
+    0:00:03  723906.0      0.00       0.0       2.1                          
+    0:00:03  723906.0      0.00       0.0       2.1                          
+    0:00:03  723906.0      0.00       0.0       2.1                          
+    0:00:03  723906.0      0.00       0.0       2.1                          
+    0:00:03  723906.0      0.00       0.0       2.1                          
+    0:00:03  723906.0      0.00       0.0       2.1                          
+    0:00:03  723906.0      0.00       0.0       2.1                          
+    0:00:03  723906.0      0.00       0.0       2.1                          
+    0:00:03  725850.0      0.00       0.0       1.2                          
+    0:00:03  727362.0      0.00       0.0       0.3                          
+    0:00:03  727578.0      0.00       0.0       0.1                          
+    0:00:03  727794.0      0.00       0.0       0.0                          
+    0:00:03  727794.0      0.00       0.0       0.0                          
+    0:00:03  727794.0      0.00       0.0       0.0                          
+    0:00:03  727794.0      0.00       0.0       0.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:03  727794.0      0.00       0.0       0.0                          
+    0:00:03  727794.0      0.00       0.0       0.0                          
+    0:00:03  727794.0      0.00       0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:03  727794.0      0.00       0.0       0.0                          
+    0:00:03  727794.0      0.00       0.0       0.0                          
+    0:00:03  726930.0      0.00       0.0       0.0                          
+    0:00:03  726930.0      0.00       0.0       0.0                          
+    0:00:03  726930.0      0.00       0.0       0.0                          
+    0:00:03  726930.0      0.00       0.0       0.0                          
+    0:00:03  726930.0      0.00       0.0       0.0                          
+    0:00:03  726930.0      0.00       0.0       0.0                          
+    0:00:03  726930.0      0.00       0.0       0.0                          
+    0:00:03  726930.0      0.00       0.0       0.0                          
+    0:00:03  726930.0      0.00       0.0       0.0                          
+    0:00:03  726930.0      0.00       0.0       0.0                          
+Loading db file '/package/eda/cells/OSU/v2.7/synopsys/lib/ami05/osu05_stdcells.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+# Step 4: Output reports
+report_timing -path full -delay max -max_paths 1 -nworst 1 > reports/USB.rep
+report_area >> reports/USB.rep
+report_power -hier >> reports/USB.rep
+# Step 5: Output final VHDL and Verilog files
+write_file -format verilog -hierarchy -output "mapped/USB.v"
+Writing verilog file '/home/ecegrid/a/mg134/ece337/Project/mapped/USB.v'.
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+echo "\nScript Done\n"
+
+Script Done
+
+echo "\nChecking Design\n"
+
+Checking Design
+
+check_design
+ 
+****************************************
+check_design summary:
+Version:     K-2015.06-SP1
+Date:        Thu Apr 27 12:08:58 2017
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                      5
+    Unconnected ports (LINT-28)                                     5
+
+Cells                                                              32
+    Connected to power or ground (LINT-32)                         23
+    Nets connected to multiple pins on same cell (LINT-33)          9
+--------------------------------------------------------------------------------
+
+Warning: In design 'bd_controller', port 'rcving' is not connected to any nets. (LINT-28)
+Warning: In design 'bd_controller', port 'txing' is not connected to any nets. (LINT-28)
+Warning: In design 'bd_controller', port 'addr_dne' is not connected to any nets. (LINT-28)
+Warning: In design 'counter', port 'd_plus' is not connected to any nets. (LINT-28)
+Warning: In design 'usb_rcv_controller', port 'ack_packet_rcv' is not connected to any nets. (LINT-28)
+Warning: In design 'bit_stuffer', a pin on submodule 'BIT_STUFFER_CNTR' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rollover_val[2]' is connected to logic 1. 
+Warning: In design 'bit_stuffer', a pin on submodule 'BIT_STUFFER_CNTR' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rollover_val[1]' is connected to logic 1. 
+Warning: In design 'bit_stuffer', a pin on submodule 'BIT_STUFFER_CNTR' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rollover_val[0]' is connected to logic 0. 
+Warning: In design 'tx_timer', a pin on submodule 'BIT_TX' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'clear' is connected to logic 0. 
+Warning: In design 'tx_timer', a pin on submodule 'BIT_TX' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rollover_val[3]' is connected to logic 1. 
+Warning: In design 'tx_timer', a pin on submodule 'BIT_TX' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rollover_val[2]' is connected to logic 0. 
+Warning: In design 'tx_timer', a pin on submodule 'BIT_TX' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rollover_val[1]' is connected to logic 0. 
+Warning: In design 'tx_timer', a pin on submodule 'BIT_TX' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rollover_val[0]' is connected to logic 0. 
+Warning: In design 'tx_timer', a pin on submodule 'BYTE_TX' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rollover_val[3]' is connected to logic 1. 
+Warning: In design 'tx_timer', a pin on submodule 'BYTE_TX' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rollover_val[2]' is connected to logic 0. 
+Warning: In design 'tx_timer', a pin on submodule 'BYTE_TX' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rollover_val[1]' is connected to logic 0. 
+Warning: In design 'tx_timer', a pin on submodule 'BYTE_TX' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rollover_val[0]' is connected to logic 0. 
+Warning: In design 'bit_destuff', a pin on submodule 'IN1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rollover_val[2]' is connected to logic 1. 
+Warning: In design 'bit_destuff', a pin on submodule 'IN1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rollover_val[1]' is connected to logic 1. 
+Warning: In design 'bit_destuff', a pin on submodule 'IN1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rollover_val[0]' is connected to logic 0. 
+Warning: In design 'counter', a pin on submodule 'IN1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rollover_val[3]' is connected to logic 1. 
+Warning: In design 'counter', a pin on submodule 'IN1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rollover_val[2]' is connected to logic 0. 
+Warning: In design 'counter', a pin on submodule 'IN1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rollover_val[1]' is connected to logic 0. 
+Warning: In design 'counter', a pin on submodule 'IN1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rollover_val[0]' is connected to logic 0. 
+Warning: In design 'counter', a pin on submodule 'IN2' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rollover_val[3]' is connected to logic 1. 
+Warning: In design 'counter', a pin on submodule 'IN2' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rollover_val[2]' is connected to logic 0. 
+Warning: In design 'counter', a pin on submodule 'IN2' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rollover_val[1]' is connected to logic 0. 
+Warning: In design 'counter', a pin on submodule 'IN2' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rollover_val[0]' is connected to logic 0. 
+Warning: In design 'readFIFO', the same net is connected to more than one pin on submodule 'F1'. (LINT-33)
+   Net 'clk' is connected to pins 'r_clk', 'w_clk''.
+Warning: In design 'USB_rx', the same net is connected to more than one pin on submodule 'RCU'. (LINT-33)
+   Net 'crc_status' is connected to pins 'crc_status_5', 'crc_status_16''.
+Warning: In design 'writeFIFO', the same net is connected to more than one pin on submodule 'F1'. (LINT-33)
+   Net 'clk' is connected to pins 'r_clk', 'w_clk''.
+Warning: In design 'bit_stuffer', the same net is connected to more than one pin on submodule 'BIT_STUFFER_CNTR'. (LINT-33)
+   Net '*Logic1*' is connected to pins 'rollover_val[2]', 'rollover_val[1]''.
+Warning: In design 'tx_timer', the same net is connected to more than one pin on submodule 'BIT_TX'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'clear', 'rollover_val[2]'', 'rollover_val[1]', 'rollover_val[0]'.
+Warning: In design 'tx_timer', the same net is connected to more than one pin on submodule 'BYTE_TX'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'rollover_val[2]', 'rollover_val[1]'', 'rollover_val[0]'.
+Warning: In design 'bit_destuff', the same net is connected to more than one pin on submodule 'IN1'. (LINT-33)
+   Net '*Logic1*' is connected to pins 'rollover_val[2]', 'rollover_val[1]''.
+Warning: In design 'counter', the same net is connected to more than one pin on submodule 'IN1'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'rollover_val[2]', 'rollover_val[1]'', 'rollover_val[0]'.
+Warning: In design 'counter', the same net is connected to more than one pin on submodule 'IN2'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'rollover_val[2]', 'rollover_val[1]'', 'rollover_val[0]'.
+quit
+
+Thank you...
+Done
+
+

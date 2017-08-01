@@ -1,0 +1,58 @@
+QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+Start time: 06:13:55 on May 02,2017
+vlog -sv -work mapped_work mapped/USB.v 
+-- Compiling module fiforam_1
+-- Compiling module write_ptr_1
+-- Compiling module write_fifo_ctrl_1
+-- Compiling module read_ptr_1
+-- Compiling module read_fifo_ctrl_1
+-- Compiling module fifo_1
+-- Compiling module readFIFO
+-- Compiling module bd_controller
+-- Compiling module tcu
+-- Compiling module flex_pts_sr_NUM_BITS8_SHIFT_MSB0
+-- Compiling module flex_counter_NUM_CNT_BITS3_1
+-- Compiling module bit_stuffer
+-- Compiling module flex_counter_NUM_CNT_BITS4_3
+-- Compiling module flex_counter_NUM_CNT_BITS4_2
+-- Compiling module tx_timer
+-- Compiling module nrzi_encode
+-- Compiling module usb_transmitter
+-- Compiling module serial_2_parallel
+-- Compiling module nrzi_decode
+-- Compiling module flex_counter_NUM_CNT_BITS3_0
+-- Compiling module bit_destuff
+-- Compiling module flex_counter_NUM_CNT_BITS4_1
+-- Compiling module flex_counter_NUM_CNT_BITS4_0
+-- Compiling module counter
+-- Compiling module usb_rcv_controller
+-- Compiling module USB_rx
+-- Compiling module fiforam_0
+-- Compiling module write_ptr_0
+-- Compiling module write_fifo_ctrl_0
+-- Compiling module read_ptr_0
+-- Compiling module read_fifo_ctrl_0
+-- Compiling module fifo_0
+-- Compiling module writeFIFO
+-- Compiling module USB_t
+-- Compiling module USB
+** Error: mapped/USB.v(2606): (vlog-LRM-2367) Multiple connections to the same port: fifo_data.
+** Error: mapped/USB.v(2606): (vlog-LRM-2367) Multiple connections to the same port: fifo_data.
+** Error: mapped/USB.v(2594): (vlog-2730) Undefined variable: 'clk'.
+** Error: mapped/USB.v(2594): Identifier must be declared with a port mode: clk.
+** Error: mapped/USB.v(2594): (vlog-2730) Undefined variable: 'n_rst'.
+** Error: mapped/USB.v(2594): Identifier must be declared with a port mode: n_rst.
+** Error: mapped/USB.v(2594): (vlog-2730) Undefined variable: 'rx_en_host'.
+** Error: mapped/USB.v(2594): Identifier must be declared with a port mode: rx_en_host.
+** Error: mapped/USB.v(2594): (vlog-2730) Undefined variable: 'crc_status'.
+** Error: mapped/USB.v(2594): Identifier must be declared with a port mode: crc_status.
+** Error: mapped/USB.v(2594): (vlog-2730) Undefined variable: 'SD_FIFO_WRITE'.
+** Error: mapped/USB.v(2594): Identifier must be declared with a port mode: SD_FIFO_WRITE.
+** Error: mapped/USB.v(2594): (vlog-2730) Undefined variable: 'read_done'.
+** Error: mapped/USB.v(2594): Identifier must be declared with a port mode: read_done.
+** Error: mapped/USB.v(2595): (vlog-2730) Undefined variable: 'd_plus_in'.
+** Error: mapped/USB.v(2595): Identifier must be declared with a port mode: d_plus_in.
+** Error: mapped/USB.v(2595): (vlog-2730) Undefined variable: 'd_minus_in'.
+** Error: mapped/USB.v(2595): Identifier must be declared with a port mode: d_minus_in.
+End time: 06:13:55 on May 02,2017, Elapsed time: 0:00:00
+Errors: 18, Warnings: 0

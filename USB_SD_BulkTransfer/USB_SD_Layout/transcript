@@ -1,0 +1,1179 @@
+# //  Questa Sim-64
+# //  Version 10.3b linux_x86_64 May 29 2014
+# //
+# //  Copyright 1991-2014 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# vsim -Lf /home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Vsim -L /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work -L /home/ecegrid/a/ece337/Class0.5u/GOLD_LIB "+no_glitch_msg" -coverage -voptargs="+acc" -i -t ps mapped_work.tb_USB 
+# Start time: 14:30:17 on Apr 27,2017
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: mapped/USB.v(1860): (vopt-2685) [TFMPC] - Too few port connections for 'RCU'.  Expected 24, found 23.
+# ** Warning: mapped/USB.v(1860): (vopt-2718) [TFMPC] - Missing connection for port 'pckt_rcvd_temp'.
+# ** Warning: mapped/USB.v(1216): (vopt-2685) [TFMPC] - Too few port connections for 'BIT_TX'.  Expected 7, found 6.
+# ** Warning: mapped/USB.v(1216): (vopt-2718) [TFMPC] - Missing connection for port 'count_out'.
+# ** Warning: mapped/USB.v(1219): (vopt-2685) [TFMPC] - Too few port connections for 'BYTE_TX'.  Expected 7, found 6.
+# ** Warning: mapped/USB.v(1219): (vopt-2718) [TFMPC] - Missing connection for port 'count_out'.
+# ** Warning: mapped/USB.v(1563): (vopt-2685) [TFMPC] - Too few port connections for 'IN1'.  Expected 7, found 6.
+# ** Warning: mapped/USB.v(1563): (vopt-2718) [TFMPC] - Missing connection for port 'count_out'.
+# ** Warning: mapped/USB.v(1566): (vopt-2685) [TFMPC] - Too few port connections for 'IN2'.  Expected 7, found 6.
+# ** Warning: mapped/USB.v(1566): (vopt-2718) [TFMPC] - Missing connection for port 'count_out'.
+# ** Warning: mapped/USB.v(1412): (vopt-2685) [TFMPC] - Too few port connections for 'IN1'.  Expected 7, found 6.
+# ** Warning: mapped/USB.v(1412): (vopt-2718) [TFMPC] - Missing connection for port 'count_out'.
+# ** Warning: mapped/USB.v(1066): (vopt-2685) [TFMPC] - Too few port connections for 'BIT_STUFFER_CNTR'.  Expected 7, found 6.
+# ** Warning: mapped/USB.v(1066): (vopt-2718) [TFMPC] - Missing connection for port 'count_out'.
+# Loading sv_std.std
+# Loading work.tb_USB(fast)
+# Loading work.USB(fast)
+# Loading work.readFIFO(fast)
+# Loading work.fifo_1(fast)
+# Loading work.fiforam_1(fast)
+# Loading work.write_fifo_ctrl_1(fast)
+# Loading work.write_ptr_1(fast)
+# Loading work.read_fifo_ctrl_1(fast)
+# Loading work.read_ptr_1(fast)
+# Loading work.bd_controller(fast)
+# Loading work.usb_transmitter(fast)
+# Loading do wave_USB.do
+# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 1 times, errno 11
+# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 2 times, errno 11
+# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 3 times, errno 11
+# ** Error: Cannot lock WLF file: "vsim.wlf"
+#           errno 11: Resource temporarily unavailable.
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: mg134  Hostname: ecegrid-thin7.ecn.purdue.edu  ProcessID: 9180
+#           Attempting to use alternate WLF file "./wlft0zPiWp".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft0zPiWp
+run 35000 ns
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/URFC
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/URFC
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/URFC/RPU1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UWFC
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UWFC
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UWFC/WPU1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/URFC
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/URFC
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/URFC/RPU1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UWFC
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UWFC
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UWFC/WPU1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been run 35000 ns
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[0][7] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[0][6] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[0][5] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[0][4] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[0][3] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[0][2] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[0][1] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[0][0] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[1][7] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[1][6] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[1][5] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[1][4] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[1][3] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[1][2] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[1][1] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[1][0] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[2][7] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[2][6] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[2][5] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[2][4] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[2][3] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[2][2] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[2][1] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[2][0] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[3][7] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[3][6] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 # End time: 17:07:33 on Apr 28,2017, Elapsed time: 28:52:50
+# Errors: 0, Warnings: 55
+Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[3][4] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[3][3] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[3][2] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[3][1] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[3][0] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[4][7] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[4][6] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[4][5] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[4][4] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[4][3] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[4][2] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[4][1] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[4][0] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[5][7] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[5][6] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[5][5] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[5][4] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[5][3] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[5][2] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[5][1] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[5][0] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[6][7] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[6][6] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[6][5] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[6][4] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[6][3] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[6][2] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[6][1] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[6][0] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[7][7] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[7][6] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[7][5] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[7][4] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[7][3] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[7][2] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[7][1] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[7][0] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[0][7] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[0][6] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[0][5] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[0][4] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[0][3] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[0][2] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[0][1] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[0][0] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[1][7] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[1][6] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[1][5] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[1][4] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[1][3] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[1][2] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[1][1] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[1][0] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[2][7] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[2][6] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[2][5] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[2][4] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[2][3] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[2][2] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[2][1] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[2][0] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[3][7] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[3][6] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[3][5] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[3][4] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[3][3] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[3][2] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[3][1] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[3][0] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[4][7] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[4][6] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[4][5] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[4][4] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[4][3] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[4][2] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[4][1] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[4][0] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[5][7] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[5][6] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[5][5] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[5][4] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[5][3] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[5][2] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[5][1] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[5][0] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[6][7] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[6][6] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[6][5] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[6][4] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[6][3] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[6][2] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[6][1] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[6][0] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[7][7] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[7][6] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[7][5] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[7][4] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[7][3] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[7][2] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[7][1] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5520 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[7][0] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[0][7] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[0][6] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[0][5] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[0][4] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[0][3] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[0][2] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[0][1] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[0][0] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[1][7] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[1][6] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[1][5] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[1][4] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[1][3] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[1][2] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[1][1] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[1][0] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[2][7] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[2][6] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[2][5] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[2][4] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[2][3] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[2][2] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[2][1] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[2][0] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[3][7] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[3][6] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[3][5] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[3][4] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[3][3] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[3][2] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[3][1] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[3][0] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[4][7] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[4][6] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[4][5] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[4][4] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[4][3] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[4][2] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[4][1] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[4][0] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[5][7] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[5][6] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[5][5] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[5][4] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[5][3] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[5][2] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[5][1] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[5][0] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[6][7] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[6][6] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[6][5] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[6][4] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[6][3] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[6][2] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[6][1] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[6][0] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[7][7] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[7][6] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[7][5] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[7][4] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[7][3] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[7][2] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[7][1] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UFIFORAM/\fiforeg_reg[7][0] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[0][7] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[0][6] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[0][5] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[0][4] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[0][3] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[0][2] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[0][1] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[0][0] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[1][7] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[1][6] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[1][5] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[1][4] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[1][3] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[1][2] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[1][1] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[1][0] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[2][7] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[2][6] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[2][5] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[2][4] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[2][3] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[2][2] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[2][1] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[2][0] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[3][7] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[3][6] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[3][5] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[3][4] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[3][3] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[3][2] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[3][1] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[3][0] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[4][7] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[4][6] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[4][5] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[4][4] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[4][3] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[4][2] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[4][1] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[4][0] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[5][7] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[5][6] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[5][5] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[5][4] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[5][3] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[5][2] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[5][1] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[5][0] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[6][7] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[6][6] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[6][5] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[6][4] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[6][3] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[6][2] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[6][1] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[6][0] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[7][7] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[7][6] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[7][5] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[7][4] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[7][3] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[7][2] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[7][1] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5660 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UFIFORAM/\fiforeg_reg[7][0] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UWFC/\wrptr_r1_reg[3] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UWFC/\wrptr_r1_reg[2] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UWFC/\wrptr_r1_reg[1] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UWFC/\wrptr_r1_reg[0] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UWFC/\wrptr_r2_reg[3] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UWFC/\wrptr_r2_reg[2] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UWFC/\wrptr_r2_reg[1] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UWFC/\wrptr_r2_reg[0] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UWFC/full_flag_r_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UWFC/\waddr_reg[2] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UWFC/\waddr_reg[1] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UWFC/\waddr_reg[0] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UWFC/WPU1/\binary_r_reg[0] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UWFC/WPU1/\binary_r_reg[1] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UWFC/WPU1/\binary_r_reg[2] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UWFC/WPU1/\binary_r_reg[3] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UWFC/WPU1/\gray_r_reg[3] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UWFC/WPU1/\gray_r_reg[2] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UWFC/WPU1/\gray_r_reg[1] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UWFC/WPU1/\gray_r_reg[0] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/URFC/\rwptr_r1_reg[3] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/URFC/\rwptr_r1_reg[2] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/URFC/\rwptr_r1_reg[1] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/URFC/\rwptr_r1_reg[0] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/URFC/\rwptr_r2_reg[3] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/URFC/\rwptr_r2_reg[2] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/URFC/\rwptr_r2_reg[1] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/URFC/\rwptr_r2_reg[0] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/URFC/empty_flag_r_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/URFC/\raddr_reg[2] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/URFC/\raddr_reg[1] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/URFC/\raddr_reg[0] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/URFC/RPU1/\binary_r_reg[0] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/URFC/RPU1/\binary_r_reg[1] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/URFC/RPU1/\binary_r_reg[2] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/URFC/RPU1/\binary_r_reg[3] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/URFC/RPU1/\gray_r_reg[3] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/URFC/RPU1/\gray_r_reg[2] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/URFC/RPU1/\gray_r_reg[1] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/URFC/RPU1/\gray_r_reg[0] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/BD/\curr_state_reg[0] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/BD/\curr_state_reg[2] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/BD/\curr_state_reg[3] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/BD/\curr_state_reg[1] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/TX/CONTROLLER/\curr_state_reg[0] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/TX/CONTROLLER/\curr_state_reg[3] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/TX/CONTROLLER/\curr_state_reg[1] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/TX/CONTROLLER/\curr_state_reg[2] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/TX/CONTROLLER/\curr_state_reg[4] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/TX/FLEX_PTS/\curr_state_reg[7] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/TX/FLEX_PTS/\curr_state_reg[6] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/TX/FLEX_PTS/\curr_state_reg[5] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/TX/FLEX_PTS/\curr_state_reg[4] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/TX/FLEX_PTS/\curr_state_reg[3] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/TX/FLEX_PTS/\curr_state_reg[2] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/TX/FLEX_PTS/\curr_state_reg[1] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/TX/FLEX_PTS/\curr_state_reg[0] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/TX/STUFF/BIT_STUFFER_CNTR/\count_out_reg[0] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/TX/STUFF/BIT_STUFFER_CNTR/\count_out_reg[2] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/TX/STUFF/BIT_STUFFER_CNTR/\count_out_reg[1] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/TX/STUFF/BIT_STUFFER_CNTR/rollover_flag_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/TX/TIMER/BIT_TX/\count_out_reg[0] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/TX/TIMER/BIT_TX/\count_out_reg[1] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/TX/TIMER/BIT_TX/\count_out_reg[2] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/TX/TIMER/BIT_TX/\count_out_reg[3] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/TX/TIMER/BIT_TX/rollover_flag_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/TX/TIMER/BYTE_TX/\count_out_reg[0] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/TX/TIMER/BYTE_TX/\count_out_reg[1] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/TX/TIMER/BYTE_TX/\count_out_reg[2] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/TX/TIMER/BYTE_TX/\count_out_reg[3] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/TX/TIMER/BYTE_TX/rollover_flag_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/TX/ENCODE/prev_d_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/TX/ENCODE/d_plus_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/TX/ENCODE/d_minus_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/RX/STP/\parallel_out_reg[0] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/RX/STP/\parallel_out_reg[1] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/RX/STP/\parallel_out_reg[2] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/RX/STP/\parallel_out_reg[3] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/RX/STP/\parallel_out_reg[4] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/RX/STP/\parallel_out_reg[5] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/RX/STP/\parallel_out_reg[6] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/RX/STP/\parallel_out_reg[7] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/RX/DEC/prev_d_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/RX/DEC/d_orig_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/RX/BIT_DE/IN1/\count_out_reg[0] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/RX/BIT_DE/IN1/\count_out_reg[2] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/RX/BIT_DE/IN1/\count_out_reg[1] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/RX/BIT_DE/IN1/rollover_flag_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/RX/CNT/IN1/\count_out_reg[0] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/RX/CNT/IN1/\count_out_reg[1] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/RX/CNT/IN1/\count_out_reg[2] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/RX/CNT/IN1/\count_out_reg[3] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/RX/CNT/IN1/rollover_flag_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/RX/CNT/IN2/\count_out_reg[0] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/RX/CNT/IN2/\count_out_reg[1] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/RX/CNT/IN2/\count_out_reg[2] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/RX/CNT/IN2/\count_out_reg[3] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/RX/CNT/IN2/rollover_flag_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/RX/RCU/\curr_state_reg[0] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/RX/RCU/\curr_state_reg[1] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/RX/RCU/\curr_state_reg[2] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/RX/RCU/\curr_state_reg[3] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/RX/RCU/\curr_state_reg[5] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/RX/RCU/\curr_state_reg[4] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UWFC/\wrptr_r1_reg[3] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UWFC/\wrptr_r1_reg[2] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UWFC/\wrptr_r1_reg[1] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UWFC/\wrptr_r1_reg[0] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UWFC/\wrptr_r2_reg[3] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UWFC/\wrptr_r2_reg[2] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UWFC/\wrptr_r2_reg[1] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UWFC/\wrptr_r2_reg[0] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UWFC/full_flag_r_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UWFC/\waddr_reg[2] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UWFC/\waddr_reg[1] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UWFC/\waddr_reg[0] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UWFC/WPU1/\binary_r_reg[0] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UWFC/WPU1/\binary_r_reg[1] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UWFC/WPU1/\binary_r_reg[2] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UWFC/WPU1/\binary_r_reg[3] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UWFC/WPU1/\gray_r_reg[3] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UWFC/WPU1/\gray_r_reg[2] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UWFC/WPU1/\gray_r_reg[1] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UWFC/WPU1/\gray_r_reg[0] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/URFC/\rwptr_r1_reg[3] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/URFC/\rwptr_r1_reg[2] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/URFC/\rwptr_r1_reg[1] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/URFC/\rwptr_r1_reg[0] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/URFC/\rwptr_r2_reg[3] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/URFC/\rwptr_r2_reg[2] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/URFC/\rwptr_r2_reg[1] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/URFC/\rwptr_r2_reg[0] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/URFC/empty_flag_r_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/URFC/\raddr_reg[2] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/URFC/\raddr_reg[1] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/URFC/\raddr_reg[0] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/URFC/RPU1/\binary_r_reg[0] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/URFC/RPU1/\binary_r_reg[1] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/URFC/RPU1/\binary_r_reg[2] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/URFC/RPU1/\binary_r_reg[3] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/URFC/RPU1/\gray_r_reg[3] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/URFC/RPU1/\gray_r_reg[2] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/URFC/RPU1/\gray_r_reg[1] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/URFC/RPU1/\gray_r_reg[0] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UWFC/\wrptr_r1_reg[3] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UWFC/\wrptr_r1_reg[2] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UWFC/\wrptr_r1_reg[1] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UWFC/\wrptr_r1_reg[0] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UWFC/\wrptr_r2_reg[3] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UWFC/\wrptr_r2_reg[2] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UWFC/\wrptr_r2_reg[1] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UWFC/\wrptr_r2_reg[0] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UWFC/full_flag_r_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UWFC/\waddr_reg[2] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UWFC/\waddr_reg[1] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UWFC/\waddr_reg[0] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UWFC/WPU1/\binary_r_reg[0] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UWFC/WPU1/\binary_r_reg[1] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UWFC/WPU1/\binary_r_reg[2] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UWFC/WPU1/\binary_r_reg[3] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UWFC/WPU1/\gray_r_reg[3] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UWFC/WPU1/\gray_r_reg[2] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UWFC/WPU1/\gray_r_reg[1] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/UWFC/WPU1/\gray_r_reg[0] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/URFC/\rwptr_r1_reg[3] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/URFC/\rwptr_r1_reg[2] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/URFC/\rwptr_r1_reg[1] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/URFC/\rwptr_r1_reg[0] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/URFC/\rwptr_r2_reg[3] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/URFC/\rwptr_r2_reg[2] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/URFC/\rwptr_r2_reg[1] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/URFC/\rwptr_r2_reg[0] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/URFC/empty_flag_r_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/URFC/\raddr_reg[2] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/URFC/\raddr_reg[1] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/URFC/\raddr_reg[0] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/URFC/RPU1/\binary_r_reg[0] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/URFC/RPU1/\binary_r_reg[1] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/URFC/RPU1/\binary_r_reg[2] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/URFC/RPU1/\binary_r_reg[3] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/URFC/RPU1/\gray_r_reg[3] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/URFC/RPU1/\gray_r_reg[2] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/URFC/RPU1/\gray_r_reg[1] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOREAD/F1/URFC/RPU1/\gray_r_reg[0] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/BD/\curr_state_reg[0] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/BD/\curr_state_reg[2] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/BD/\curr_state_reg[3] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/BD/\curr_state_reg[1] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/TX/CONTROLLER/\curr_state_reg[0] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/TX/CONTROLLER/\curr_state_reg[3] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/TX/CONTROLLER/\curr_state_reg[1] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/TX/CONTROLLER/\curr_state_reg[2] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/TX/CONTROLLER/\curr_state_reg[4] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/TX/FLEX_PTS/\curr_state_reg[7] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/TX/FLEX_PTS/\curr_state_reg[6] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/TX/FLEX_PTS/\curr_state_reg[5] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/TX/FLEX_PTS/\curr_state_reg[4] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/TX/FLEX_PTS/\curr_state_reg[3] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/TX/FLEX_PTS/\curr_state_reg[2] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/TX/FLEX_PTS/\curr_state_reg[1] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/TX/FLEX_PTS/\curr_state_reg[0] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/TX/STUFF/BIT_STUFFER_CNTR/\count_out_reg[0] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/TX/STUFF/BIT_STUFFER_CNTR/\count_out_reg[2] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/TX/STUFF/BIT_STUFFER_CNTR/\count_out_reg[1] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/TX/STUFF/BIT_STUFFER_CNTR/rollover_flag_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/TX/TIMER/BIT_TX/\count_out_reg[0] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/TX/TIMER/BIT_TX/\count_out_reg[1] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/TX/TIMER/BIT_TX/\count_out_reg[2] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/TX/TIMER/BIT_TX/\count_out_reg[3] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/TX/TIMER/BIT_TX/rollover_flag_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/TX/TIMER/BYTE_TX/\count_out_reg[0] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/TX/TIMER/BYTE_TX/\count_out_reg[1] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/TX/TIMER/BYTE_TX/\count_out_reg[2] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/TX/TIMER/BYTE_TX/\count_out_reg[3] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/TX/TIMER/BYTE_TX/rollover_flag_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/TX/ENCODE/prev_d_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/TX/ENCODE/d_plus_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/TX/ENCODE/d_minus_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/RX/STP/\parallel_out_reg[0] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/RX/STP/\parallel_out_reg[1] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/RX/STP/\parallel_out_reg[2] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/RX/STP/\parallel_out_reg[3] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/RX/STP/\parallel_out_reg[4] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/RX/STP/\parallel_out_reg[5] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/RX/STP/\parallel_out_reg[6] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/RX/STP/\parallel_out_reg[7] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/RX/DEC/prev_d_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/RX/DEC/d_orig_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/RX/BIT_DE/IN1/\count_out_reg[0] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/RX/BIT_DE/IN1/\count_out_reg[2] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/RX/BIT_DE/IN1/\count_out_reg[1] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/RX/BIT_DE/IN1/rollover_flag_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/RX/CNT/IN1/\count_out_reg[0] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/RX/CNT/IN1/\count_out_reg[1] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/RX/CNT/IN1/\count_out_reg[2] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/RX/CNT/IN1/\count_out_reg[3] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/RX/CNT/IN1/rollover_flag_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/RX/CNT/IN2/\count_out_reg[0] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/RX/CNT/IN2/\count_out_reg[1] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/RX/CNT/IN2/\count_out_reg[2] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/RX/CNT/IN2/\count_out_reg[3] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/RX/CNT/IN2/rollover_flag_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/RX/RCU/\curr_state_reg[0] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/RX/RCU/\curr_state_reg[1] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/RX/RCU/\curr_state_reg[2] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/RX/RCU/\curr_state_reg[3] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/RX/RCU/\curr_state_reg[5] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/RX/RCU/\curr_state_reg[4] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UWFC/\wrptr_r1_reg[3] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UWFC/\wrptr_r1_reg[2] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UWFC/\wrptr_r1_reg[1] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UWFC/\wrptr_r1_reg[0] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UWFC/\wrptr_r2_reg[3] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UWFC/\wrptr_r2_reg[2] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UWFC/\wrptr_r2_reg[1] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UWFC/\wrptr_r2_reg[0] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UWFC/full_flag_r_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UWFC/\waddr_reg[2] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UWFC/\waddr_reg[1] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UWFC/\waddr_reg[0] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UWFC/WPU1/\binary_r_reg[0] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UWFC/WPU1/\binary_r_reg[1] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UWFC/WPU1/\binary_r_reg[2] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UWFC/WPU1/\binary_r_reg[3] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UWFC/WPU1/\gray_r_reg[3] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UWFC/WPU1/\gray_r_reg[2] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UWFC/WPU1/\gray_r_reg[1] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/UWFC/WPU1/\gray_r_reg[0] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/URFC/\rwptr_r1_reg[3] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/URFC/\rwptr_r1_reg[2] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/URFC/\rwptr_r1_reg[1] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/URFC/\rwptr_r1_reg[0] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/URFC/\rwptr_r2_reg[3] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/URFC/\rwptr_r2_reg[2] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/URFC/\rwptr_r2_reg[1] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/URFC/\rwptr_r2_reg[0] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/URFC/empty_flag_r_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/URFC/\raddr_reg[2] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/URFC/\raddr_reg[1] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/URFC/\raddr_reg[0] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/URFC/RPU1/\binary_r_reg[0] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/URFC/RPU1/\binary_r_reg[1] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/URFC/RPU1/\binary_r_reg[2] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/URFC/RPU1/\binary_r_reg[3] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/URFC/RPU1/\gray_r_reg[3] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/URFC/RPU1/\gray_r_reg[2] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/URFC/RPU1/\gray_r_reg[1] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB/DUT/FIFOWRITE/F1/URFC/RPU1/\gray_r_reg[0] 

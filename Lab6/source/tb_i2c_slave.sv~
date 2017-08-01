@@ -1,0 +1,212 @@
+// $Id: $
+// File name:   tb_i2c_slave.sv
+// Created:     2/27/2017
+// Author:      Kunwar Digraj Singh Jain
+// Lab Section: 5
+// Version:     1.0  Initial Design Entry
+// Description: Testbench for i2c Slave
+
+`timescale 1ns / 10ps
+
+module tb_i2c_slave () ;
+
+	// Define parameters
+	// basic test bench parameters
+	localparam	CLK_PERIOD	= 2.5;
+	localparam	CHECK_DELAY = 1; // Check 1ns after the rising edge to allow for propagation delay
+	
+	localparam	SCL_PERIOD	= 300;
+
+	// Shared Test Variables
+	reg tb_clk, tb_scl;
+
+	always
+	begin
+		tb_clk = 1'b0;
+		#(CLK_PERIOD/0.5);
+		tb_clk = 1'b1;
+		#(CLK_PERIOD/0.5);
+	end	
+
+	always
+	begin
+		tb_scl = 1'b0;
+		#(2 * SCL_PERIOD/3);
+		tb_scl = 1'b1;
+		#(SCL_PERIOD/3.0);
+	end	
+
+	tb_i2c_slave_DUT testbench(.tb_clk, .tb_scl_out(tb_scl));
+	
+endmodule
+
+module tb_i2c_slave_DUT (input wire tb_clk, input wire tb_scl_out) ;
+
+	reg		tb_n_rst,
+			tb_sda_in,
+			DUT_scl_in,
+			DUT_sda_in,
+			tb_write_enable,
+			tb_fifo_empty,
+			tb_fifo_full,
+			tb_sda_out,
+			DUT_sda_out ;
+	reg		[7:0] tb_write_data ;
+
+	i2c_slave DUT (
+			.clk(tb_clk),
+			.n_rst(tb_n_rst),
+			.scl(DUT_scl_in),
+			.sda_in(DUT_sda_in),
+			.write_enable(tb_write_enable),
+			.write_data(tb_write_data),
+			.fifo_empty(tb_fifo_empty),
+			.fifo_full(tb_fifo_full),
+			.sda_out(DUT_sda_out)
+	) ;
+
+	i2c_bus #2 BUS (
+			.scl_write({1'bz, tb_scl_out}),
+			.sda_write({DUT_sda_out, tb_sda_out}),
+			.sda_read({DUT_sda_in, tb_sda_in}),
+			.scl_read({DUT_scl_in, tb_scl_in})
+	) ;
+
+	int i;
+	int here ;
+	initial 
+	begin
+		//TEST CASE 1
+		here = 1'b0 ;
+		$display ("-----Test Case 1-----") ;
+		tb_n_rst = 1'b1 ;
+		tb_write_data = 8'b10101010 ;
+		tb_sda_in = 1'b1;
+		@(negedge tb_clk)
+		tb_write_enable = 1'b0 ;
+		//RESET DESIGN
+		#10
+		@(negedge tb_clk)
+		tb_n_rst = 1'b0 ;
+		tb_write_enable = 1'b1 ;		
+	
+		@(negedge tb_clk)
+		tb_write_enable = 1'b0 ;
+
+		@(negedge tb_clk)
+		tb_n_rst = 1'b1 ;
+		//POST RESET
+
+		@(negedge tb_clk)
+		tb_write_enable = 1 ;
+		
+		@(negedge tb_clk)
+		tb_write_enable = 0 ;
+
+		tb_write_data = 8'b10111000 ;
+		@(negedge tb_clk)
+		tb_write_enable = 1 ;
+		
+		@(negedge tb_clk)
+		tb_write_enable = 0 ;
+
+		tb_write_data = 8'b01000111 ;
+		@(negedge tb_clk)
+		tb_write_enable = 1 ;
+		
+		@(negedge tb_clk)
+		tb_write_enable = 0 ;
+
+		tb_write_data = 8'b11110000 ;
+		@(negedge tb_clk)
+		tb_write_enable = 1 ;
+		
+		@(negedge tb_clk)
+		tb_write_enable = 0 ;
+
+		tb_write_data = 8'b01001000 ;
+		@(negedge tb_clk)
+		tb_write_enable = 1 ;
+		
+		@(negedge tb_clk)
+		tb_write_enable = 0 ;
+
+		tb_write_data = 8'b01010101 ;
+		@(negedge tb_clk)
+		tb_write_enable = 1 ;
+		
+		@(negedge tb_clk)
+		tb_write_enable = 0 ;
+
+		tb_write_data = 8'b11110011 ;
+		@(negedge tb_clk)
+		tb_write_enable = 1 ;
+		
+		@(negedge tb_clk)
+		tb_write_enable = 0 ;
+
+		tb_write_data = 8'b11110001 ;
+		@(negedge tb_clk)
+		tb_write_enable = 1 ;
+		
+		@(negedge tb_clk)
+		tb_write_enable = 0 ;
+
+		#350
+		@(negedge tb_clk)
+		tb_sda_out = 1'b0 ;
+		#100
+		@(negedge tb_clk)
+		tb_sda_out = 1'b1 ;
+
+		#1200
+		@(negedge tb_clk)
+		tb_sda_out = 1'b0 ;
+
+		#900
+		@(negedge tb_clk)
+		tb_sda_out = 1'b1 ;
+		
+		#3000
+		@(posedge tb_scl_out)
+		tb_sda_out = 1'b0 ;
+	
+		@(negedge tb_scl_out)
+		tb_sda_out = 1'b1 ;
+
+		#3550
+		@(negedge tb_clk)
+		tb_sda_out = 1'b0 ;
+		#100
+		@(negedge tb_clk)
+		tb_sda_out = 1'b1 ;
+
+		#900
+		@(negedge tb_clk)
+		tb_sda_out = 1'b0 ;
+
+		#900
+		@(negedge tb_clk)
+		tb_sda_out = 1'b1 ;
+
+		
+				
+
+		$display("-----END-----") ;
+	end
+endmodule
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

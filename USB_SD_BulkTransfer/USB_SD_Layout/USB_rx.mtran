@@ -1,0 +1,388 @@
+# //  Questa Sim-64
+# //  Version 10.3b linux_x86_64 May 29 2014
+# //
+# //  Copyright 1991-2014 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# vsim -Lf /home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Vsim -L /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work -L /home/ecegrid/a/ece337/Class0.5u/GOLD_LIB "+no_glitch_msg" -coverage -voptargs="+acc" -i -t ps mapped_work.tb_USB_rx 
+# Start time: 06:20:12 on Apr 26,2017
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb_USB_rx(fast)
+# Loading work.USB_rx(fast)
+# Loading work.serial_2_parallel(fast)
+# Loading work.nrzi_decode(fast)
+# Loading work.bit_destuff(fast)
+# Loading work.flex_counter_NUM_CNT_BITS3(fast)
+# Loading work.counter(fast)
+# Loading work.flex_counter_NUM_CNT_BITS4_1(fast)
+# Loading work.flex_counter_NUM_CNT_BITS4_0(fast)
+# Loading work.writeFIFO(fast)
+# Loading work.usb_rcv_controller(fast)
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.math_real(body)
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.dffsr(metastabilitywrapperarch)#1
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.prim(body)
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.dffsr_core(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.invx1(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.mux2x1(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.nor2x1(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.xnor2x1(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.xor2x1(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.oai21x1(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.nand2x1(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.and2x1(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.oai22x1(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.nand3x1(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.aoi21x1(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.or2x1(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Vsim.fifo(rtl)#1
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading /home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Vsim.fiforam(rtl)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Vsim.write_fifo_ctrl(rtl)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Vsim.write_ptr(rtl)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Vsim.read_fifo_ctrl(rtl)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Vsim.read_ptr(rtl)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.invx2(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.and2x2(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.aoi22x1(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.nor3x1(behavioral)#1
+# ** Warning: (vsim-3015) source/tb_USB_rx.sv(44): [PCDPC] - Port size (2) does not match connection size (1) for port 'pckt_rcvd'. The port definition is at: mapped/USB_rx.v(1285).
+#         Region: /tb_USB_rx/DUT
+# ** Warning: (vsim-3839) source/tb_USB_rx.sv(619): Variable '/tb_USB_rx/tb_sd_rx_en_read', driven via a port connection, is multiply driven. See source/tb_USB_rx.sv(44).
+#         Region: /tb_USB_rx
+do wave_tx.do
+# ** Error: (vish-4014) No objects found matching '/tb_usb_transmitter/tb_clk'.
+# Executing ONERROR command at macro ./wave_tx.do line 3
+# ** Error: (vish-4014) No objects found matching '/tb_usb_transmitter/tb_n_rst'.
+# Executing ONERROR command at macro ./wave_tx.do line 4
+# ** Error: (vish-4014) No objects found matching '/tb_usb_transmitter/tb_send_data'.
+# Executing ONERROR command at macro ./wave_tx.do line 5
+# ** Error: (vish-4014) No objects found matching '/tb_usb_transmitter/tb_tx_ena'.
+# Executing ONERROR command at macro ./wave_tx.do line 6
+# ** Error: (vish-4014) No objects found matching '/tb_usb_transmitter/tb_tx_nack'.
+# Executing ONERROR command at macro ./wave_tx.do line 7
+# ** Error: (vish-4014) No objects found matching '/tb_usb_transmitter/tb_write_done'.
+# Executing ONERROR command at macro ./wave_tx.do line 8
+# ** Error: (vish-4014) No objects found matching '/tb_usb_transmitter/tb_tx_ack'.
+# Executing ONERROR command at macro ./wave_tx.do line 9
+# ** Error: (vish-4014) No objects found matching '/tb_usb_transmitter/tb_d_plus'.
+# Executing ONERROR command at macro ./wave_tx.do line 10
+# ** Error: (vish-4014) No objects found matching '/tb_usb_transmitter/tb_d_minus'.
+# Executing ONERROR command at macro ./wave_tx.do line 11
+# ** Error: (vish-4014) No objects found matching '/tb_usb_transmitter/DUT/CONTROLLER/curr_state'.
+# Executing ONERROR command at macro ./wave_tx.do line 12
+# ** Error: (vish-4014) No objects found matching '/tb_usb_transmitter/DUT/CONTROLLER/send_data'.
+# Executing ONERROR command at macro ./wave_tx.do line 14
+# ** Error: (vish-4014) No objects found matching '/tb_usb_transmitter/DUT/CONTROLLER/tx_ena'.
+# Executing ONERROR command at macro ./wave_tx.do line 15
+# ** Error: (vish-4014) No objects found matching '/tb_usb_transmitter/DUT/CONTROLLER/buff_empty'.
+# Executing ONERROR command at macro ./wave_tx.do line 16
+# ** Error: (vish-4014) No objects found matching '/tb_usb_transmitter/DUT/CONTROLLER/tx_nack'.
+# Executing ONERROR command at macro ./wave_tx.do line 17
+# ** Error: (vish-4014) No objects found matching '/tb_usb_transmitter/DUT/CONTROLLER/write_done'.
+# Executing ONERROR command at macro ./wave_tx.do line 18
+# ** Error: (vish-4014) No objects found matching '/tb_usb_transmitter/DUT/CONTROLLER/tx_ack'.
+# Executing ONERROR command at macro ./wave_tx.do line 19
+# ** Error: (vish-4014) No objects found matching '/tb_usb_transmitter/DUT/CONTROLLER/cnt_done'.
+# Executing ONERROR command at macro ./wave_tx.do line 20
+# ** Error: (vish-4014) No objects found matching '/tb_usb_transmitter/DUT/CONTROLLER/eop'.
+# Executing ONERROR command at macro ./wave_tx.do line 21
+# ** Error: (vish-4014) No objects found matching '/tb_usb_transmitter/DUT/CONTROLLER/fifo_en'.
+# Executing ONERROR command at macro ./wave_tx.do line 22
+# ** Error: (vish-4014) No objects found matching '/tb_usb_transmitter/DUT/CONTROLLER/start_read'.
+# Executing ONERROR command at macro ./wave_tx.do line 23
+# ** Error: (vish-4014) No objects found matching '/tb_usb_transmitter/DUT/CONTROLLER/trans'.
+# Executing ONERROR command at macro ./wave_tx.do line 24
+# ** Error: (vish-4014) No objects found matching '/tb_usb_transmitter/DUT/CONTROLLER/sd_tx_en_write'.
+# Executing ONERROR command at macro ./wave_tx.do line 25
+# ** Error: (vish-4014) No objects found matching '/tb_usb_transmitter/DUT/CONTROLLER/load_ena'.
+# Executing ONERROR command at macro ./wave_tx.do line 26
+# ** Error: (vish-4014) No objects found matching '/tb_usb_transmitter/DUT/CONTROLLER/load_sync'.
+# Executing ONERROR command at macro ./wave_tx.do line 27
+# ** Error: (vish-4014) No objects found matching '/tb_usb_transmitter/DUT/CONTROLLER/load_data_pid'.
+# Executing ONERROR command at macro ./wave_tx.do line 28
+# ** Error: (vish-4014) No objects found matching '/tb_usb_transmitter/DUT/CONTROLLER/load_data_1_crc'.
+# Executing ONERROR command at macro ./wave_tx.do line 29
+# ** Error: (vish-4014) No objects found matching '/tb_usb_transmitter/DUT/CONTROLLER/load_data_2_crc'.
+# Executing ONERROR command at macro ./wave_tx.do line 30
+# ** Error: (vish-4014) No objects found matching '/tb_usb_transmitter/DUT/CONTROLLER/load_ack'.
+# Executing ONERROR command at macro ./wave_tx.do line 31
+# ** Error: (vish-4014) No objects found matching '/tb_usb_transmitter/DUT/CONTROLLER/load_nack'.
+# Executing ONERROR command at macro ./wave_tx.do line 32
+# ** Error: (vish-4014) No objects found matching '/tb_usb_transmitter/DUT/FLEX_PTS/shift_enable'.
+# Executing ONERROR command at macro ./wave_tx.do line 34
+# ** Error: (vish-4014) No objects found matching '/tb_usb_transmitter/DUT/FLEX_PTS/load_enable'.
+# Executing ONERROR command at macro ./wave_tx.do line 35
+# ** Error: (vish-4014) No objects found matching '/tb_usb_transmitter/DUT/FLEX_PTS/load_sync'.
+# Executing ONERROR command at macro ./wave_tx.do line 36
+# ** Error: (vish-4014) No objects found matching '/tb_usb_transmitter/DUT/FLEX_PTS/load_data_pid'.
+# Executing ONERROR command at macro ./wave_tx.do line 37
+# ** Error: (vish-4014) No objects found matching '/tb_usb_transmitter/DUT/FLEX_PTS/load_data_1_crc'.
+# Executing ONERROR command at macro ./wave_tx.do line 38
+# ** Error: (vish-4014) No objects found matching '/tb_usb_transmitter/DUT/FLEX_PTS/load_data_2_crc'.
+# Executing ONERROR command at macro ./wave_tx.do line 39
+# ** Error: (vish-4014) No objects found matching '/tb_usb_transmitter/DUT/FLEX_PTS/load_ack'.
+# Executing ONERROR command at macro ./wave_tx.do line 40
+# ** Error: (vish-4014) No objects found matching '/tb_usb_transmitter/DUT/FLEX_PTS/load_nack'.
+# Executing ONERROR command at macro ./wave_tx.do line 41
+# ** Error: (vish-4014) No objects found matching '/tb_usb_transmitter/DUT/FLEX_PTS/parallel_in'.
+# Executing ONERROR command at macro ./wave_tx.do line 42
+# ** Error: (vish-4014) No objects found matching '/tb_usb_transmitter/DUT/FLEX_PTS/serial_out'.
+# Executing ONERROR command at macro ./wave_tx.do line 43
+# ** Error: (vish-4014) No objects found matching '/tb_usb_transmitter/DUT/FLEX_PTS/mid_state'.
+# Executing ONERROR command at macro ./wave_tx.do line 44
+# ** Error: (vish-4014) No objects found matching '/tb_usb_transmitter/DUT/FLEX_PTS/curr_state'.
+# Executing ONERROR command at macro ./wave_tx.do line 45
+# ** Error: (vish-4014) No objects found matching '/tb_usb_transmitter/DUT/STUFF/d_orig'.
+# Executing ONERROR command at macro ./wave_tx.do line 47
+# ** Error: (vish-4014) No objects found matching '/tb_usb_transmitter/DUT/STUFF/flag_8'.
+# Executing ONERROR command at macro ./wave_tx.do line 48
+# ** Error: (vish-4014) No objects found matching '/tb_usb_transmitter/DUT/STUFF/pause'.
+# Executing ONERROR command at macro ./wave_tx.do line 49
+# ** Error: (vish-4014) No objects found matching '/tb_usb_transmitter/DUT/STUFF/temp_pause'.
+# Executing ONERROR command at macro ./wave_tx.do line 50
+# ** Error: (vish-4014) No objects found matching '/tb_usb_transmitter/DUT/STUFF/num_ones'.
+# Executing ONERROR command at macro ./wave_tx.do line 51
+# ** Error: (vish-4014) No objects found matching '/tb_usb_transmitter/DUT/STUFF/found_6'.
+# Executing ONERROR command at macro ./wave_tx.do line 52
+# ** Error: (vish-4014) No objects found matching '/tb_usb_transmitter/DUT/STUFF/temp_out'.
+# Executing ONERROR command at macro ./wave_tx.do line 53
+# ** Error: (vish-4014) No objects found matching '/tb_usb_transmitter/DUT/TIMER/pause'.
+# Executing ONERROR command at macro ./wave_tx.do line 55
+# ** Error: (vish-4014) No objects found matching '/tb_usb_transmitter/DUT/TIMER/count_up'.
+# Executing ONERROR command at macro ./wave_tx.do line 56
+# ** Error: (vish-4014) No objects found matching '/tb_usb_transmitter/DUT/TIMER/shift_en'.
+# Executing ONERROR command at macro ./wave_tx.do line 57
+# ** Error: (vish-4014) No objects found matching '/tb_usb_transmitter/DUT/TIMER/byte_rcvd'.
+# Executing ONERROR command at macro ./wave_tx.do line 58
+# ** Error: (vish-4014) No objects found matching '/tb_usb_transmitter/DUT/TIMER/flag_8'.
+# Executing ONERROR command at macro ./wave_tx.do line 59
+# ** Error: (vish-4014) No objects found matching '/tb_usb_transmitter/DUT/TIMER/clear_64'.
+# Executing ONERROR command at macro ./wave_tx.do line 60
+# ** Error: (vish-4014) No objects found matching '/tb_usb_transmitter/DUT/TIMER/count_up_8'.
+# Executing ONERROR command at macro ./wave_tx.do line 61
+# ** Error: (vish-4014) No objects found matching '/tb_usb_transmitter/DUT/TIMER/count_up_64'.
+# Executing ONERROR command at macro ./wave_tx.do line 62
+# ** Error: (vish-4014) No objects found matching '/tb_usb_transmitter/DUT/ENCODE/pause'.
+# Executing ONERROR command at macro ./wave_tx.do line 64
+# ** Error: (vish-4014) No objects found matching '/tb_usb_transmitter/DUT/ENCODE/d_orig'.
+# Executing ONERROR command at macro ./wave_tx.do line 65
+# ** Error: (vish-4014) No objects found matching '/tb_usb_transmitter/DUT/ENCODE/flag_8'.
+# Executing ONERROR command at macro ./wave_tx.do line 66
+# ** Error: (vish-4014) No objects found matching '/tb_usb_transmitter/DUT/ENCODE/eop'.
+# Executing ONERROR command at macro ./wave_tx.do line 67
+# ** Error: (vish-4014) No objects found matching '/tb_usb_transmitter/DUT/ENCODE/d_plus'.
+# Executing ONERROR command at macro ./wave_tx.do line 68
+# ** Error: (vish-4014) No objects found matching '/tb_usb_transmitter/DUT/ENCODE/d_minus'.
+# Executing ONERROR command at macro ./wave_tx.do line 69
+# ** Error: (vish-4014) No objects found matching '/tb_usb_transmitter/DUT/ENCODE/prev_d'.
+# Executing ONERROR command at macro ./wave_tx.do line 70
+# ** Error: (vish-4014) No objects found matching '/tb_usb_transmitter/DUT/FIFO/read_enable'.
+# Executing ONERROR command at macro ./wave_tx.do line 72
+# ** Error: (vish-4014) No objects found matching '/tb_usb_transmitter/DUT/FIFO/write_enable'.
+# Executing ONERROR command at macro ./wave_tx.do line 73
+# ** Error: (vish-4014) No objects found matching '/tb_usb_transmitter/DUT/FIFO/write_data'.
+# Executing ONERROR command at macro ./wave_tx.do line 74
+# ** Error: (vish-4014) No objects found matching '/tb_usb_transmitter/DUT/FIFO/read_data'.
+# Executing ONERROR command at macro ./wave_tx.do line 75
+# ** Error: (vish-4014) No objects found matching '/tb_usb_transmitter/DUT/FIFO/fifo_empty'.
+# Executing ONERROR command at macro ./wave_tx.do line 76
+# ** Error: (vish-4014) No objects found matching '/tb_usb_transmitter/DUT/FIFO/fifo_full'.
+# Executing ONERROR command at macro ./wave_tx.do line 77
+do wave_rx.do
+# ** Error: (vish-4014) No objects found matching '/tb_USB_rx/DUT/CNT/count_out_bit'.
+# Executing ONERROR command at macro ./wave_rx.do line 38
+# ** Error: (vish-4014) No objects found matching '/tb_USB_rx/DUT/CNT/count_out_byte'.
+# Executing ONERROR command at macro ./wave_rx.do line 39
+run 25000 ns
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_USB_rx/DUT/FIFO/F1/URFC
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_USB_rx/DUT/FIFO/F1/URFC
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_USB_rx/DUT/FIFO/F1/URFC/RPU1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_USB_rx/DUT/FIFO/F1/UWFC
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_USB_rx/DUT/FIFO/F1/UWFC
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_USB_rx/DUT/FIFO/F1/UWFC/WPU1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_USB_rx/DUT/FIFO/F1/UFIFORAM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_USB_rx/DUT/FIFO/F1/UFIFORAM
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_USB_rx/DUT/FIFO/F1/UFIFORAM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_USB_rx/DUT/FIFO/F1/UFIFORAM
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /tb_USB_rx/DUT/FIFO/F1/UFIFORAM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 2  Instance: /tb_USB_rx/DUT/FIFO/F1/UFIFORAM
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 5210 ps  Iteration: 1  Instance: /tb_USB_rx/DUT/FIFO/F1/UFIFORAM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 5210 ps  Iteration: 1  Instance: /tb_USB_rx/DUT/FIFO/F1/UFIFORAM
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB_rx/DUT/STP/\parallel_out_reg[0] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB_rx/DUT/STP/\parallel_out_reg[1] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB_rx/DUT/STP/\parallel_out_reg[2] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB_rx/DUT/STP/\parallel_out_reg[3] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB_rx/DUT/STP/\parallel_out_reg[4] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB_rx/DUT/STP/\parallel_out_reg[5] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB_rx/DUT/STP/\parallel_out_reg[6] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB_rx/DUT/STP/\parallel_out_reg[7] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB_rx/DUT/DEC/prev_d_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB_rx/DUT/DEC/d_orig_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB_rx/DUT/BIT_DE/IN1/\count_out_reg[0] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB_rx/DUT/BIT_DE/IN1/\count_out_reg[2] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB_rx/DUT/BIT_DE/IN1/\count_out_reg[1] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB_rx/DUT/BIT_DE/IN1/rollover_flag_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB_rx/DUT/CNT/IN1/\count_out_reg[0] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB_rx/DUT/CNT/IN1/\count_out_reg[1] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB_rx/DUT/CNT/IN1/\count_out_reg[2] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB_rx/DUT/CNT/IN1/\count_out_reg[3] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB_rx/DUT/CNT/IN1/rollover_flag_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB_rx/DUT/CNT/IN2/\count_out_reg[0] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB_rx/DUT/CNT/IN2/\count_out_reg[1] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB_rx/DUT/CNT/IN2/\count_out_reg[2] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB_rx/DUT/CNT/IN2/\count_out_reg[3] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB_rx/DUT/CNT/IN2/rollover_flag_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB_rx/DUT/RCU/\curr_state_reg[0] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB_rx/DUT/RCU/\curr_state_reg[5] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB_rx/DUT/RCU/\curr_state_reg[4] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB_rx/DUT/RCU/\curr_state_reg[3] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB_rx/DUT/RCU/\curr_state_reg[2] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_USB_rx/DUT/RCU/\curr_state_reg[1] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB_rx/DUT/STP/\parallel_out_reg[0] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB_rx/DUT/STP/\parallel_out_reg[1] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB_rx/DUT/STP/\parallel_out_reg[2] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB_rx/DUT/STP/\parallel_out_reg[3] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB_rx/DUT/STP/\parallel_out_reg[4] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB_rx/DUT/STP/\parallel_out_reg[5] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB_rx/DUT/STP/\parallel_out_reg[6] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB_rx/DUT/STP/\parallel_out_reg[7] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB_rx/DUT/DEC/prev_d_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB_rx/DUT/DEC/d_orig_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB_rx/DUT/BIT_DE/IN1/\count_out_reg[0] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB_rx/DUT/BIT_DE/IN1/\count_out_reg[2] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB_rx/DUT/BIT_DE/IN1/\count_out_reg[1] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB_rx/DUT/BIT_DE/IN1/rollover_flag_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB_rx/DUT/CNT/IN1/\count_out_reg[0] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB_rx/DUT/CNT/IN1/\count_out_reg[1] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB_rx/DUT/CNT/IN1/\count_out_reg[2] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB_rx/DUT/CNT/IN1/\count_out_reg[3] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB_rx/DUT/CNT/IN1/rollover_flag_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB_rx/DUT/CNT/IN2/\count_out_reg[0] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB_rx/DUT/CNT/IN2/\count_out_reg[1] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB_rx/DUT/CNT/IN2/\count_out_reg[2] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB_rx/DUT/CNT/IN2/\count_out_reg[3] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB_rx/DUT/CNT/IN2/rollover_flag_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB_rx/DUT/RCU/\curr_state_reg[0] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB_rx/DUT/RCU/\curr_state_reg[5] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB_rx/DUT/RCU/\curr_state_reg[4] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB_rx/DUT/RCU/\curr_state_reg[3] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB_rx/DUT/RCU/\curr_state_reg[2] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_USB_rx/DUT/RCU/\curr_state_reg[1] 
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 6010 ps  Iteration: 2  Instance: /tb_USB_rx/DUT/FIFO/F1/UFIFORAM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 6010 ps  Iteration: 2  Instance: /tb_USB_rx/DUT/FIFO/F1/UFIFORAM
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10420 ps  Iteration: 3  Instance: /tb_USB_rx/DUT/FIFO/F1/UWFC
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10420 ps  Iteration: 3  Instance: /tb_USB_rx/DUT/FIFO/F1/UWFC
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10420 ps  Iteration: 4  Instance: /tb_USB_rx/DUT/FIFO/F1/UWFC
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10420 ps  Iteration: 4  Instance: /tb_USB_rx/DUT/FIFO/F1/UWFC
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10420 ps  Iteration: 4  Instance: /tb_USB_rx/DUT/FIFO/F1/URFC
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10420 ps  Iteration: 4  Instance: /tb_USB_rx/DUT/FIFO/F1/URFC
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10420 ps  Iteration: 5  Instance: /tb_USB_rx/DUT/FIFO/F1/UWFC
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10420 ps  Iteration: 5  Instance: /tb_USB_rx/DUT/FIFO/F1/URFC
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10420 ps  Iteration: 6  Instance: /tb_USB_rx/DUT/FIFO/F1/UWFC
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10420 ps  Iteration: 7  Instance: /tb_USB_rx/DUT/FIFO/F1/UWFC
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10420 ps  Iteration: 7  Instance: /tb_USB_rx/DUT/FIFO/F1/URFC
+do wave_rx.do
+# ** Error: (vish-4014) No objects found matching '/tb_USB_rx/DUT/CNT/count_out_bit'.
+# Executing ONERROR command at macro ./wave_rx.do line 38
+# ** Error: (vish-4014) No objects found matching '/tb_USB_rx/DUT/CNT/count_out_byte'.
+# Executing ONERROR command at macro ./wave_rx.do line 39
+# End time: 06:21:00 on Apr 26,2017, Elapsed time: 0:00:48
+# Errors: 219, Warnings: 89

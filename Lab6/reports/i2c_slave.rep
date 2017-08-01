@@ -1,0 +1,134 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : i2c_slave
+Version: K-2015.06-SP1
+Date   : Thu Apr 27 06:24:20 2017
+****************************************
+
+Operating Conditions: typical   Library: osu05_stdcells
+Wire Load Model Mode: top
+
+  Startpoint: C1/curr_state_reg[3]
+              (rising edge-triggered flip-flop)
+  Endpoint: sda_out (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  C1/curr_state_reg[3]/CLK (DFFSR)         0.00       0.00 r
+  C1/curr_state_reg[3]/Q (DFFSR)           0.70       0.70 f
+  C1/U68/Y (INVX1)                         0.23       0.92 r
+  C1/U67/Y (NOR2X1)                        0.29       1.21 f
+  C1/U66/Y (NAND2X1)                       0.24       1.46 r
+  C1/U65/Y (INVX1)                         0.24       1.70 f
+  C1/U61/Y (NOR2X1)                        0.14       1.84 r
+  C1/U7/Y (INVX1)                          0.11       1.95 f
+  C1/sda_mode[1] (controller)              0.00       1.95 f
+  S1/sda_mode[1] (sda_sel)                 0.00       1.95 f
+  S1/U4/Y (NAND2X1)                        0.10       2.04 r
+  S1/U3/Y (NAND2X1)                        0.04       2.08 f
+  S1/sda_out (sda_sel)                     0.00       2.08 f
+  sda_out (out)                            0.00       2.08 f
+  data arrival time                                   2.08
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+1
+ 
+****************************************
+Report : area
+Design : i2c_slave
+Version: K-2015.06-SP1
+Date   : Thu Apr 27 06:24:20 2017
+****************************************
+
+Library(s) Used:
+
+    osu05_stdcells (File: /package/eda/cells/OSU/v2.7/synopsys/lib/ami05/osu05_stdcells.db)
+
+Number of ports:                          263
+Number of nets:                          1015
+Number of cells:                          776
+Number of combinational cells:            535
+Number of sequential cells:               222
+Number of macros/black boxes:               0
+Number of buf/inv:                        142
+Number of references:                      10
+
+Combinational area:             152568.000000
+Buf/Inv area:                    21096.000000
+Noncombinational area:          178848.000000
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                331416.000000
+Total area:                 undefined
+1
+Loading db file '/package/eda/cells/OSU/v2.7/synopsys/lib/ami05/osu05_stdcells.db'
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: There is no defined clock in the design. (PWR-80)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -hier
+        -analysis_effort low
+Design : i2c_slave
+Version: K-2015.06-SP1
+Date   : Thu Apr 27 06:24:21 2017
+****************************************
+
+
+Library(s) Used:
+
+    osu05_stdcells (File: /package/eda/cells/OSU/v2.7/synopsys/lib/ami05/osu05_stdcells.db)
+
+
+Operating Conditions: typical   Library: osu05_stdcells
+Wire Load Model Mode: top
+
+
+Global Operating Voltage = 5    
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+--------------------------------------------------------------------------------
+                                       Switch   Int      Leak     Total
+Hierarchy                              Power    Power    Power    Power    %
+--------------------------------------------------------------------------------
+i2c_slave                                 4.751   20.041  100.008   24.792 100.0
+  F1 (tx_fifo)                            4.493   14.558   65.610   19.051  76.8
+    F1 (fifo)                             4.493   14.558   65.610   19.051  76.8
+      URFC (read_fifo_ctrl)            1.58e-02    2.235   13.466    2.251   9.1
+        RPU1 (read_ptr)                   0.000    0.819    5.746    0.819   3.3
+      UWFC (write_fifo_ctrl)              1.088    3.614   13.547    4.701  19.0
+        WPU1 (write_ptr)                  0.378    1.804    5.746    2.182   8.8
+      UFIFORAM (fiforam)                  3.389    8.708   38.597   12.098  48.8
+  S1 (sda_sel)                            0.000    0.000    0.110 1.10e-07   0.0
+  E1 (scl_edge)                        6.67e-02    0.439    1.265    0.505   2.0
+  T1 (timer)                           9.32e-03    0.827   10.426    0.836   3.4
+    IN1 (flex_counter_NUM_CNT_BITS4)   9.24e-03    0.520    6.346    0.529   2.1
+  PTS_i2c (tx_sr)                      3.79e-02    1.062    6.092    1.100   4.4
+    PTS (flex_pts_sr_NUM_BITS8_SHIFT_MSB1)
+                                       3.79e-02    1.062    5.974    1.100   4.4
+  STP_i2c (rx_sr)                      5.75e-03    1.041    5.667    1.047   4.2
+    STP (flex_stp_sr_NUM_BITS8_SHIFT_MSB1)
+                                       5.75e-03    1.041    5.550    1.047   4.2
+  D1 (decode)                             0.119    0.873    2.808    0.991   4.0
+  C1 (controller)                      2.40e-03    0.411    5.900    0.413   1.7
+  SDA (sync_low_0)                     1.15e-02    0.417    1.066    0.429   1.7
+  SCL (sync_low_1)                     6.51e-03    0.413    1.066    0.420   1.7
+1

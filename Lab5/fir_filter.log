@@ -1,0 +1,535 @@
+Synthesizing design: fir_filter.sv
+dc_shell-t -x "source -echo do_mapping.tcl"
+                                        
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+                                        
+               Version K-2015.06-SP1 for linux64 - Jul 21, 2015 
+                                        
+                    Copyright (c) 1988 - 2015 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+# Step 1:  Read in the source file
+analyze -format sverilog -lib WORK {counter.sv flex_counter.sv controller.sv sync_low.sv magnitude.sv fir_filter.sv}
+Running PRESTO HDLC
+Compiling source file ./source/counter.sv
+Compiling source file ./source/flex_counter.sv
+Compiling source file ./source/controller.sv
+Compiling source file ./source/sync_low.sv
+Compiling source file ./source/magnitude.sv
+Compiling source file ./source/fir_filter.sv
+Warning:  ./source/fir_filter.sv:33: the undeclared symbol 'overflow' assumed to have the default net type, which is 'wire'. (VER-936)
+Presto compilation completed successfully.
+Loading db file '/package/eda/cells/OSU/v2.7/synopsys/lib/ami05/osu05_stdcells.db'
+Loading db file '/package/eda/synopsys/syn-K-2015.06-SP1/libraries/syn/dw_foundation.sldb'
+elaborate fir_filter -lib WORK
+Loading db file '/package/eda/synopsys/syn-K-2015.06-SP1/libraries/syn/gtech.db'
+Loading db file '/package/eda/synopsys/syn-K-2015.06-SP1/libraries/syn/standard.sldb'
+  Loading link library 'osu05_stdcells'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'fir_filter'.
+Information: Building the design 'controller'. (HDL-193)
+
+Statistics for case statements in always block at line 70 in file
+	'./source/controller.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            79            |     no/auto      |
+===============================================
+
+Statistics for case statements in always block at line 182 in file
+	'./source/controller.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           186            |     no/auto      |
+===============================================
+
+Inferred memory devices in process
+	in routine controller line 54 in file
+		'./source/controller.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     modwait_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|   curr_state_reg    | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'counter'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'magnitude'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'sync_low'. (HDL-193)
+
+Inferred memory devices in process
+	in routine sync_low line 19 in file
+		'./source/sync_low.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     mid_out_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine sync_low line 32 in file
+		'./source/sync_low.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    sync_out_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'datapath'. (HDL-193)
+Warning:  /home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Source/datapath.sv:75: unsigned to signed assignment occurs. (VER-318)
+Warning:  /home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Source/datapath.sv:80: unsigned to signed assignment occurs. (VER-318)
+
+Statistics for case statements in always block at line 67 in file
+	'/home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Source/datapath.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            72            |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Information: Building the design 'flex_counter' instantiated from design 'counter' with
+	the parameters "10". (HDL-193)
+
+Inferred memory devices in process
+	in routine flex_counter_NUM_CNT_BITS10 line 70 in file
+		'./source/flex_counter.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    count_out_reg    | Flip-flop |  10   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine flex_counter_NUM_CNT_BITS10 line 80 in file
+		'./source/flex_counter.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  rollover_flag_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'datapath_decode'. (HDL-193)
+
+Statistics for case statements in always block at line 36 in file
+	'/home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Source/datapath_decode.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            44            |     no/auto      |
+===============================================
+Presto compilation completed successfully.
+Information: Building the design 'alu'. (HDL-193)
+Warning:  /home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Source/alu.sv:31: signed to unsigned part selection occurs. (VER-318)
+Warning:  /home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Source/alu.sv:32: signed to unsigned part selection occurs. (VER-318)
+Warning:  /home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Source/alu.sv:60: signed to unsigned part selection occurs. (VER-318)
+Warning:  /home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Source/alu.sv:64: signed to unsigned part selection occurs. (VER-318)
+Warning:  /home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Source/alu.sv:68: signed to unsigned part selection occurs. (VER-318)
+Warning:  /home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Source/alu.sv:73: signed to unsigned part selection occurs. (VER-318)
+Warning:  /home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Source/alu.sv:77: signed to unsigned part selection occurs. (VER-318)
+Warning:  /home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Source/alu.sv:81: signed to unsigned part selection occurs. (VER-318)
+Warning:  /home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Source/alu.sv:90: unsigned to signed assignment occurs. (VER-318)
+Warning:  /home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Source/alu.sv:60: signed to unsigned part selection occurs. (VER-318)
+Warning:  /home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Source/alu.sv:64: signed to unsigned part selection occurs. (VER-318)
+Warning:  /home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Source/alu.sv:73: signed to unsigned part selection occurs. (VER-318)
+Warning:  /home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Source/alu.sv:77: signed to unsigned part selection occurs. (VER-318)
+Warning:  /home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Source/alu.sv:60: signed to unsigned part selection occurs. (VER-318)
+
+Statistics for case statements in always block at line 46 in file
+	'/home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Source/alu.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            52            |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Information: Building the design 'register_file'. (HDL-193)
+Statistics for MUX_OPs
+===========================================================
+| block name/line  | Inputs | Outputs | # sel inputs | MB |
+===========================================================
+| register_file/69 |   16   |   17    |      4       | N  |
+| register_file/70 |   16   |   17    |      4       | N  |
+===========================================================
+Presto compilation completed successfully.
+Information: Building the design 'flex_sreg' instantiated from design 'register_file' with
+	the parameters "NUM_BITS=17". (HDL-193)
+
+Inferred memory devices in process
+	in routine flex_sreg_NUM_BITS17 line 39 in file
+		'/home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Source/flex_sreg.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      value_reg      | Flip-flop |  17   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+uniquify
+Information: Uniquified 2 instances of design 'sync_low'. (OPT-1056)
+Information: Uniquified 16 instances of design 'flex_sreg_NUM_BITS17'. (OPT-1056)
+# Step 2: Set design constraints
+# Uncomment below to set timing, area, power, etc. constraints
+# set_max_delay <delay> -from "<input>" -to "<output>"
+# set_max_area <area>
+# set_max_total_power <power> mW
+create_clock "clk" -name "clk" -period 9
+# Step 3: Compile the design
+compile -map_effort medium
+Information: Checking out the license 'DesignWare'. (SEC-104)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | K-2015.06-DWBB_201506.1 |     *     |
+| Licensed DW Building Blocks        | K-2015.06-DWBB_201506.1 |     *     |
+============================================================================
+
+
+Information: There are 19 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'flex_sreg_NUM_BITS17_0'
+  Processing 'register_file'
+  Processing 'alu'
+Information: Added key list 'DesignWare' to design 'alu'. (DDB-72)
+  Processing 'datapath_decode'
+  Processing 'datapath'
+  Processing 'sync_low_0'
+  Processing 'magnitude'
+  Processing 'flex_counter_NUM_CNT_BITS10'
+Information: Added key list 'DesignWare' to design 'flex_counter_NUM_CNT_BITS10'. (DDB-72)
+  Processing 'counter'
+  Processing 'controller'
+  Processing 'fir_filter'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 'alu_DW01_sub_0'
+  Processing 'alu_DW01_add_0'
+  Processing 'magnitude_DW01_sub_0'
+  Processing 'flex_counter_NUM_CNT_BITS10_DW01_dec_0'
+  Processing 'flex_counter_NUM_CNT_BITS10_DW01_inc_0'
+  Mapping 'flex_counter_NUM_CNT_BITS10_DW_mult_uns_0'
+  Mapping 'alu_DW_mult_uns_0'
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+  Mapping Optimization (Phase 1)
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:05 1423269.0      0.87     204.5       0.0                          
+    0:00:05 1423269.0      0.87     204.5       0.0                          
+    0:00:05 1423269.0      0.87     204.5       0.0                          
+    0:00:05 1423269.0      0.87     204.5       0.0                          
+    0:00:05 1423269.0      0.87     204.5       0.0                          
+    0:00:06 1371573.0      1.51     362.8       0.0                          
+    0:00:06 1372221.0      1.68     413.1       0.0                          
+    0:00:06 1372437.0      1.21     288.9       0.0                          
+    0:00:06 1373337.0      1.16     271.7       0.0                          
+    0:00:06 1373301.0      1.46     344.5       0.0                          
+    0:00:06 1374237.0      1.10     250.9       0.0                          
+    0:00:06 1374453.0      0.96     223.4       0.0                          
+    0:00:06 1374813.0      0.95     224.6       0.0                          
+    0:00:06 1374957.0      0.94     216.0       0.0                          
+    0:00:06 1377405.0      0.92     210.7       0.0                          
+    0:00:06 1378053.0      0.92     207.4       0.0                          
+    0:00:06 1378629.0      0.89     202.2       0.0                          
+    0:00:06 1380033.0      0.83     180.7       0.0                          
+    0:00:06 1380762.0      0.79     177.5       0.0                          
+    0:00:06 1382058.0      0.75     166.1       0.0                          
+    0:00:06 1382202.0      0.71     158.0       0.0                          
+    0:00:07 1382526.0      0.70     151.2       0.0                          
+    0:00:07 1383786.0      0.70     150.8       0.0                          
+    0:00:07 1384686.0      0.68     148.7       0.0                          
+    0:00:07 1384686.0      0.68     148.7       0.0                          
+    0:00:07 1384686.0      0.68     148.7       0.0                          
+    0:00:07 1384686.0      0.68     148.7       0.0                          
+    0:00:07 1384686.0      0.68     148.7       0.0                          
+    0:00:07 1384686.0      0.68     148.7       0.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:07 1384686.0      0.68     148.7       0.0                          
+    0:00:07 1385118.0      0.64     137.0       0.0 D2/RF/genblk1[7].REGX/value_reg[10]/D
+    0:00:07 1389834.0      0.59     129.6       0.0 D2/RF/genblk1[7].REGX/value_reg[10]/D
+    0:00:07 1389474.0      0.57     127.1       0.0 D2/RF/genblk1[0].REGX/value_reg[6]/D
+    0:00:07 1391382.0      0.54     117.2       0.0 C1/curr_state_reg[0]/D   
+    0:00:07 1392858.0      0.50     105.7       0.0 D2/RF/genblk1[7].REGX/value_reg[10]/D
+    0:00:07 1395990.0      0.48     100.3       0.0 D2/RF/genblk1[7].REGX/value_reg[10]/D
+    0:00:07 1397358.0      0.45      93.1       0.0 D2/RF/genblk1[7].REGX/value_reg[10]/D
+    0:00:08 1400310.0      0.41      82.5       0.0 D2/RF/genblk1[7].REGX/value_reg[10]/D
+    0:00:08 1401390.0      0.38      75.3       0.0 D2/RF/genblk1[7].REGX/value_reg[10]/D
+    0:00:08 1404270.0      0.36      71.3       0.0 D2/RF/genblk1[8].REGX/value_reg[10]/D
+    0:00:08 1404630.0      0.35      66.8       0.0 D2/RF/genblk1[1].REGX/value_reg[15]/D
+    0:00:08 1404594.0      0.32      60.5       0.1 D2/RF/genblk1[0].REGX/value_reg[10]/D
+    0:00:08 1406610.0      0.29      53.8       0.1 D2/RF/genblk1[0].REGX/value_reg[10]/D
+    0:00:08 1407438.0      0.27      48.9       0.1 D2/RF/genblk1[0].REGX/value_reg[10]/D
+    0:00:08 1412442.0      0.24      40.4       0.1 D2/RF/genblk1[0].REGX/value_reg[10]/D
+    0:00:08 1415718.0      0.22      36.2       0.1 D2/RF/genblk1[0].REGX/value_reg[10]/D
+    0:00:08 1417482.0      0.21      35.4       0.1 D2/RF/genblk1[9].REGX/value_reg[12]/D
+    0:00:08 1418274.0      0.19      32.7       0.1 D2/RF/genblk1[15].REGX/value_reg[12]/D
+    0:00:08 1419174.0      0.19      30.0       0.1 D2/RF/genblk1[5].REGX/value_reg[12]/D
+    0:00:09 1419822.0      0.17      27.9       0.1 D2/RF/genblk1[0].REGX/value_reg[12]/D
+    0:00:09 1420398.0      0.13      20.1       0.1 D2/RF/genblk1[0].REGX/value_reg[12]/D
+    0:00:09 1420686.0      0.12      17.0       0.1 D2/RF/genblk1[0].REGX/value_reg[12]/D
+    0:00:09 1421046.0      0.11      15.0       0.1 D2/RF/genblk1[0].REGX/value_reg[12]/D
+    0:00:09 1421262.0      0.09      12.2       0.4 D2/RF/genblk1[0].REGX/value_reg[12]/D
+    0:00:09 1422054.0      0.07       8.8       0.4 D2/RF/genblk1[0].REGX/value_reg[12]/D
+    0:00:09 1422126.0      0.07       8.6       0.4 D2/RF/genblk1[0].REGX/value_reg[10]/D
+    0:00:09 1425438.0      0.06       5.8       0.5 D2/RF/genblk1[0].REGX/value_reg[12]/D
+    0:00:09 1425222.0      0.05       5.2       0.5 D2/RF/genblk1[1].REGX/value_reg[15]/D
+    0:00:09 1426806.0      0.03       2.4       0.5 D2/RF/genblk1[0].REGX/value_reg[12]/D
+    0:00:10 1427094.0      0.01       0.0       0.5 D2/RF/genblk1[0].REGX/value_reg[12]/D
+    0:00:10 1428894.0      0.00       0.0       0.5                          
+    0:00:10 1428894.0      0.00       0.0       0.5                          
+
+
+  Beginning Design Rule Fixing  (max_capacitance)
+  ----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:10 1428894.0      0.00       0.0       0.5                          
+    0:00:10 1429182.0      0.00       0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:10 1429182.0      0.00       0.0       0.0                          
+    0:00:10 1429182.0      0.00       0.0       0.0                          
+    0:00:10 1413054.0      0.07       6.6       0.0                          
+    0:00:10 1408446.0      0.68     132.1       0.0                          
+    0:00:10 1407726.0      0.68     132.1       0.0                          
+    0:00:10 1407438.0      0.68     132.1       0.0                          
+    0:00:10 1407438.0      0.68     132.1       0.0                          
+    0:00:10 1407438.0      0.68     132.1       0.0                          
+    0:00:10 1410894.0      0.01       0.2       0.0 D2/RF/genblk1[0].REGX/value_reg[12]/D
+    0:00:10 1410966.0      0.01       0.1       0.0                          
+    0:00:11 1411182.0      0.00       0.0       0.0                          
+    0:00:11 1406574.0      0.58     114.2       0.0                          
+    0:00:11 1406286.0      0.58     114.2       0.0                          
+    0:00:11 1406286.0      0.58     114.2       0.0                          
+    0:00:11 1406286.0      0.58     114.2       0.0                          
+    0:00:11 1406286.0      0.58     114.2       0.0                          
+    0:00:11 1406286.0      0.58     114.2       0.0                          
+    0:00:11 1406286.0      0.58     114.2       0.0                          
+    0:00:11 1409742.0      0.04       1.2       0.0 D2/RF/genblk1[1].REGX/value_reg[15]/D
+    0:00:11 1411542.0      0.00       0.0       0.0                          
+Loading db file '/package/eda/cells/OSU/v2.7/synopsys/lib/ami05/osu05_stdcells.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+# Step 4: Output reports
+report_timing -path full -delay max -max_paths 1 -nworst 1 > reports/fir_filter.rep
+report_area >> reports/fir_filter.rep
+report_power -hier >> reports/fir_filter.rep
+# Step 5: Output final VHDL and Verilog files
+write_file -format verilog -hierarchy -output "mapped/fir_filter.v"
+Writing verilog file '/home/ecegrid/a/mg134/ece337/Lab5/mapped/fir_filter.v'.
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+Warning: Verilog writer has added 30 nets to module alu using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+Warning: Verilog writer has added 1 nets to module fir_filter using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+echo "\nScript Done\n"
+
+Script Done
+
+echo "\nChecking Design\n"
+
+Checking Design
+
+check_design
+ 
+****************************************
+check_design summary:
+Version:     K-2015.06-SP1
+Date:        Wed Feb 15 19:46:07 2017
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                     54
+    Unconnected ports (LINT-28)                                    53
+    Constant outputs (LINT-52)                                      1
+
+Cells                                                              35
+    Connected to power or ground (LINT-32)                         28
+    Nets connected to multiple pins on same cell (LINT-33)          7
+--------------------------------------------------------------------------------
+
+Warning: In design 'alu_DW01_add_1', port 'A[16]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW01_add_1', port 'B[16]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW01_add_1', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW01_add_1', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_3', port 'a[14]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_3', port 'a[13]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_3', port 'a[12]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_3', port 'a[11]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_3', port 'a[10]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_3', port 'a[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_3', port 'a[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_3', port 'a[7]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_3', port 'a[6]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_3', port 'a[5]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_3', port 'a[4]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_3', port 'a[3]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_3', port 'a[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_3', port 'a[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_3', port 'a[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_3', port 'product[29]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_3', port 'product[28]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_3', port 'product[27]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_3', port 'product[26]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_3', port 'product[25]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_3', port 'product[24]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_3', port 'product[23]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_3', port 'product[22]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_3', port 'product[21]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_3', port 'product[20]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_3', port 'product[19]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_3', port 'product[18]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_3', port 'product[17]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_3', port 'product[16]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_3', port 'product[15]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_3', port 'product[14]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_3', port 'product[13]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_3', port 'product[12]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_3', port 'product[11]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_3', port 'product[10]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_3', port 'product[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_3', port 'product[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_3', port 'product[7]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_3', port 'product[6]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_3', port 'product[5]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_3', port 'product[4]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_3', port 'product[3]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_3', port 'product[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_3', port 'product[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW_mult_uns_3', port 'product[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW01_sub_2', port 'A[16]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW01_sub_2', port 'B[17]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW01_sub_2', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW01_sub_2', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'fir_filter', a pin on submodule 'D2' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'src1[3]' is connected to logic 0. 
+Warning: In design 'counter', a pin on submodule 'IN1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rollover_val[9]' is connected to logic 1. 
+Warning: In design 'counter', a pin on submodule 'IN1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rollover_val[8]' is connected to logic 1. 
+Warning: In design 'counter', a pin on submodule 'IN1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rollover_val[7]' is connected to logic 1. 
+Warning: In design 'counter', a pin on submodule 'IN1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rollover_val[6]' is connected to logic 1. 
+Warning: In design 'counter', a pin on submodule 'IN1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rollover_val[5]' is connected to logic 1. 
+Warning: In design 'counter', a pin on submodule 'IN1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rollover_val[4]' is connected to logic 0. 
+Warning: In design 'counter', a pin on submodule 'IN1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rollover_val[3]' is connected to logic 1. 
+Warning: In design 'counter', a pin on submodule 'IN1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rollover_val[2]' is connected to logic 0. 
+Warning: In design 'counter', a pin on submodule 'IN1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rollover_val[1]' is connected to logic 0. 
+Warning: In design 'counter', a pin on submodule 'IN1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rollover_val[0]' is connected to logic 0. 
+Warning: In design 'alu', a pin on submodule 'add_41' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'alu', a pin on submodule 'sub_44' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'alu', a pin on submodule 'mult_35' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'a[14]' is connected to logic 0. 
+Warning: In design 'alu', a pin on submodule 'mult_35' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'a[13]' is connected to logic 0. 
+Warning: In design 'alu', a pin on submodule 'mult_35' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'a[12]' is connected to logic 0. 
+Warning: In design 'alu', a pin on submodule 'mult_35' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'a[11]' is connected to logic 0. 
+Warning: In design 'alu', a pin on submodule 'mult_35' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'a[10]' is connected to logic 0. 
+Warning: In design 'alu', a pin on submodule 'mult_35' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'a[9]' is connected to logic 0. 
+Warning: In design 'alu', a pin on submodule 'mult_35' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'a[8]' is connected to logic 0. 
+Warning: In design 'alu', a pin on submodule 'mult_35' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'a[7]' is connected to logic 0. 
+Warning: In design 'alu', a pin on submodule 'mult_35' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'a[6]' is connected to logic 0. 
+Warning: In design 'alu', a pin on submodule 'mult_35' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'a[5]' is connected to logic 0. 
+Warning: In design 'alu', a pin on submodule 'mult_35' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'a[4]' is connected to logic 0. 
+Warning: In design 'alu', a pin on submodule 'mult_35' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'a[3]' is connected to logic 0. 
+Warning: In design 'alu', a pin on submodule 'mult_35' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'a[2]' is connected to logic 0. 
+Warning: In design 'alu', a pin on submodule 'mult_35' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'a[1]' is connected to logic 0. 
+Warning: In design 'alu', a pin on submodule 'mult_35' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'a[0]' is connected to logic 0. 
+Warning: In design 'counter', the same net is connected to more than one pin on submodule 'IN1'. (LINT-33)
+   Net '*Logic1*' is connected to pins 'rollover_val[9]', 'rollover_val[8]'', 'rollover_val[7]', 'rollover_val[6]', 'rollover_val[5]', 'rollover_val[3]'.
+Warning: In design 'counter', the same net is connected to more than one pin on submodule 'IN1'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'rollover_val[4]', 'rollover_val[2]'', 'rollover_val[1]', 'rollover_val[0]'.
+Warning: In design 'alu', the same net is connected to more than one pin on submodule 'add_41'. (LINT-33)
+   Net 'src1_data[16]' is connected to pins 'A[17]', 'A[16]''.
+Warning: In design 'alu', the same net is connected to more than one pin on submodule 'add_41'. (LINT-33)
+   Net 'src2_data[16]' is connected to pins 'B[17]', 'B[16]''.
+Warning: In design 'alu', the same net is connected to more than one pin on submodule 'sub_44'. (LINT-33)
+   Net 'src1_data[16]' is connected to pins 'A[17]', 'A[16]''.
+Warning: In design 'alu', the same net is connected to more than one pin on submodule 'sub_44'. (LINT-33)
+   Net 'src2_data[16]' is connected to pins 'B[17]', 'B[16]''.
+Warning: In design 'alu', the same net is connected to more than one pin on submodule 'mult_35'. (LINT-33)
+   Net 'n68' is connected to pins 'a[14]', 'a[13]'', 'a[12]', 'a[11]', 'a[10]', 'a[9]', 'a[8]', 'a[7]', 'a[6]', 'a[5]', 'a[4]', 'a[3]', 'a[2]', 'a[1]', 'a[0]'.
+Warning: In design 'controller', output port 'src1[3]' is connected directly to 'logic 0'. (LINT-52)
+quit
+
+Thank you...
+Done
+
+

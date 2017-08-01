@@ -1,0 +1,126 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : comparator
+Version: K-2015.06-SP1
+Date   : Thu Jan 12 16:54:21 2017
+****************************************
+
+Operating Conditions: typical   Library: osu05_stdcells
+Wire Load Model Mode: top
+
+  Startpoint: b[0] (input port)
+  Endpoint: eq (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                     0.00       0.00 r
+  b[0] (in)                                0.00       0.00 r
+  r300/B[0] (comparator_DW01_cmp6_0)       0.00       0.00 r
+  r300/U28/Y (INVX2)                       0.07       0.07 f
+  r300/U75/Y (NOR2X1)                      0.16       0.23 r
+  r300/U74/Y (AOI21X1)                     0.15       0.38 f
+  r300/U18/Y (INVX2)                       0.08       0.46 r
+  r300/U73/Y (OAI21X1)                     0.10       0.55 f
+  r300/U72/Y (OAI21X1)                     0.15       0.70 r
+  r300/U70/Y (OAI21X1)                     0.10       0.80 f
+  r300/U69/Y (OAI21X1)                     0.15       0.95 r
+  r300/U67/Y (OAI21X1)                     0.10       1.05 f
+  r300/U66/Y (OAI21X1)                     0.15       1.20 r
+  r300/U64/Y (OAI21X1)                     0.10       1.31 f
+  r300/U63/Y (OAI21X1)                     0.15       1.45 r
+  r300/U61/Y (OAI21X1)                     0.10       1.56 f
+  r300/U60/Y (OAI21X1)                     0.15       1.70 r
+  r300/U58/Y (OAI21X1)                     0.10       1.81 f
+  r300/U57/Y (OAI21X1)                     0.15       1.96 r
+  r300/U55/Y (OAI21X1)                     0.10       2.06 f
+  r300/U54/Y (OAI22X1)                     0.16       2.22 r
+  r300/U4/Y (INVX2)                        0.09       2.30 f
+  r300/U52/Y (OAI21X1)                     0.14       2.45 r
+  r300/LT (comparator_DW01_cmp6_0)         0.00       2.45 r
+  U12/Y (INVX1)                            0.19       2.64 f
+  U9/Y (NAND3X1)                           0.15       2.79 r
+  U8/Y (INVX1)                             0.05       2.84 f
+  eq (out)                                 0.00       2.84 f
+  data arrival time                                   2.84
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+1
+ 
+****************************************
+Report : area
+Design : comparator
+Version: K-2015.06-SP1
+Date   : Thu Jan 12 16:54:21 2017
+****************************************
+
+Library(s) Used:
+
+    osu05_stdcells (File: /package/eda/cells/OSU/v2.7/synopsys/lib/ami05/osu05_stdcells.db)
+
+Number of ports:                           74
+Number of nets:                           174
+Number of cells:                          108
+Number of combinational cells:            106
+Number of sequential cells:                 1
+Number of macros/black boxes:               0
+Number of buf/inv:                         31
+Number of references:                       4
+
+Combinational area:              22266.000000
+Buf/Inv area:                     4464.000000
+Noncombinational area:               0.000000
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                 22266.000000
+Total area:                 undefined
+1
+Loading db file '/package/eda/cells/OSU/v2.7/synopsys/lib/ami05/osu05_stdcells.db'
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: There is no defined clock in the design. (PWR-80)
+Warning: Design has unannotated primary inputs. (PWR-414)
+ 
+****************************************
+Report : power
+        -hier
+        -analysis_effort low
+Design : comparator
+Version: K-2015.06-SP1
+Date   : Thu Jan 12 16:54:22 2017
+****************************************
+
+
+Library(s) Used:
+
+    osu05_stdcells (File: /package/eda/cells/OSU/v2.7/synopsys/lib/ami05/osu05_stdcells.db)
+
+
+Operating Conditions: typical   Library: osu05_stdcells
+Wire Load Model Mode: top
+
+
+Global Operating Voltage = 5    
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+--------------------------------------------------------------------------------
+                                       Switch   Int      Leak     Total
+Hierarchy                              Power    Power    Power    Power    %
+--------------------------------------------------------------------------------
+comparator                                7.035    6.813    6.372   13.848 100.0
+  r300 (comparator_DW01_cmp6_0)           6.853    6.628    6.150   13.482  97.4
+1

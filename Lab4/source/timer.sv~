@@ -1,0 +1,26 @@
+// $Id: $
+// File name:   timer.sv
+// Created:     2/7/2017
+// Author:      Kunwar Digraj Singh Jain
+// Lab Section: 5
+// Version:     1.0  Initial Design Entry
+// Description: Timer Controller
+
+module timer 
+(
+	input wire 	clk,
+			n_rst,
+			enable_timer,
+	output wire	shift_strobe,
+			packet_done
+) ;
+	
+	reg [3:0] count_1, count_2 ;
+	wire packet_done_intermediate ;
+
+	flex_counter #(4) IN1 (.clk(clk), .n_rst(n_rst), .clear(packet_done), .count_enable(enable_timer), .rollover_val(4'b1010), .count_out(count_1), .rollover_flag(shift_strobe)) ;
+	flex_counter #(4) IN2 (.clk(clk), .n_rst(n_rst), .clear(packet_done_intermediate), .count_enable(shift_strobe), .rollover_val(4'b1001), .count_out(count_2), .rollover_flag(packet_done_intermediate)) ;
+
+	assign packed_done = packet_done_intermediate ;
+
+endmodule

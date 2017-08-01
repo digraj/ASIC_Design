@@ -1,0 +1,21 @@
+// $Id: $
+// File name:   adder_1bit.sv
+// Created:     1/23/2017
+// Author:      Kunwar Digraj Singh Jain
+// Lab Section: 5
+// Version:     1.0  Initial Design Entry
+// Description: 1 bit adder
+
+module sensor_b
+(
+	input wire a, b, carry_in,
+	output reg sum, carry_out
+);
+
+	always_comb begin
+		sum = carry_in ^ (a ^ b) ;
+		carry_out = ((~carry_in) & b & a) | (carry_in & (b | a)) ;
+	end
+
+endmodule
+		

@@ -1,0 +1,79 @@
+// $Id: $
+// File name:   rcu.sv
+// Created:     2/7/2017
+// Author:      Kunwar Digraj Singh Jain
+// Lab Section: 5
+// Version:     1.0  Initial Design Entry
+// Description: Receiver Control Unit
+
+module rcu 
+(
+	input wire	clk,
+			n_rst,
+			start_bit_detected,
+			packet_done,
+			framing_error,
+	output reg	sbc_clear,
+			sbc_enable,
+			load_buffer,
+			enable_timer
+) ;
+
+	parameter [2:0] 	IDLE = 		3'b000,
+				CLEAR_STATE = 	3'b001,
+				START_RCV = 	3'b010,
+				CHK_CRTS = 	3'b011,
+				HOLD = 		3'b100,
+				LD_BUFF = 	3'b101 ;
+				
+	reg [2:0] 	next_state,
+			curr_state ;
+
+	always_comb
+	begin
+		load_buffer = 1'b0 ;
+		sbc_clear = 1'b0 ;
+		sbc_enable = 1'b0 ;
+		enable_timer = 1'b0 ;
+		case (curr_state)
+			CLEAR_STATE: sbc_clear = 1'b1 ;
+			START_RCV: enable_timer = 1'b1 ;
+			CHK_CRTS: sbc_enable = 1'b1 ;
+			LD_BUFF: load_buffer = 1'b1 ;
+		endcase	
+	end
+	
+	always_comb
+	begin
+		next_state = curr_state ;
+		case (curr_state)
+			IDLE: begin
+				if (start_bit_detected)
+					next_state = CLEAR_STATE ;
+			end
+			CLEAR_STATE: 
+				next_state = START_RCV ;
+			START_RCV: begin
+				if (packet_done)
+					next_state = CHK_CRTS ;
+			end
+			CHK_CRTS: next_state <= HOLD ;
+			HOLD: begin
+				if (framing_error)
+					next_state <= IDLE ;
+				else
+					next_state <= LD_BUFF ;
+			end
+			LD_BUFF: next_state = IDLE ;
+		endcase	
+	end
+
+	always_ff @ (posedge clk, negedge n_rst) 
+	begin
+		if (n_rst == 1'b0) 
+			curr_state <= IDLE ;
+		else
+			curr_state <= next_state ;
+	end
+
+endmodule			

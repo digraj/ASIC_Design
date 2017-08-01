@@ -1,0 +1,92 @@
+// $Id: $
+// File name:   tb_scl_edge.sv
+// Created:     2/21/2017
+// Author:      Kunwar Digraj Singh Jain
+// Lab Section: 5
+// Version:     1.0  Initial Design Entry
+// Description: Testbench for ECL Edge detector
+
+`timescale 1ns / 10ps
+
+module tb_scl_edge () ;
+
+	// Define parameters
+	// basic test bench parameters
+	localparam	CLK_PERIOD	= 2.5;
+	localparam	CHECK_DELAY = 1; // Check 1ns after the rising edge to allow for propagation delay
+
+	localparam	SCL_PERIOD	= 300;
+	
+	// Shared Test Variables
+	reg tb_clk;
+	reg tb_scl;
+
+	always
+	begin
+		tb_clk = 1'b0;
+		#(CLK_PERIOD/0.5);
+		tb_clk = 1'b1;
+		#(CLK_PERIOD/0.5);
+	end	
+
+	always
+	begin
+		tb_scl = 1'b0;
+		#(2 * SCL_PERIOD/3);
+		tb_scl = 1'b1;
+		#(SCL_PERIOD/3.0);
+	end	
+
+	tb_scl_edge_DUT testbench(.tb_clk, .tb_scl);
+	
+endmodule
+
+module tb_scl_edge_DUT (input wire tb_clk, input wire tb_scl) ;
+
+	reg	tb_n_rst;
+	reg	tb_rising_edge_found;
+	reg	tb_falling_edge_found;
+
+	scl_edge DUT
+		(
+			.clk(tb_clk),
+			.n_rst(tb_n_rst),
+			.scl(tb_scl),
+			.rising_edge_found(tb_rising_edge_found),
+			.falling_edge_found(tb_falling_edge_found)
+		);	
+
+	initial 
+	begin
+		//TEST CASE 1
+		$display ("-----Test Case 1-----") ;
+		tb_n_rst = 1'b1 ;
+		#10
+		@(negedge tb_clk)
+		tb_n_rst = 1'b0 ;
+
+		@(negedge tb_clk)
+		tb_n_rst = 1'b1 ;
+	end
+endmodule	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

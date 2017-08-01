@@ -1,0 +1,24 @@
+// $Id: $
+// File name:   tx_sr.sv
+// Created:     2/24/2017
+// Author:      Kunwar Digraj Singh Jain
+// Lab Section: 5
+// Version:     1.0  Initial Design Entry
+// Description: Transmitting Shift Register wrapper file
+
+module tx_sr (	
+	input wire 	clk,
+			n_rst,
+			falling_edge_found,
+			tx_enable,
+			load_data,
+	input wire	[7:0] tx_data,
+	output wire	tx_out
+) ;
+
+	wire enable ;
+	assign enable = falling_edge_found & tx_enable ;
+
+	flex_pts_sr #(8, 1) PTS (.clk(clk), .n_rst(n_rst), .shift_enable(tx_enable), .load_enable(load_data), .parallel_in(tx_data), .serial_out(tx_out)) ;
+
+endmodule

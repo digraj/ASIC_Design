@@ -1,0 +1,67 @@
+// $Id: $
+// File name:   tb_sda_sel.sv
+// Created:     2/21/2017
+// Author:      Kunwar Digraj Singh Jain
+// Lab Section: 5
+// Version:     1.0  Initial Design Entry
+// Description: Testbench for SDA Select
+
+`timescale 1ns / 10ps
+
+module tb_sda_sel () ;
+
+	// Define parameters
+	// basic test bench parameters
+	localparam	CLK_PERIOD	= 2.5;
+	localparam	CHECK_DELAY = 1; // Check 1ns after the rising edge to allow for propagation delay
+
+	// Shared Test Variables
+	reg tb_clk;
+	
+	always
+	begin
+		tb_clk = 1'b0;
+		#(CLK_PERIOD/0.5);
+		tb_clk = 1'b1;
+		#(CLK_PERIOD/0.5);
+	end	
+
+	tb_sda_sel_DUT testbench(.tb_clk);
+	
+endmodule
+
+module tb_sda_sel_DUT (input wire tb_clk) ;
+
+	reg	tb_tx_out;
+	reg	[1:0] tb_sda_mode;
+	reg	tb_sda_out;
+
+	sda_sel DUT
+		(
+			.tx_out(tb_tx_out),
+			.sda_mode(tb_sda_mode),
+			.sda_out(tb_sda_out)
+		);	
+
+	initial 
+	begin
+		tb_tx_out = 1 ;
+		tb_sda_mode = 0 ;
+		#10
+		tb_sda_mode = 1 ;
+		#10
+		tb_sda_mode = 2 ;
+		#10
+		tb_sda_mode = 3 ;
+		#10
+		tb_tx_out = 0 ;
+		#10
+		tb_tx_out = 1 ;
+		#10
+		tb_sda_mode = 0 ;
+		#10
+		$display("------END------");
+	end
+endmodule
+
+

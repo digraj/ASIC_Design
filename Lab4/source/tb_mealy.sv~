@@ -1,0 +1,137 @@
+// $Id: $
+// File name:   tb_mealy.sv
+// Created:     2/4/2017
+// Author:      Kunwar Digraj Singh Jain
+// Lab Section: 5
+// Version:     1.0  Initial Design Entry
+// Description: Testbench for mealy model
+
+`timescale 1ns / 10ps
+
+module tb_mealy () ;
+
+	// Define parameters
+	// basic test bench parameters
+	localparam	CLK_PERIOD	= 2.5;
+	localparam	CHECK_DELAY = 1; // Check 1ns after the rising edge to allow for propagation delay
+	
+	// Shared Test Variables
+	reg tb_clk;
+
+	always
+	begin
+		tb_clk = 1'b0;
+		#(CLK_PERIOD/2.0);
+		tb_clk = 1'b1;
+		#(CLK_PERIOD/2.0);
+	end	
+
+	tb_mealy_DUT testbench(.tb_clk);
+	
+endmodule
+
+module tb_mealy_DUT (input wire tb_clk) ;
+
+	reg	tb_n_rst;
+	reg	tb_i;
+	reg	tb_o;
+
+	mealy DUT
+		(
+			.clk(tb_clk),
+			.n_rst(tb_n_rst),
+			.i(tb_i),
+			.o(tb_o)
+		);	
+
+	int i ;
+	initial 
+	begin
+		//TEST CASE 1
+		$display ("-----Test Case 1-----") ;
+		tb_n_rst = 1'b1 ;
+		#5
+		@(negedge tb_clk)
+		tb_n_rst = 1'b0 ;
+		#5
+		@(negedge tb_clk)
+		tb_n_rst = 1'b1 ;
+
+		tb_i = 1'b0 ;
+		@(negedge tb_clk) ;
+
+		tb_i = 1'b1 ;
+		@(negedge tb_clk) ;
+
+		tb_i = 1'b0 ;
+		@(negedge tb_clk) ;
+
+		tb_i = 1'b1 ;
+		@(negedge tb_clk) ;
+
+		tb_i = 1'b1 ;
+		@(negedge tb_clk) ;
+	
+		tb_i = 1'b1 ;
+		@(negedge tb_clk) ;
+	
+		tb_i = 1'b0 ;
+		@(negedge tb_clk) ;
+	
+		tb_i = 1'b1 ;
+		@(negedge tb_clk) ;
+	
+		tb_i = 1'b1 ;
+		@(negedge tb_clk) ;
+	
+		tb_i = 1'b0 ;
+		@(negedge tb_clk) ;
+
+		tb_i = 1'b1 ;
+		@(negedge tb_clk) ;
+
+		tb_i = 1'b0 ;
+		@(negedge tb_clk) ;
+
+		tb_i = 1'b0 ;
+		@(negedge tb_clk) ;
+
+		tb_i = 1'b1 ;
+		@(negedge tb_clk) ;
+
+		tb_i = 1'b1 ;
+		@(negedge tb_clk) ;
+
+		tb_i = 1'b1 ;
+		@(negedge tb_clk) ;
+
+		tb_i = 1'b0 ;
+		@(negedge tb_clk) ;
+
+		tb_i = 1'b0 ;
+		@(negedge tb_clk) ;
+
+		$display ("-----END-----") ;
+	end
+endmodule	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

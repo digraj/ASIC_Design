@@ -1,0 +1,25 @@
+// $Id: $
+// File name:   sensor_d.sv
+// Created:     1/19/2017
+// Author:      Kunwar Digraj Singh Jain
+// Lab Section: 5
+// Version:     1.0  Initial Design Entry
+// Description: dataflow style sensor
+
+module sensor_d
+(
+	input wire [3:0] sensors,
+	output wire error
+);
+
+	wire	AandC,
+		BandC,
+		AandCorBandC;
+
+	assign AandC = sensors[3] & sensors[1] ;
+	assign BandC = sensors[2] & sensors[1] ;
+	
+	assign AandCorBandC = AandC | BandC ;
+	assign error = AandCorBandC | B(sensors[0] ;
+
+endmodule

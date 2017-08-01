@@ -1,0 +1,55 @@
+// $Id: $
+// File name:   decode.sv
+// Created:     2/21/2017
+// Author:      Kunwar Digraj Singh Jain
+// Lab Section: 5
+// Version:     1.0  Initial Design Entry
+// Description: Decoder
+
+module decode (
+	input wire 	clk,
+			n_rst,
+			scl,
+			sda_in,
+	input wire	[7:0] starting_byte,
+	output reg 	rw_mode,
+			address_match,
+			start_found,
+			stop_found
+) ;
+
+	reg final_sda, final_scl, inter_sda, inter_scl, temp_scl, temp_sda ;
+
+	always_ff @ (posedge clk, negedge n_rst) begin
+		if (n_rst == 1'b0) begin
+			final_scl <= 1 ;
+			inter_scl <= 1 ;
+		end
+		else begin
+			final_scl <= inter_scl ;
+			inter_scl <= scl ;
+		end
+	end
+
+	always_ff @ (posedge clk, negedge n_rst) begin
+		if (n_rst == 1'b0) begin
+			final_sda <= 1 ;
+			inter_sda <= 1 ;
+		end
+		else begin
+			final_sda <= inter_sda ;
+			inter_sda <= sda_in ;
+		end
+	end
+
+	always_comb begin
+		start_found = (final_scl & inter_scl) & (final_sda & ~inter_sda) ;
+		stop_found = (final_scl & inter_scl) & (~final_sda & inter_sda) ;
+	end
+
+	always_comb begin
+		rw_mode = starting_byte[0] ;
+		address_match = (starting_byte[7:1] == 7'b1111000) ;
+	end
+
+endmodule

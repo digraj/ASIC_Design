@@ -1,0 +1,14 @@
+// $Id: $
+// File name:   timer_tx.sv
+// Created:     4/21/2017
+// Author:      Kunwar Digraj Singh Jain
+// Lab Section: 5
+// Version:     1.0  Initial Design Entry
+// Description: Timer for Transmitter
+
+module timer_tx (
+	input wire	clk,
+			n_rst,
+			load_enable,		
+	output reg	shift_enable
+) ;

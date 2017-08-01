@@ -1,0 +1,42 @@
+// $Id: $
+// File name:   sd_clock_divider.sv
+// Created:     4/11/2017
+// Author:      Pushkal B. Vaid
+// Lab Section: 5
+// Version:     1.0  Initial Design Entry
+// Description: SD Card - Clock divider into 400Khz and 24Mhz
+
+
+module sd_clock_divider
+
+(
+	input wire clk,
+	input wire n_rst,
+	input wire divider, 
+	output reg sclk
+);
+	reg clear1;
+	reg clear2;
+	reg [2:0] count1;
+	reg [7:0] count2;
+	reg rollover_flag1;
+	reg rollover_flag2;
+	
+	wire enable;
+	assign enable = 1'b1;
+	flex_counter #(3) FLEX_CNT1 ( .clk(clk), .n_rst(n_rst), .clear(clear1), .count_enable(enable), .rollover_val(3'b100), .count_out(count1), .rollover_flag(rollover_flag1));
+	flex_counter #(8) FLEX_CNT2 ( .clk(clk), .n_rst(n_rst), .clear(clear2), .count_enable(enable), .rollover_val(8'd240), .count_out(count2), .rollover_flag(rollover_flag2));
+
+	always_comb
+	begin
+		//sclk = rollover_flag1; //24Mhz
+//		if ( divider == 1'b1 )
+//		begin 
+			sclk = rollover_flag2;	//400Khz	
+//		end
+	end
+	
+
+
+
+endmodule 

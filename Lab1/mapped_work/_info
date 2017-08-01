@@ -1,0 +1,67 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/ecegrid/a/mg134/ece337/Lab1
+T_opt
+!s110 1484258068
+V@YoV2__EAm1Ika7ZKl1[M3
+04 10 4 work comparator fast 0
+=1-3417eba01d97-5877fb14-99ce2-7849
+o-quiet -auto_acc_if_foreign -work mapped_work/ -L /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work -L /home/ecegrid/a/ece337/Class0.5u/GOLD_LIB -Lf /home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Vsim +acc
+n@_opt
+OL;O;10.3b;59
+vcomparator
+Z1 DXx6 sv_std 3 std 0 22 <EOTafDcUY:cQeO^ICn]m3
+Z2 !s110 1484258064
+!i10b 1
+!s100 LBdlB]Z`ZF1g0`Dc9aTZh1
+I00aJc;JM@QgXz@imGYEA<3
+Z3 V`JN@9S9cnhjKRR_L]QIcM3
+Z4 !s105 comparator_v_unit
+S1
+R0
+Z5 w1484258062
+Z6 8mapped/comparator.v
+Z7 Fmapped/comparator.v
+L0 125
+Z8 OL;L;10.3b;59
+r1
+!s85 0
+31
+Z9 !s108 1484258064.892938
+Z10 !s107 mapped/comparator.v|
+Z11 !s90 -sv|-work|mapped_work|mapped/comparator.v|
+!i113 0
+Z12 o-sv -work mapped_work
+Z13 tCoverage 63 CoverExcludeDefault 1 CoverOpt 1 CoverShortCircuit 0
+vcomparator_DW01_cmp6_0
+R1
+R2
+!i10b 1
+!s100 RfIlEJ0k=?7K@F_Tm7D:z2
+IS^[Jb[mWRmNg<_RMDJ7?f1
+R3
+R4
+S1
+R0
+R5
+R6
+R7
+L0 8
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R13
+ncomparator_@d@w01_cmp6_0

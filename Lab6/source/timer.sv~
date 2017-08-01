@@ -1,0 +1,113 @@
+// $Id: $
+// File name:   timer.sv
+// Created:     2/24/2017
+// Author:      Kunwar Digraj Singh Jain
+// Lab Section: 5
+// Version:     1.0  Initial Design Entry
+// Description: Timer wrapper file
+
+module timer (
+	input wire 	clk,
+			n_rst,
+			rising_edge_found,
+			falling_edge_found,
+			stop_found,
+			start_found,
+	output reg	byte_received,
+			ack_prep,
+			check_ack,
+			ack_done
+) ;
+
+	typedef enum reg [2:0] {	IDLE,
+					PREP,
+					CHECK,
+					DONE,
+					CLEAR, 
+					COUNT,
+					BYTE 
+				} state_type ;
+
+	state_type 	next_state,
+			curr_state ;
+
+	reg [3:0] count_out ;
+
+	reg rollover_flag, clear ;
+
+	flex_counter #(4) IN1 (.clk(clk), .n_rst(n_rst), .clear(clear), .count_out(count_out), .count_enable(rising_edge_found), .rollover_val(4'd9), .rollover_flag(rollover_flag)) ;
+
+	always_ff @ (posedge clk, negedge n_rst) begin
+		if (n_rst == 1'b0) 
+			curr_state <= IDLE;
+		else
+			curr_state <= next_state;
+	end
+
+	always_comb begin
+		byte_received = 1'b0 ;
+		ack_prep = 1'b0 ;
+		check_ack = 1'b0 ;
+		ack_done = 1'b0 ;
+		clear = 1'b0 ;
+		case(curr_state)
+		
+		CLEAR: clear = 1'b1 ;
+
+		PREP: ack_prep = 1'b1 ;
+		
+		CHECK: check_ack = 1'b1 ;
+
+		DONE: ack_done = 1'b1 ;
+		
+		BYTE: byte_received = 1'b1 ;
+
+		endcase
+	end
+
+	always_comb begin
+		next_state = curr_state ;
+		case(curr_state)
+		
+		IDLE: begin
+			if (start_found)
+				next_state = CLEAR  ;
+		end
+		
+		CLEAR: begin
+			next_state = COUNT ;
+		end
+
+		COUNT: begin
+			 if (count_out == 4'd8)
+				next_state = BYTE ;
+		end
+
+		BYTE: begin
+			if (falling_edge_found)
+				next_state = PREP ;
+		end
+
+		PREP: begin
+			if (rising_edge_found)
+				next_state = CHECK ;
+		end
+		
+		CHECK: begin
+			if (falling_edge_found)
+				next_state = DONE ;
+		end
+
+		DONE: begin
+			next_state = COUNT ;
+		end
+		endcase
+
+		if (stop_found)
+			next_state = IDLE ;
+		if (start_found)
+			next_state = CLEAR ;
+	end
+
+endmodule
+

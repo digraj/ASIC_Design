@@ -1,0 +1,161 @@
+// $Id: $
+// File name:   i2c_slave.sv
+// Created:     2/24/2017
+// Author:      Kunwar Digraj Singh Jain
+// Lab Section: 5
+// Version:     1.0  Initial Design Entry
+// Description: Heart of Lab 6
+
+module i2c_slave (
+	input wire 	clk,
+			n_rst,
+			scl,
+			sda_in,
+			write_enable,
+	input wire	[7:0] write_data,
+	output reg	fifo_empty,
+			fifo_full,
+			sda_out
+) ;
+
+	reg 	start_found, 
+		stop_found,
+		byte_received,
+		ack_prep,
+		check_ack,
+		ack_done,
+		rw_mode,
+		address_match,
+		rx_enable,
+		tx_enable,
+		read_enable,
+		rising_edge_found,
+		falling_edge_found,
+		load_data,
+		tx_out,
+		sda_sync,
+		scl_sync ;
+
+	reg	[1:0] sda_mode ;
+	reg	[7:0] rx_data ;
+	reg	[7:0] read_data ;
+
+	sync_low SCL ( 
+			.clk(clk), 
+			.n_rst(n_rst), 
+			.async_in(scl), 
+			.sync_out(scl_sync)
+	);
+
+	sync_low SDA ( 
+			.clk(clk), 
+			.n_rst(n_rst), 
+			.async_in(sda_in), 
+			.sync_out(sda_sync)
+	);
+
+	controller C1 (
+			.clk(clk),
+			.n_rst(n_rst),
+			.stop_found(stop_found),
+			.start_found(start_found), 
+			.byte_received(byte_received),
+			.ack_prep(ack_prep),
+			.check_ack(check_ack),
+			.ack_done(ack_done),
+			.rw_mode(rw_mode),
+			.address_match(address_match),
+			.sda_in(sda_sync),
+			.rx_enable(rx_enable), 
+			.tx_enable(tx_enable),
+			.read_enable(read_enable),
+			.load_data(load_data),
+			.sda_mode(sda_mode)
+	) ;
+
+	decode D1 (
+		 	.clk(clk),
+			.n_rst(n_rst),
+			.scl(scl_sync),
+			.sda_in(sda_sync),
+			.starting_byte(rx_data),
+			.rw_mode(rw_mode),
+			.address_match(address_match),
+			.start_found(start_found),
+			.stop_found(stop_found)
+	) ;
+
+	rx_sr STP_i2c (
+			.clk(clk),
+			.n_rst(n_rst),
+			.sda_in(sda_sync),
+			.rising_edge_found(rising_edge_found), 
+			.rx_enable(rx_enable),
+			.rx_data(rx_data)
+	) ;
+
+	tx_sr PTS_i2c (	
+		 	.clk(clk),
+			.n_rst(n_rst),
+			.falling_edge_found(falling_edge_found),
+			.tx_enable(tx_enable),
+			.load_data(load_data),
+			.tx_data(read_data),
+			.tx_out(tx_out)
+	) ;
+
+	timer T1 (
+		 	.clk(clk),
+			.n_rst(n_rst),
+			.rising_edge_found(rising_edge_found),
+			.falling_edge_found(falling_edge_found),
+			.stop_found(stop_found),
+			.start_found(start_found),
+			.byte_received(byte_received),
+			.ack_prep(ack_prep),
+			.check_ack(check_ack),
+			.ack_done(ack_done)
+	) ;
+
+
+	scl_edge E1 (
+			.clk(clk),
+			.n_rst(n_rst),
+			.scl(scl_sync),
+			.rising_edge_found(rising_edge_found),
+			.falling_edge_found(falling_edge_found)
+	) ;
+
+
+	sda_sel S1 (
+			.tx_out(tx_out),
+			.sda_mode(sda_mode),
+			.sda_out(sda_out)
+	) ;
+
+	tx_fifo F1 (
+			.clk(clk),
+			.n_rst(n_rst),
+			.read_enable(read_enable),
+			.write_enable(write_enable),
+			.write_data(write_data),
+			.read_data(read_data),
+			.fifo_empty(fifo_empty),
+			.fifo_full(fifo_full)
+	) ;
+
+endmodule
+
+
+
+
+
+
+
+
+
+
+
+
+
+

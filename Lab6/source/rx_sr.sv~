@@ -1,0 +1,22 @@
+// $Id: $
+// File name:   rx_sr.sv
+// Created:     2/24/2017
+// Author:      Kunwar Digraj Singh Jain
+// Lab Section: 5
+// Version:     1.0  Initial Design Entry
+// Description: Wrapper file Receiving Shift register
+
+module rx_sr (
+	input wire	clk,
+			n_rst,
+			sda_in,
+			rising_edge_found, 
+			rx_enable,
+	output_reg	[7:0] rx_data
+) ;
+	wire enable ;
+	assign enable = rising_edge_found & rx_enable ;
+
+	flex_stp_sr #(8, 1) STP (.clk(clk), .n_rst(n_rst), .shift_enable(enable), .serial_in(sda_in), .parallel_out(rx_data)) ;
+
+endmodule

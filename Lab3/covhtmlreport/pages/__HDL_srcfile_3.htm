@@ -1,0 +1,55 @@
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+  <title>Questa Coverage Report</title>
+  <link rel="StyleSheet" media="screen" href="../css/hdl2html.css"/>
+</head>
+<body id="hdl2html">
+  <tt><a name="1"/><span style="color:red">%s%%s%%s%%s%%s%1%s%%s%</span><span class="comment">//%s%$Id:%s%$</span><br/>
+<a name="2"/><span style="color:red">%s%%s%%s%%s%%s%2%s%%s%</span><span class="comment">//%s%File%s%name:%s%%s%%s%adder_16bit.sv</span><br/>
+<a name="3"/><span style="color:red">%s%%s%%s%%s%%s%3%s%%s%</span><span class="comment">//%s%Created:%s%%s%%s%%s%%s%1/26/2017</span><br/>
+<a name="4"/><span style="color:red">%s%%s%%s%%s%%s%4%s%%s%</span><span class="comment">//%s%Author:%s%%s%%s%%s%%s%%s%Kunwar%s%Digraj%s%Singh%s%Jain</span><br/>
+<a name="5"/><span style="color:red">%s%%s%%s%%s%%s%5%s%%s%</span><span class="comment">//%s%Lab%s%Section:%s%5</span><br/>
+<a name="6"/><span style="color:red">%s%%s%%s%%s%%s%6%s%%s%</span><span class="comment">//%s%Version:%s%%s%%s%%s%%s%1.0%s%%s%Initial%s%Design%s%Entry</span><br/>
+<a name="7"/><span style="color:red">%s%%s%%s%%s%%s%7%s%%s%</span><span class="comment">//%s%Description:%s%16%s%bit%s%adder</span><br/>
+<a name="8"/><span style="color:red">%s%%s%%s%%s%%s%8%s%%s%</span><br/>
+<a name="9"/><span style="color:red">%s%%s%%s%%s%%s%9%s%%s%</span><span class="keyword">module</span>%s%adder_16bit<br/>
+<a name="10"/><span style="color:red">%s%%s%%s%%s%10%s%%s%</span>(<br/>
+<a name="11"/><span style="color:red">%s%%s%%s%%s%11%s%%s%</span>%t%<span class="keyword">input</span>%s%<span class="keyword">wire</span>%s%[15:0]%s%a,<br/>
+<a name="12"/><span style="color:red">%s%%s%%s%%s%12%s%%s%</span>%t%<span class="keyword">input</span>%s%<span class="keyword">wire</span>%s%[15:0]%s%b,<br/>
+<a name="13"/><span style="color:red">%s%%s%%s%%s%13%s%%s%</span>%t%<span class="keyword">input</span>%s%<span class="keyword">wire</span>%s%carry_in,<br/>
+<a name="14"/><span style="color:red">%s%%s%%s%%s%14%s%%s%</span>%t%<span class="keyword">output</span>%s%<span class="keyword">wire</span>%s%[15:0]%s%sum,<br/>
+<a name="15"/><span style="color:red">%s%%s%%s%%s%15%s%%s%</span>%t%<span class="keyword">output</span>%s%<span class="keyword">wire</span>%s%overflow<br/>
+<a name="16"/><span style="color:red">%s%%s%%s%%s%16%s%%s%</span>);<br/>
+<a name="17"/><span style="color:red">%s%%s%%s%%s%17%s%%s%</span><span class="comment">/*%t%int%s%i,%s%j;</span><br/>
+<a name="18"/><span style="color:red">%s%%s%%s%%s%18%s%%s%</span><span class="comment"></span><br/>
+<a name="19"/><span style="color:red">%s%%s%%s%%s%19%s%%s%</span><span class="comment">%t%always%s%@%s%(a)%s%begin</span><br/>
+<a name="20"/><span style="color:red">%s%%s%%s%%s%20%s%%s%</span><span class="comment">%t%%t%for%s%(i%s%=%s%0;%s%i%s%&lt;%s%16;%s%i%s%=%s%i%s%+%s%1)</span><br/>
+<a name="21"/><span style="color:red">%s%%s%%s%%s%21%s%%s%</span><span class="comment">%t%%t%begin</span><br/>
+<a name="22"/><span style="color:red">%s%%s%%s%%s%22%s%%s%</span><span class="comment">%t%%t%%t%assert%s%((a[i]%s%==%s%1'b1)%s%||%s%(a[i]%s%==%s%1'b0))</span><br/>
+<a name="23"/><span style="color:red">%s%%s%%s%%s%23%s%%s%</span><span class="comment">%t%%t%%t%else%s%$error("Input%s%value%s%of%s%a%s%is%s%incorrect");</span><br/>
+<a name="24"/><span style="color:red">%s%%s%%s%%s%24%s%%s%</span><span class="comment">%t%%t%end</span><br/>
+<a name="25"/><span style="color:red">%s%%s%%s%%s%25%s%%s%</span><span class="comment">%t%end</span><br/>
+<a name="26"/><span style="color:red">%s%%s%%s%%s%26%s%%s%</span><span class="comment"></span><br/>
+<a name="27"/><span style="color:red">%s%%s%%s%%s%27%s%%s%</span><span class="comment">%t%always%s%@%s%(b)%s%begin</span><br/>
+<a name="28"/><span style="color:red">%s%%s%%s%%s%28%s%%s%</span><span class="comment">%t%%t%for%s%(j%s%=%s%0;%s%j%s%&lt;%s%16;%s%j%s%=%s%j%s%+%s%1)</span><br/>
+<a name="29"/><span style="color:red">%s%%s%%s%%s%29%s%%s%</span><span class="comment">%t%%t%begin</span><br/>
+<a name="30"/><span style="color:red">%s%%s%%s%%s%30%s%%s%</span><span class="comment">%t%%t%%t%assert%s%((b[j]%s%==%s%1'b1)%s%||%s%(b[j]%s%==%s%1'b0))</span><br/>
+<a name="31"/><span style="color:red">%s%%s%%s%%s%31%s%%s%</span><span class="comment">%t%%t%%t%else%s%$error("Input%s%value%s%of%s%b%s%is%s%incorrect");</span><br/>
+<a name="32"/><span style="color:red">%s%%s%%s%%s%32%s%%s%</span><span class="comment">%t%%t%end</span><br/>
+<a name="33"/><span style="color:red">%s%%s%%s%%s%33%s%%s%</span><span class="comment">%t%end</span><br/>
+<a name="34"/><span style="color:red">%s%%s%%s%%s%34%s%%s%</span><span class="comment"></span><br/>
+<a name="35"/><span style="color:red">%s%%s%%s%%s%35%s%%s%</span><span class="comment">%t%always%s%@%s%(carry_in)%s%begin</span><br/>
+<a name="36"/><span style="color:red">%s%%s%%s%%s%36%s%%s%</span><span class="comment">%t%%t%assert%s%((carry_in%s%==%s%1'b1)%s%||%s%(carry_in%s%==%s%1'b0))</span><br/>
+<a name="37"/><span style="color:red">%s%%s%%s%%s%37%s%%s%</span><span class="comment">%t%%t%else%s%$error("Input%s%value%s%of%s%carry_in%s%is%s%incorrect");</span><br/>
+<a name="38"/><span style="color:red">%s%%s%%s%%s%38%s%%s%</span><span class="comment">%t%end</span><br/>
+<a name="39"/><span style="color:red">%s%%s%%s%%s%39%s%%s%</span><span class="comment">*/</span><br/>
+<a name="40"/><span style="color:red">%s%%s%%s%%s%40%s%%s%</span>%t%adder_nbit%s%#(16)%s%IZ%s%(.a(a),%s%.b(b),%s%.carry_in(carry_in),%s%.sum(sum),%s%.overflow(overflow))%s%;<br/>
+<a name="41"/><span style="color:red">%s%%s%%s%%s%41%s%%s%</span><br/>
+<a name="42"/><span style="color:red">%s%%s%%s%%s%42%s%%s%</span><span class="keyword">endmodule</span><br/>
+</tt>
+<script type="text/javascript" src="../scripts/buildsrcpage.js"></script>
+  
+</body>
+</html>

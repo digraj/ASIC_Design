@@ -1,0 +1,65 @@
+// $Id: $
+// File name:   adder_nbit.sv
+// Created:     1/24/2017
+// Author:      Kunwar Digraj Singh Jain
+// Lab Section: 5
+// Version:     1.0  Initial Design Entry
+// Description: n bit adder
+
+module adder_nbit
+#(
+	parameter BIT_WIDTH = 4
+)
+(
+	input wire [(BIT_WIDTH-1):0]a, [(BIT_WIDTH-1):0]b, 
+	input wire carry_in,
+	output reg [(BIT_WIDTH-1):0]sum, 
+	output reg overflow
+);
+
+	wire [BIT_WIDTH:0] carrys ;
+	genvar i ;
+	int j, m, k;
+	assign carrys[0] = carry_in ;
+
+	generate
+		for (i = 0; i < BIT_WIDTH; i = i + 1)
+		begin		
+			adder_1bit IX (.a(a[i]), .b(b[i]), .carry_in(carrys[i]), .sum(sum[i]), .carry_out(carrys[i+1])) ;
+		end	
+	endgenerate
+
+	assign overflow = carrys[BIT_WIDTH] ;
+/*
+	always @ (a) begin
+		for (j = 0; j < BIT_WIDTH; j = j + 1)
+		begin
+			assert ((a[j] == 1'b1) || (a[j] == 1'b0))
+			else $error("Input value of a is incorrect");
+		end
+	end
+
+	always @ (b) begin
+		for (k = 0; k < BIT_WIDTH; k = k + 1)
+		begin
+			assert ((b[k] == 1'b1) || (b[k] == 1'b0))
+			else $error("Input value of b is incorrect");
+		end
+	end
+
+	always @ (carry_in) begin
+		assert ((carry_in == 1'b1) || (carry_in == 1'b0))
+		else $error("Input value of carry_in is incorrect");
+
+	end
+
+//	always @ (sum) begin
+//		for (m = 0; m < BIT_WIDTH; m = m + 1)
+//		begin
+//			#(2) assert (((a[m] + b[m] + carrys[m]) % 2) == sum[m])
+//			else $error ("Output is incorrect");
+//		end	
+//	end
+*/
+
+endmodule

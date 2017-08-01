@@ -1,0 +1,28 @@
+idle: 
+if (data_ready=0) goto idle  ; wait until data_ready=1 
+store: 
+if (data_ready=0) goto eidle 
+	reg[3] = data ; Store data in a register 
+	err = 0   ; reset error 
+zero: reg[0] = 0                  ; zero out accumulator 
+sort1: reg[1] = reg[2] ; Reorder registers 
+sort2: reg[2] = reg[3] ; Reorder registers 
+sort1: reg[3] = reg[4] ; Reorder registers 
+sort2: reg[4] = reg[5] ; Reorder registers 
+mul1: reg[10] = reg[1] * reg[6]    ; sample4 * F3    
+add1:   reg[0] = reg[0] + reg[10]     
+        if (V) goto eidle ; On overflow, err condition 
+mul2: reg[6] = reg[2] * reg[7]    ; sample3 * F2    
+sub1:   reg[0] = reg[0] - reg[10]   
+	if (V) goto eidle ; On overflow, err condition 
+	else goto idle 
+mul3: reg[6] = reg[3] * reg[8]    ; sample2 * F1    
+add2:   reg[0] = reg[0] + reg[10]   
+        if (V) goto eidle ; On overflow, err condition 
+mul4: reg[6] = reg[4] * reg[9]    ; sample1 * F0    
+sub2:   reg[0] = reg[0] - reg[10]  
+	if (V) goto eidle ; On overflow, err condition 
+	else goto idle 
+eidle: err = 1 
+	if (data_ready=1) goto store  ; wait until data_ready=1 
+	if (data_ready=0) goto eidle 

@@ -1,0 +1,106 @@
+# //  Questa Sim-64
+# //  Version 10.3b linux_x86_64 May 29 2014
+# //
+# //  Copyright 1991-2014 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# vsim -Lf /home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Vsim -L /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work -L /home/ecegrid/a/ece337/Class0.5u/GOLD_LIB "+no_glitch_msg" -coverage -voptargs="+acc" -i -t ps source_work.tb_adder_4bit 
+# Start time: 17:41:00 on Jan 24,2017
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb_adder_4bit(fast)
+# Loading work.adder_4bit(fast)
+# Loading work.adder_1bit(fast)
+# ** Warning: (vsim-3015) source/tb_adder_4bit.sv(36): [PCDPC] - Port size (4) does not match connection size (1) for port 'carry_in'. The port definition is at: source/adder_4bit.sv(11).
+#         Region: /tb_adder_4bit/DUT
+# ** Warning: (vsim-3015) source/tb_adder_4bit.sv(36): [PCDPC] - Port size (4) does not match connection size (1) for port 'overflow'. The port definition is at: source/adder_4bit.sv(12).
+#         Region: /tb_adder_4bit/DUT
+run 200 ns
+# ** Info: Correct Sum value for test case           0!
+#    Time: 10 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case           0!
+#    Time: 10 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case           1!
+#    Time: 20 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case           1!
+#    Time: 20 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case           2!
+#    Time: 30 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case           2!
+#    Time: 30 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case           3!
+#    Time: 40 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case           3!
+#    Time: 40 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case           4!
+#    Time: 50 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case           4!
+#    Time: 50 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case           5!
+#    Time: 60 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case           5!
+#    Time: 60 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case           6!
+#    Time: 70 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case           6!
+#    Time: 70 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case           7!
+#    Time: 80 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case           7!
+#    Time: 80 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case           8!
+#    Time: 90 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case           8!
+#    Time: 90 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case           9!
+#    Time: 100 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case           9!
+#    Time: 100 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case          10!
+#    Time: 110 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case          10!
+#    Time: 110 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case          11!
+#    Time: 120 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case          11!
+#    Time: 120 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case          12!
+#    Time: 130 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case          12!
+#    Time: 130 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case          13!
+#    Time: 140 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case          13!
+#    Time: 140 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case          14!
+#    Time: 150 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case          14!
+#    Time: 150 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case          15!
+#    Time: 160 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case          15!
+#    Time: 160 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case          16!
+#    Time: 170 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case          16!
+#    Time: 170 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case          17!
+#    Time: 180 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case          17!
+#    Time: 180 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case          18!
+#    Time: 190 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case          18!
+#    Time: 190 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case          19!
+#    Time: 200 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case          19!
+#    Time: 200 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# Window cannot be closed because the modal window "Quit Vsim" is still open.
+# This test bench was not run long enough to execute all test cases. Please run this test bench for at least a total of        5120 ns
+# End time: 17:47:28 on Jan 24,2017, Elapsed time: 0:06:28
+# Errors: 0, Warnings: 3

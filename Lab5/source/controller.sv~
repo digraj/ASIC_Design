@@ -1,0 +1,309 @@
+// $Id: $
+// File name:   controller.sv
+// Created:     2/14/2017
+// Author:      Kunwar Digraj Singh Jain
+// Lab Section: 5
+// Version:     1.0  Initial Design Entry
+// Description: Brain of the system
+
+module controller (
+	input wire 	clk, 
+			n_reset, 
+			dr, 
+  			lc, 
+			overflow, 
+	output reg    	cnt_up, 
+			clear, 
+	output reg 	modwait, 
+	output reg    	[2:0] op, 
+	output reg    	[3:0] src1, 
+	output reg    	[3:0] src2, 
+	output reg   	[3:0] dest, 
+	output reg    	err
+);
+
+	parameter [4:0]		IDLE = 		5'b00000,
+				EIDLE =		5'b00001,
+				STORE =		5'b00010,
+				ZERO =		5'b00011,
+				SORT1 =    	5'b00100,
+				SORT2 =		5'b00101,
+				SORT3 =		5'b00110,
+				SORT4 = 	5'b00111,			
+				WAIT1 =		5'b01000,
+				WAIT2 =		5'b01001,
+				WAIT3 =		5'b01010,
+				LOAD1 =		5'b01011,
+				LOAD2 =		5'b01100,
+				LOAD3 =		5'b01101,
+				LOAD4 =		5'b01110,
+				MUL1 =		5'b01111,
+				MUL2 =		5'b10000,
+				MUL3 =		5'b10001,
+				MUL4 =		5'b10010,
+				SUB1 =		5'b10011,
+				SUB2 =		5'b10100,
+				ADD1 =		5'b10101,
+				ADD2 =		5'b10110;
+
+	reg [4:0] 	next_state,
+			curr_state ;
+	reg 		next_modwait ;
+
+	//ALWAYS SEQUENTIAL BLOCK
+	always_ff @ (posedge clk, negedge n_reset) 
+	begin
+		if (n_reset == 1'b0)
+		begin
+			curr_state <= IDLE ;
+			modwait <= 0 ;
+		end		
+		else
+		begin
+			curr_state <= next_state ;
+			modwait <= next_modwait ;
+		end
+	end
+
+
+	//OUTPUTS COMB BLOCK
+	always_comb
+	begin
+		cnt_up = 0 ;
+		clear = 0 ;
+		op = 0 ;
+		src1 = 0 ;
+		src2 = 0 ;
+		dest = 0 ;
+		err = 0 ;
+		case (curr_state)	
+			LOAD1: begin			
+				op = 3'b011 ;
+				dest = 6 ;
+			end
+			LOAD2: begin			
+				op = 3'b011 ;
+				dest = 7 ;
+			end
+			LOAD3: begin			
+				op = 3'b011 ;
+				dest = 8 ;
+			end
+			LOAD4: begin			
+				op = 3'b011 ;
+				dest = 9 ;
+			end
+			STORE: begin
+				op = 3'b010 ;	
+				dest = 5 ;
+				err = 0 ;
+			end
+			ZERO: begin
+				cnt_up = 1 ;
+				op = 3'b101 ; 
+			end
+			SORT1: begin
+				src1 = 2;
+				dest = 1;				
+				op = 3'b001 ;
+			end
+			SORT2: begin
+				src1 = 3;
+				dest = 2;
+				op = 3'b001 ;
+			end			
+			SORT3: begin
+				src1 = 4;
+				dest = 3; 
+				op = 3'b001 ;
+			end			
+			SORT4: begin
+				src1 = 5;
+				dest = 4; 
+				op = 3'b001 ;
+			end			
+			MUL1: begin
+				src1 = 4;
+				src2 = 6;
+				dest = 10 ;
+				op = 3'b110 ;
+			end
+			SUB1: begin
+				src1 = 0;
+				src2 = 10;
+				op = 3'b101 ;
+				dest = 0 ;
+			end
+			MUL2: begin
+				src1 = 3;
+				src2 = 7; 
+				dest = 10 ;
+				op = 3'b110 ;
+			end
+			ADD1: begin
+				src1 = 0; 
+				src2 = 10;
+				op = 3'b100 ;
+				dest = 0 ;
+			end
+			MUL3: begin
+				src1 = 2;
+				src2 = 8;
+				dest = 10;
+				op = 3'b110 ;
+			end
+			SUB2: begin
+				src1 = 0;
+				src2 = 10;
+				op = 3'b101 ;
+				dest = 0 ;
+			end
+			MUL4: begin
+				src1 = 1;
+				src2 = 9;
+				dest = 10 ;
+				op = 3'b110 ;
+			end
+			ADD2: begin
+				src1 = 0; 
+				src2 = 10;
+				op = 3'b100 ;
+				dest = 0 ;
+			end
+			EIDLE: begin
+				err = 1 ;	
+			end
+		endcase
+	end
+
+
+	//NEXT STATE COMB BLOCK
+	always_comb
+	begin
+		next_modwait = 1 ;
+		next_state = curr_state ;
+		case (curr_state)
+			IDLE: begin
+				if (dr)
+					next_state = STORE ;
+				else if (lc)
+					next_state = LOAD1 ;
+				else 
+					next_modwait = 0 ;	
+			end
+			
+			LOAD1: begin
+				next_state = WAIT1 ;
+				next_modwait = 0 ;
+			end
+			WAIT1: begin
+				if (lc)
+					next_state = LOAD2 ;
+				else
+				begin
+					next_modwait = 0 ;
+					next_state = WAIT1 ;
+				end
+			end
+
+			LOAD2: begin
+				next_state = WAIT2 ;
+				next_modwait = 0 ;
+			end
+			WAIT2: begin
+				if (lc)
+					next_state = LOAD3 ;
+				else
+				begin
+					next_modwait = 0 ;
+					next_state = WAIT2 ;
+				end
+			end
+
+			LOAD3: begin
+				next_state = WAIT3 ;
+				next_modwait = 0 ;
+			end
+			WAIT3: begin
+				if (lc)
+					next_state = LOAD4 ;
+				else
+				begin
+					next_modwait = 0 ;
+					next_state = WAIT3 ;
+				end
+			end
+
+			LOAD4: begin
+				next_state = IDLE ;
+				next_modwait = 0 ;
+			end
+			STORE: begin
+				if (dr)
+					next_state = ZERO ;
+				else 
+				begin
+					next_state = EIDLE ;
+					next_modwait = 0 ;
+				end
+			end
+
+			ZERO: next_state = SORT1 ;
+			SORT1: next_state = SORT2 ;
+			SORT2: next_state = SORT3 ;
+			SORT3: next_state = SORT4 ;
+			SORT4: next_state = MUL1 ;
+			MUL1: next_state = SUB1 ;
+			SUB1: begin
+				if (~overflow)
+					next_state = MUL2 ;
+				else begin
+					next_modwait = 0 ;
+					next_state = EIDLE ;
+				end
+			end
+		
+			MUL2: next_state = ADD1 ;
+			ADD1: begin
+				if (~overflow)
+					next_state = MUL3 ;
+				else begin
+					next_state = EIDLE ;
+					next_modwait = 0 ;	
+				end		
+			end
+		
+			MUL3: next_state = SUB2 ;
+			SUB2: begin
+				if (~overflow)
+					next_state = MUL4 ;
+				else begin
+					next_modwait = 0 ;
+					next_state = EIDLE ;
+				end
+			end
+		
+			MUL4: next_state = ADD2 ;
+			ADD2: begin
+				next_modwait = 0 ;
+				if (~overflow)
+					next_state = IDLE ;
+				else
+					next_state = EIDLE ;
+			end
+
+			EIDLE: begin
+				if (dr)
+					next_state = STORE ;
+				else if (lc)
+					next_state = LOAD1 ;
+				else 
+				begin
+					next_state = EIDLE ;
+					next_modwait = 0 ;
+				end
+			end
+		endcase
+	end
+
+endmodule

@@ -1,0 +1,116 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/ecegrid/a/mg134/ece337/Lab3
+T_opt
+!s110 1486071216
+V`S;TimmBj=9aX5<B25XKK0
+04 15 4 work tb_flex_counter fast 0
+=1-3417ebad4b83-5893a5b0-72b15-3ca
+o-quiet -auto_acc_if_foreign -work mapped_work/ -L /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work -L /home/ecegrid/a/ece337/Class0.5u/GOLD_LIB -Lf /home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Vsim +acc
+n@_opt
+OL;O;10.3b;59
+vflex_counter
+Z1 DXx6 sv_std 3 std 0 22 <EOTafDcUY:cQeO^ICn]m3
+Z2 !s110 1486071213
+!i10b 1
+!s100 M`ld07Hhzbd9aSUQbEIk_3
+IdYj`f=1lObJa^_WVXLH`W2
+Z3 V`JN@9S9cnhjKRR_L]QIcM3
+Z4 !s105 flex_counter_v_unit
+S1
+R0
+w1486071210
+Z5 8mapped/flex_counter.v
+Z6 Fmapped/flex_counter.v
+L0 8
+Z7 OL;L;10.3b;59
+r1
+!s85 0
+31
+!s108 1486071213.008664
+Z8 !s107 mapped/flex_counter.v|
+Z9 !s90 -##implicit##push_minusfile_path##|/home/ecegrid/a/mg134/ece337/Lab3/vlog.opt|-##implicit##pop_minusfile_path##|-sv|-work|mapped_work|mapped/flex_counter.v|
+!i113 0
+Z10 o-sv -work mapped_work
+Z11 tCoverage 63 CoverExcludeDefault 1 CoverOpt 1 CoverShortCircuit 0
+vflex_counter_DW01_inc_0
+R1
+!s110 1486070976
+!i10b 1
+!s100 D3BLVmKDS2g:lnU_HMcZU3
+I1;n4mBWA5edK10I[ohQH60
+R3
+R4
+S1
+R0
+w1486070973
+R5
+R6
+L0 8
+R7
+r1
+!s85 0
+31
+!s108 1486070976.750935
+R8
+R9
+!i113 0
+R10
+R11
+nflex_counter_@d@w01_inc_0
+vtb_flex_counter
+R1
+R2
+!i10b 1
+!s100 ]o@G;j`finUQFBG0Yh`CI3
+IaRD[eVJ7WbmiTXK`Xe@]a1
+R3
+Z12 !s105 tb_flex_counter_sv_unit
+S1
+R0
+Z13 w1486071187
+Z14 8source/tb_flex_counter.sv
+Z15 Fsource/tb_flex_counter.sv
+L0 11
+R7
+r1
+!s85 0
+31
+Z16 !s108 1486071213.113811
+Z17 !s107 source/tb_flex_counter.sv|
+Z18 !s90 -##implicit##push_minusfile_path##|/home/ecegrid/a/mg134/ece337/Lab3/vlog.opt|-##implicit##pop_minusfile_path##|-sv|-work|mapped_work|source/tb_flex_counter.sv|
+!i113 0
+R10
+R11
+vtb_flex_counter_DUT
+R1
+R2
+!i10b 1
+!s100 jOK<>PDFEhKM@hATIaAKc0
+IDc1Uh7mQ4HG2=Nn]]LRM<2
+R3
+R12
+S1
+R0
+R13
+R14
+R15
+L0 33
+R7
+r1
+!s85 0
+31
+R16
+R17
+R18
+!i113 0
+R10
+R11
+ntb_flex_counter_@d@u@t

@@ -1,0 +1,68 @@
+// $Id: $
+// File name:   mealy.sv
+// Created:     2/4/2017
+// Author:      Kunwar Digraj Singh Jain
+// Lab Section: 5
+// Version:     1.0  Initial Design Entry
+// Description: State transition diagram for mealy model
+
+module mealy
+(
+	input wire 	clk,
+			n_rst,
+			i,
+	output reg 	o
+);
+
+	parameter [2:0] 	sta_stp = 2'b00,
+				det1 = 2'b01,
+				det11 = 2'b10,
+				det110 = 2'b11; 
+
+	reg [2:0] 	next_state,
+			curr_state ;
+
+	always_comb
+	begin
+		next_state = curr_state ;
+		case (curr_state)
+		sta_stp: begin
+			if (i == 1)
+				next_state = det1 ;
+			else
+				next_state = sta_stp ;
+		end			
+		det1: begin
+			if (i == 1)
+				next_state = det11 ;
+			else
+				next_state = sta_stp ;
+		end
+		det11: begin
+			if (i == 0)
+				next_state = det110 ;
+			else
+				next_state = det11 ;
+		end
+		det110: begin
+			if (i == 1)
+				next_state = det1 ;
+			else
+				next_state = sta_stp ;
+		end
+		endcase
+	end
+
+
+	always_ff @ (posedge clk, negedge n_rst) 
+	begin
+		if (n_rst == 1'b0) 
+			curr_state <= sta_stp ;
+		else
+			curr_state <= next_state ;
+	end 
+
+	@(posedge clk)
+	assign o = ((curr_state == det110) && (i == 1)) ;
+
+endmodule

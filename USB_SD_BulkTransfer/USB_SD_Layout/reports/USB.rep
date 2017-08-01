@@ -1,0 +1,153 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : USB
+Version: K-2015.06-SP1
+Date   : Thu Apr 27 12:08:57 2017
+****************************************
+
+Operating Conditions: typical   Library: osu05_stdcells
+Wire Load Model Mode: top
+
+  Startpoint: FIFOWRITE/F1/URFC/raddr_reg[1]
+              (rising edge-triggered flip-flop)
+  Endpoint: useless[7] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  FIFOWRITE/F1/URFC/raddr_reg[1]/CLK (DFFSR)              0.00       0.00 r
+  FIFOWRITE/F1/URFC/raddr_reg[1]/Q (DFFSR)                0.61       0.61 f
+  FIFOWRITE/F1/URFC/raddr[1] (read_fifo_ctrl_0)           0.00       0.61 f
+  FIFOWRITE/F1/UFIFORAM/raddr[1] (fiforam_0)              0.00       0.61 f
+  FIFOWRITE/F1/UFIFORAM/U71/Y (INVX2)                     0.13       0.75 r
+  FIFOWRITE/F1/UFIFORAM/U14/Y (NOR2X1)                    0.15       0.89 f
+  FIFOWRITE/F1/UFIFORAM/U8/Y (BUFX2)                      0.68       1.57 f
+  FIFOWRITE/F1/UFIFORAM/U64/Y (AOI22X1)                   0.23       1.80 r
+  FIFOWRITE/F1/UFIFORAM/U65/Y (AOI21X1)                   0.15       1.95 f
+  FIFOWRITE/F1/UFIFORAM/U69/Y (OR2X1)                     0.13       2.08 f
+  FIFOWRITE/F1/UFIFORAM/rdata[7] (fiforam_0)              0.00       2.08 f
+  FIFOWRITE/F1/r_data[7] (fifo_0)                         0.00       2.08 f
+  FIFOWRITE/read_data[7] (writeFIFO)                      0.00       2.08 f
+  useless[7] (out)                                        0.00       2.08 f
+  data arrival time                                                  2.08
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+1
+ 
+****************************************
+Report : area
+Design : USB
+Version: K-2015.06-SP1
+Date   : Thu Apr 27 12:08:57 2017
+****************************************
+
+Library(s) Used:
+
+    osu05_stdcells (File: /package/eda/cells/OSU/v2.7/synopsys/lib/ami05/osu05_stdcells.db)
+
+Number of ports:                          546
+Number of nets:                          2315
+Number of cells:                         1844
+Number of combinational cells:           1379
+Number of sequential cells:               432
+Number of macros/black boxes:               0
+Number of buf/inv:                        346
+Number of references:                       6
+
+Combinational area:             386658.000000
+Buf/Inv area:                    51120.000000
+Noncombinational area:          340272.000000
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                726930.000000
+Total area:                 undefined
+1
+Loading db file '/package/eda/cells/OSU/v2.7/synopsys/lib/ami05/osu05_stdcells.db'
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: There is no defined clock in the design. (PWR-80)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -hier
+        -analysis_effort low
+Design : USB
+Version: K-2015.06-SP1
+Date   : Thu Apr 27 12:08:58 2017
+****************************************
+
+
+Library(s) Used:
+
+    osu05_stdcells (File: /package/eda/cells/OSU/v2.7/synopsys/lib/ami05/osu05_stdcells.db)
+
+
+Operating Conditions: typical   Library: osu05_stdcells
+Wire Load Model Mode: top
+
+
+Global Operating Voltage = 5    
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+--------------------------------------------------------------------------------
+                                       Switch   Int      Leak     Total
+Hierarchy                              Power    Power    Power    Power    %
+--------------------------------------------------------------------------------
+USB                                       5.516   32.273  217.333   37.789 100.0
+  FIFOWRITE (writeFIFO)                2.64e-04    9.260   65.610    9.261  24.5
+    F1 (fifo_0)                        2.64e-04    9.260   65.610    9.261  24.5
+      URFC (read_fifo_ctrl_0)          2.63e-04    2.074   13.466    2.074   5.5
+        RPU1 (read_ptr_0)                 0.000    0.819    5.746    0.819   2.2
+      UWFC (write_fifo_ctrl_0)            0.000    2.047   13.547    2.047   5.4
+        WPU1 (write_ptr_0)                0.000    0.819    5.746    0.819   2.2
+      UFIFORAM (fiforam_0)                0.000    5.139   38.597    5.139  13.6
+  RX (USB_rx)                             1.131    5.041   43.062    6.172  16.3
+    RCU (usb_rcv_controller)              0.832    1.471   17.362    2.302   6.1
+    CNT (counter)                         0.136    1.163   12.773    1.300   3.4
+      IN2 (flex_counter_NUM_CNT_BITS4_0)
+                                       5.12e-02    0.527    6.346    0.578   1.5
+      IN1 (flex_counter_NUM_CNT_BITS4_1)
+                                       8.51e-02    0.637    6.346    0.722   1.9
+    BIT_DE (bit_destuff)                  0.000    0.409    5.095    0.409   1.1
+      IN1 (flex_counter_NUM_CNT_BITS3_0)
+                                          0.000    0.409    4.896    0.409   1.1
+    DEC (nrzi_decode)                     0.153    0.954    2.202    1.106   2.9
+    STP (serial_2_parallel)            1.06e-02    1.043    5.631    1.054   2.8
+  TX (usb_transmitter)                 7.56e-03    3.159   36.562    3.166   8.4
+    ENCODE (nrzi_encode)               2.08e-03    0.392    2.471    0.394   1.0
+    TIMER (tx_timer)                      0.000    1.024   12.773    1.024   2.7
+      BYTE_TX (flex_counter_NUM_CNT_BITS4_2)
+                                          0.000    0.512    6.346    0.512   1.4
+      BIT_TX (flex_counter_NUM_CNT_BITS4_3)
+                                          0.000    0.512    6.346    0.512   1.4
+    STUFF (bit_stuffer)                   0.000    0.409    5.044    0.409   1.1
+      BIT_STUFFER_CNTR (flex_counter_NUM_CNT_BITS3_1)
+                                          0.000    0.409    4.896    0.409   1.1
+    FLEX_PTS (flex_pts_sr_NUM_BITS8_SHIFT_MSB0)
+                                       4.77e-03    0.822    7.126    0.826   2.2
+    CONTROLLER (tcu)                   7.15e-04    0.512    9.148    0.513   1.4
+  BD (bd_controller)                      0.000    0.409    6.384    0.409   1.1
+  FIFOREAD (readFIFO)                     4.336   14.342   65.610   18.678  49.4
+    F1 (fifo_1)                           4.336   14.342   65.610   18.678  49.4
+      URFC (read_fifo_ctrl_1)          1.54e-02    2.217   13.466    2.233   5.9
+        RPU1 (read_ptr_1)                 0.000    0.819    5.746    0.819   2.2
+      UWFC (write_fifo_ctrl_1)            1.035    3.535   13.547    4.570  12.1
+        WPU1 (write_ptr_1)                0.355    1.751    5.746    2.106   5.6
+      UFIFORAM (fiforam_1)                3.286    8.590   38.597   11.876  31.4
+1

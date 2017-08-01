@@ -1,0 +1,7 @@
+// $Id: $
+// File name:   tb_usb_rcv_controller
+// Created:     4/19/2017
+// Author:      Kunwar Digraj Singh Jain
+// Lab Section: 5
+// Version:     1.0  Initial Design Entry
+// Description: Testbench for USB Receiver Controller

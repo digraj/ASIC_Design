@@ -1,0 +1,216 @@
+# //  Questa Sim-64
+# //  Version 10.3b linux_x86_64 May 29 2014
+# //
+# //  Copyright 1991-2014 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# vsim -Lf /home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Vsim -L /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work -L /home/ecegrid/a/ece337/Class0.5u/GOLD_LIB "+no_glitch_msg" -coverage -voptargs="+acc" -i -t ps source_work/.tb_nrzi_encode 
+# Start time: 00:53:22 on Apr 26,2017
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: source/tb_nrzi_encode.sv(34): (vopt-2685) [TFMPC] - Too few port connections for 'DUT'.  Expected 8, found 6.
+# ** Warning: source/tb_nrzi_encode.sv(34): (vopt-2718) [TFMPC] - Missing connection for port 'flag_8'.
+# ** Warning: source/tb_nrzi_encode.sv(34): (vopt-2718) [TFMPC] - Missing connection for port 'pause'.
+# Loading sv_std.std
+# Loading work.tb_nrzi_encode(fast)
+# Loading work.nrzi_encode(fast)
+add wave *
+run 1000 ns
+vlog -sv -work source_work /home/ecegrid/a/mg134/ece337/Project/source/nrzi_encode.sv
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 00:55:12 on Apr 26,2017
+# vlog -reportprogress 300 -sv -work source_work /home/ecegrid/a/mg134/ece337/Project/source/nrzi_encode.sv 
+# -- Compiling module nrzi_encode
+# 
+# Top level modules:
+# 	nrzi_encode
+# End time: 00:55:12 on Apr 26,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -sv -work source_work /home/ecegrid/a/mg134/ece337/Project/source/tb_nrzi_encode.sv
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 00:55:12 on Apr 26,2017
+# vlog -reportprogress 300 -sv -work source_work /home/ecegrid/a/mg134/ece337/Project/source/tb_nrzi_encode.sv 
+# -- Compiling module tb_nrzi_encode
+# 
+# Top level modules:
+# 	tb_nrzi_encode
+# End time: 00:55:12 on Apr 26,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart -f; run 100 ns
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: /home/ecegrid/a/mg134/ece337/Project/source/tb_nrzi_encode.sv(34): (vopt-2685) [TFMPC] - Too few port connections for 'DUT'.  Expected 8, found 6.
+# ** Warning: /home/ecegrid/a/mg134/ece337/Project/source/tb_nrzi_encode.sv(34): (vopt-2718) [TFMPC] - Missing connection for port 'flag_8'.
+# ** Warning: /home/ecegrid/a/mg134/ece337/Project/source/tb_nrzi_encode.sv(34): (vopt-2718) [TFMPC] - Missing connection for port 'pause'.
+# Loading sv_std.std
+# Loading work.tb_nrzi_encode(fast)
+# Loading work.nrzi_encode(fast)
+vlog -sv -work source_work /home/ecegrid/a/mg134/ece337/Project/source/nrzi_encode.sv
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 00:56:41 on Apr 26,2017
+# vlog -reportprogress 300 -sv -work source_work /home/ecegrid/a/mg134/ece337/Project/source/nrzi_encode.sv 
+# -- Compiling module nrzi_encode
+# 
+# Top level modules:
+# 	nrzi_encode
+# End time: 00:56:41 on Apr 26,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -sv -work source_work /home/ecegrid/a/mg134/ece337/Project/source/tb_nrzi_encode.sv
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 00:56:41 on Apr 26,2017
+# vlog -reportprogress 300 -sv -work source_work /home/ecegrid/a/mg134/ece337/Project/source/tb_nrzi_encode.sv 
+# -- Compiling module tb_nrzi_encode
+# 
+# Top level modules:
+# 	tb_nrzi_encode
+# End time: 00:56:41 on Apr 26,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart -f; run 100 ns
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: /home/ecegrid/a/mg134/ece337/Project/source/tb_nrzi_encode.sv(35): (vopt-2685) [TFMPC] - Too few port connections for 'DUT'.  Expected 8, found 7.
+# ** Warning: /home/ecegrid/a/mg134/ece337/Project/source/tb_nrzi_encode.sv(35): (vopt-2718) [TFMPC] - Missing connection for port 'pause'.
+# Loading sv_std.std
+# Loading work.tb_nrzi_encode(fast)
+# Loading work.nrzi_encode(fast)
+add wave -position insertpoint  \
+sim:/tb_nrzi_encode/tb_flag_8
+restart -f; run 100 ns
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading sv_std.std
+# Loading work.tb_nrzi_encode(fast)
+# Loading work.nrzi_encode(fast)
+add wave -position insertpoint  \
+sim:/tb_nrzi_encode/DUT/prev_d
+restart -f; run 100 ns
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading sv_std.std
+# Loading work.tb_nrzi_encode(fast)
+# Loading work.nrzi_encode(fast)
+vlog -sv -work source_work /home/ecegrid/a/mg134/ece337/Project/source/nrzi_encode.sv
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 01:00:20 on Apr 26,2017
+# vlog -reportprogress 300 -sv -work source_work /home/ecegrid/a/mg134/ece337/Project/source/nrzi_encode.sv 
+# -- Compiling module nrzi_encode
+# 
+# Top level modules:
+# 	nrzi_encode
+# End time: 01:00:20 on Apr 26,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -sv -work source_work /home/ecegrid/a/mg134/ece337/Project/source/tb_nrzi_encode.sv
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 01:00:20 on Apr 26,2017
+# vlog -reportprogress 300 -sv -work source_work /home/ecegrid/a/mg134/ece337/Project/source/tb_nrzi_encode.sv 
+# -- Compiling module tb_nrzi_encode
+# ** Error: /home/ecegrid/a/mg134/ece337/Project/source/tb_nrzi_encode.sv(42): (vlog-2110) Illegal reference to net "tb_pause".
+# End time: 01:00:20 on Apr 26,2017, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# /package/eda/mg/questa10.3b/questasim/linux_x86_64/vlog failed.
+vlog -sv -work source_work /home/ecegrid/a/mg134/ece337/Project/source/nrzi_encode.sv
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 01:00:34 on Apr 26,2017
+# vlog -reportprogress 300 -sv -work source_work /home/ecegrid/a/mg134/ece337/Project/source/nrzi_encode.sv 
+# -- Compiling module nrzi_encode
+# 
+# Top level modules:
+# 	nrzi_encode
+# End time: 01:00:34 on Apr 26,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -sv -work source_work /home/ecegrid/a/mg134/ece337/Project/source/tb_nrzi_encode.sv
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 01:00:34 on Apr 26,2017
+# vlog -reportprogress 300 -sv -work source_work /home/ecegrid/a/mg134/ece337/Project/source/tb_nrzi_encode.sv 
+# -- Compiling module tb_nrzi_encode
+# 
+# Top level modules:
+# 	tb_nrzi_encode
+# End time: 01:00:34 on Apr 26,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart -f; run 100 ns
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb_nrzi_encode(fast)
+# Loading work.nrzi_encode(fast)
+vlog -sv -work source_work /home/ecegrid/a/mg134/ece337/Project/source/nrzi_encode.sv
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 01:01:56 on Apr 26,2017
+# vlog -reportprogress 300 -sv -work source_work /home/ecegrid/a/mg134/ece337/Project/source/nrzi_encode.sv 
+# -- Compiling module nrzi_encode
+# 
+# Top level modules:
+# 	nrzi_encode
+# End time: 01:01:56 on Apr 26,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -sv -work source_work /home/ecegrid/a/mg134/ece337/Project/source/tb_nrzi_encode.sv
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 01:01:56 on Apr 26,2017
+# vlog -reportprogress 300 -sv -work source_work /home/ecegrid/a/mg134/ece337/Project/source/tb_nrzi_encode.sv 
+# -- Compiling module tb_nrzi_encode
+# 
+# Top level modules:
+# 	tb_nrzi_encode
+# End time: 01:01:56 on Apr 26,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart -f; run 100 ns
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb_nrzi_encode(fast)
+# Loading work.nrzi_encode(fast)
+vlog -sv -work source_work /home/ecegrid/a/mg134/ece337/Project/source/nrzi_encode.sv
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 01:03:08 on Apr 26,2017
+# vlog -reportprogress 300 -sv -work source_work /home/ecegrid/a/mg134/ece337/Project/source/nrzi_encode.sv 
+# -- Compiling module nrzi_encode
+# 
+# Top level modules:
+# 	nrzi_encode
+# End time: 01:03:08 on Apr 26,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -sv -work source_work /home/ecegrid/a/mg134/ece337/Project/source/tb_nrzi_encode.sv
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 01:03:08 on Apr 26,2017
+# vlog -reportprogress 300 -sv -work source_work /home/ecegrid/a/mg134/ece337/Project/source/tb_nrzi_encode.sv 
+# -- Compiling module tb_nrzi_encode
+# 
+# Top level modules:
+# 	tb_nrzi_encode
+# End time: 01:03:08 on Apr 26,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart -f; run 100 ns
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb_nrzi_encode(fast)
+# Loading work.nrzi_encode(fast)
+vlog -sv -work source_work /home/ecegrid/a/mg134/ece337/Project/source/nrzi_encode.sv
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 01:05:23 on Apr 26,2017
+# vlog -reportprogress 300 -sv -work source_work /home/ecegrid/a/mg134/ece337/Project/source/nrzi_encode.sv 
+# -- Compiling module nrzi_encode
+# 
+# Top level modules:
+# 	nrzi_encode
+# End time: 01:05:23 on Apr 26,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -sv -work source_work /home/ecegrid/a/mg134/ece337/Project/source/tb_nrzi_encode.sv
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 01:05:23 on Apr 26,2017
+# vlog -reportprogress 300 -sv -work source_work /home/ecegrid/a/mg134/ece337/Project/source/tb_nrzi_encode.sv 
+# -- Compiling module tb_nrzi_encode
+# 
+# Top level modules:
+# 	tb_nrzi_encode
+# End time: 01:05:23 on Apr 26,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart -f; run 100 ns
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb_nrzi_encode(fast)
+# Loading work.nrzi_encode(fast)
+restart -f; run 50 ns
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading sv_std.std
+# Loading work.tb_nrzi_encode(fast)
+# Loading work.nrzi_encode(fast)
+# End time: 01:21:04 on Apr 26,2017, Elapsed time: 0:27:42
+# Errors: 2, Warnings: 12

@@ -1,0 +1,21 @@
+// $Id: $
+// File name:   magnitude.sv
+// Created:     2/15/2017
+// Author:      Kunwar Digraj Singh Jain
+// Lab Section: 5
+// Version:     1.0  Initial Design Entry
+// Description: MUX that chooses between input and its 2's complement
+
+module magnitude (
+	input  wire [16:0] in, 
+	output reg [15:0] out 
+) ;
+
+	always_comb
+	begin
+		out = in[15:0] ;
+		if (in[16])
+			out = ~in[15:0] + 1'b1 ;
+	end
+
+endmodule

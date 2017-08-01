@@ -1,0 +1,25 @@
+// $Id: $
+// File name:   sensor_s.sv
+// Created:     1/19/2017
+// Author:      Kunwar Digraj Singh Jain
+// Lab Section: 5
+// Version:     1.0  Initial Design Entry
+// Description: Lab 2 code .
+
+module sensor_s
+(
+	input wire [3:0] sensors,
+	output wire error
+);
+
+	wire	AandC,
+		BandC,
+		AandCorBandC;
+
+	AND2X1 AND1 (.Y(AandC), .A(sensors[3]), .B(sensors[1])) ;
+	AND2X1 AND2 (.Y(BandC), .A(sensors[2]), .B(sensors[2])) ;
+	
+	OR2X1 OR1 (.Y(AandCorBandC), .A(AandC), .B(BandC)) ;
+	OR2X1 OR2 (.Y(error), .A(AandCorBandC), .B(sensors[0])) ;
+
+endmodule

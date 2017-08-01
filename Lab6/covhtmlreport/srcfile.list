@@ -1,0 +1,8 @@
+/home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Source/fifo.vhd
+/home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Source/fiforam.vhd
+/home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Source/read_fifo_ctrl.vhd
+/home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Source/read_ptr.vhd
+/home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Source/write_fifo_ctrl.vhd
+/home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Source/write_ptr.vhd
+mapped/tx_fifo.v
+source/tb_tx_fifo.sv

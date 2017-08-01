@@ -1,0 +1,63 @@
+# //  Questa Sim-64
+# //  Version 10.3b linux_x86_64 May 29 2014
+# //
+# //  Copyright 1991-2014 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# vsim comparator 
+# Start time: 15:09:31 on Feb 06,2017
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.comparator(fast)
+add wave *
+vlog -sv -work source_work /home/ecegrid/a/mg134/ece337/Lab1/source/comparator.sv
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 15:10:19 on Feb 06,2017
+# vlog -reportprogress 300 -sv -work source_work /home/ecegrid/a/mg134/ece337/Lab1/source/comparator.sv 
+# -- Compiling module comparator
+# 
+# Top level modules:
+# 	comparator
+# End time: 15:10:19 on Feb 06,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+add wave *
+restart -f
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading sv_std.std
+# Loading work.comparator(fast)
+clear wave
+# [H[2J
+vlog comparator.sv
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 15:10:55 on Feb 06,2017
+# vlog -reportprogress 300 comparator.sv 
+# ** Error: (vlog-7) Failed to open design unit file "comparator.sv" in read mode.
+# No such file or directory. (errno = ENOENT)
+# End time: 15:10:55 on Feb 06,2017, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# /package/eda/mg/questa10.3b/questasim/linux_x86_64/vlog failed.
+vlog comparator
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 15:11:00 on Feb 06,2017
+# vlog -reportprogress 300 comparator 
+# ** Error: (vlog-7) Failed to open design unit file "comparator" in read mode.
+# No such file or directory. (errno = ENOENT)
+# End time: 15:11:00 on Feb 06,2017, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# /package/eda/mg/questa10.3b/questasim/linux_x86_64/vlog failed.
+vsim comparator
+# vsim 
+# Start time: 15:11:07 on Feb 06,2017
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading sv_std.std
+# Loading work.comparator(fast)
+assert x 3'b111
+# ambiguous command name "assert": assertDefineMenus assertGetData assertResetBrowserData assertion assertion_clock_image assertion_cy_image assertion_message assertion_psl_image assertion_spice_image assertion_verilog_image assertionsShow assertions_destroy
+assert b 1'b1
+# ambiguous command name "assert": assertDefineMenus assertGetData assertResetBrowserData assertion assertion_clock_image assertion_cy_image assertion_message assertion_psl_image assertion_spice_image assertion_verilog_image assertionsShow assertions_destroy
+# End time: 15:11:46 on Feb 06,2017, Elapsed time: 0:00:39
+# Errors: 2, Warnings: 0

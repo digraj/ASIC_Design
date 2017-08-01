@@ -1,0 +1,27 @@
+
+Cadence Innovus(TM) Implementation System.
+Copyright 2016 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v16.12-s051_1, built Wed Aug 17 12:18:54 PDT 2016
+Options:	
+Date:		Tue May  2 05:27:45 2017
+Host:		ecegrid-thin7.ecn.purdue.edu (x86_64 w/Linux 2.6.32-696.1.1.el6.x86_64) (10cores*40cpus*Intel(R) Xeon(R) CPU E5-2660 v3 @ 2.60GHz 25600KB)
+OS:		Red Hat Enterprise Linux Workstation release 6.9 (Santiago)
+
+License:
+		invs	Innovus Implementation System	16.1	checkout succeeded
+		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+
+**INFO:  MMMC transition support version v31-84 
+
+<CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+<CMD> suppressMessage ENCEXT-2799
+<CMD> getDrawView
+<CMD> loadWorkspace -name Physical
+<CMD> win
+couldn't read file "full_run.tcl": no such file or directory
+
+*** Memory Usage v#1 (Current mem = 506.578M, initial mem = 166.582M) ***
+*** Message Summary: 0 warning(s), 0 error(s)
+
+--- Ending "Innovus" (totcpu=0:00:24.0, real=0:03:24, mem=506.6M) ---

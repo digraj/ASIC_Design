@@ -1,0 +1,74 @@
+// $Id: $
+// File name:   moore.sv
+// Created:     2/3/2017
+// Author:      Kunwar Digraj Singh Jain
+// Lab Section: 5
+// Version:     1.0  Initial Design Entry
+// Description: Moore machine 1101 detector
+
+module moore 
+(
+	input wire 	clk,
+			n_rst,
+			i,
+	output reg 	o
+);
+
+	parameter [2:0] 	WAIT = 3'b000,
+				det1 = 3'b001,
+				det11 = 3'b010,
+				det110 = 3'b011,
+				det1101 = 3'b100 ; 
+
+	reg [2:0] 	next_state,
+			curr_state ;
+
+	always_comb
+	begin
+		next_state = curr_state ;
+		case (curr_state)
+		WAIT: begin
+			if (i == 1)
+				next_state = det1 ;
+			else
+				next_state = WAIT ;
+		end			
+		det1: begin
+			if (i == 1)
+				next_state = det11 ;
+			else
+				next_state = WAIT ;
+		end
+		det11: begin
+			if (i == 0)
+				next_state = det110 ;
+			else
+				next_state = det11 ;
+		end
+		det110: begin
+			if (i == 1)
+				next_state = det1101 ;
+			else
+				next_state = WAIT ;
+		end
+		det1101: begin
+			if (i == 1)
+				next_state = det11 ;
+			else
+				next_state = WAIT ;
+		end
+	endcase
+	end
+
+
+	always_ff @ (posedge clk, negedge n_rst) 
+	begin
+		if (n_rst == 1'b0) 
+			curr_state <= WAIT ;
+		else
+			curr_state <= next_state ;
+	end 
+
+	assign o = (curr_state == det1101) ;
+
+endmodule

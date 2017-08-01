@@ -1,0 +1,28 @@
+QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+Start time: 06:24:23 on Apr 27,2017
+vlog -sv -work mapped_work mapped/i2c_slave.v 
+-- Compiling module sync_low_1
+-- Compiling module sync_low_0
+-- Compiling module controller
+-- Compiling module decode
+-- Compiling module flex_stp_sr_NUM_BITS8_SHIFT_MSB1
+-- Compiling module rx_sr
+-- Compiling module flex_pts_sr_NUM_BITS8_SHIFT_MSB1
+-- Compiling module tx_sr
+-- Compiling module flex_counter_NUM_CNT_BITS4
+-- Compiling module timer
+-- Compiling module scl_edge
+-- Compiling module sda_sel
+-- Compiling module fiforam
+-- Compiling module write_ptr
+-- Compiling module write_fifo_ctrl
+-- Compiling module read_ptr
+-- Compiling module read_fifo_ctrl
+-- Compiling module fifo
+-- Compiling module tx_fifo
+-- Compiling module i2c_slave
+
+Top level modules:
+	i2c_slave
+End time: 06:24:23 on Apr 27,2017, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0

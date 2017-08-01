@@ -1,0 +1,24 @@
+// $Id: $
+// File name:   sr_9bit.sv
+// Created:     2/7/2017
+// Author:      Kunwar Digraj Singh Jain
+// Lab Section: 5
+// Version:     1.0  Initial Design Entry
+// Description: 9 bit shift register
+
+module sr_9bit 
+(
+	input wire	clk,
+			n_rst,
+			shift_strobe,
+			serial_in,
+	output wire	stop_bit,
+			[7:0] packet_data
+);
+	wire packet_received ;
+	flex_stp_sr #(9, 0) FSR1 (.clk(clk), .n_rst(n_rst), .shift_enable(shift_strobe), .serial_in(serial_in), .parallel_out(packet_received)) ;
+
+	assign packet_data = packet_received[7:0] ;
+	assign stop_bit = packet_received[8] ;
+
+endmodule

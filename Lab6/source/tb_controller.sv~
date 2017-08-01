@@ -1,0 +1,136 @@
+// $Id: $
+// File name:   tb_controller.sv
+// Created:     2/27/2017
+// Author:      Kunwar Digraj Singh Jain
+// Lab Section: 5
+// Version:     1.0  Initial Design Entry
+// Description: Testbench for controller
+
+`timescale 1ns / 10ps
+
+module tb_controller () ;
+
+	// Define parameters
+	// basic test bench parameters
+	localparam	CLK_PERIOD	= 2.5;
+	localparam	CHECK_DELAY = 1; // Check 1ns after the rising edge to allow for propagation delay
+	
+	// Shared Test Variables
+	reg tb_clk;
+	reg tb_scl;
+
+	always
+	begin
+		tb_clk = 1'b0;
+		#(CLK_PERIOD/0.5);
+		tb_clk = 1'b1;
+		#(CLK_PERIOD/0.5);
+	end	
+
+	tb_controller_DUT testbench(.tb_clk);
+	
+endmodule
+
+module tb_controller_DUT (input wire tb_clk) ;
+
+	reg tb_n_rst;
+	reg tb_stop_found;
+	reg tb_start_found; 
+	reg tb_byte_received;
+	reg tb_ack_prep;
+	reg tb_check_ack;
+	reg tb_ack_done;
+	reg tb_rw_mode;
+	reg tb_address_match;
+	reg tb_sda_in;
+	reg tb_rx_enable; 
+	reg tb_tx_enable;
+	reg tb_read_enable;
+	reg tb_load_data;
+	reg tb_sda_mode;
+
+	controller DUT (
+			.clk(tb_clk),
+			.n_rst(tb_n_rst),
+			.stop_found(tb_stop_found),
+			.start_found(tb_start_found), 
+			.byte_received(tb_byte_received),
+			.ack_prep(tb_ack_prep),
+			.check_ack(tb_check_ack),
+			.ack_done(tb_ack_done),
+			.rw_mode(tb_rw_mode),
+			.address_match(tb_address_match),
+			.sda_in(tb_sda_in),
+			.rx_enable(tb_rx_enable), 
+			.tx_enable(tb_tx_enable),
+			.read_enable(tb_read_enable),
+			.load_data(tb_load_data),
+			.sda_mode(tb_sda_mode)
+	) ;	
+
+	initial 
+	begin
+		//TEST CASE 1
+		$display ("-----Test Case 1-----") ;
+		tb_n_rst = 1'b1 ;
+		#10
+		@(negedge tb_clk)
+		tb_n_rst = 1'b0 ;
+
+		@(negedge tb_clk)
+		tb_n_rst = 1'b1 ;
+	
+		@(negedge tb_clk)
+		tb_start_found = 1'b1 ;
+		#10
+		@(negedge tb_clk)
+		tb_byte_received = 1'b1 ;
+		#10
+		@(negedge tb_clk)
+		tb_ack_prep = 1'b1 ;
+		#10
+		@(negedge tb_clk)
+		tb_address_match = 1'b1 ;
+		tb_rw_mode = 1'b1 ;
+		#10
+		@(negedge tb_clk)
+		tb_ack_done = 1'b1 ;
+		tb_ack_prep = 1'b1 ;
+		tb_check_ack = 1'b1 ;
+		tb_sda_in = 1'b0 ;
+		tb_ack_done = 1'b1 ;	
+		#50
+		
+		@(negedge tb_clk)
+		tb_ack_done = 1'b1 ;		
+		#10
+		@(negedge tb_clk)
+		tb_ack_prep = 1'b1 ;
+		#10
+		@(negedge tb_clk)
+		tb_check_ack = 1'b1 ;
+		tb_sda_in = 1'b1 ;	
+		#10
+		@(negedge tb_clk)
+		tb_ack_done = 1'b1 ;
+		#10
+		@(negedge tb_clk)
+		tb_start_found = 1'b1 ;
+		#10
+		@(negedge tb_clk)
+		tb_byte_received = 1'b1 ;
+		#10
+		@(negedge tb_clk)
+		tb_ack_prep = 1'b1 ;
+		#10	
+		@(negedge tb_clk)
+		tb_address_match = 1'b0 ;
+		tb_rw_mode = 1'b0 ;
+		#10
+		@(negedge tb_clk)
+		tb_ack_done = 1'b1 ;
+		#10
+		$display("-----END-----") ;
+	end
+endmodule	
+

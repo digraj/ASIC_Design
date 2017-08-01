@@ -1,0 +1,46 @@
+// $Id: $
+// File name:   tb_USB.sv
+// Created:     4/26/2017
+// Author:      Kunwar Digraj Singh Jain
+// Lab Section: 5
+// Version:     1.0  Initial Design Entry
+// Description: Testbench for USB
+
+`timescale 1ns / 10ps
+
+module tb_USB (); 
+
+	localparam	CLK_PERIOD	= 10.42;
+
+	reg		tb_clk,
+			tb_n_rst,
+			tb_rx_en_host,
+			tb_crc_status,
+			tb_write_enable_fifo, //from SD card
+			tb_read_done,
+			tb_write_done;
+
+	reg		[7:0] tb_fifo_data;
+
+ 	reg		tb_d_plus,
+			tb_d_minus,
+			tb_sd_rx_en_read; 
+	always
+	begin
+		tb_clk = 1'b0;
+		#(CLK_PERIOD/2.0);
+		tb_clk = 1'b1;
+		#(CLK_PERIOD/2.0);
+	end
+
+	initial
+	begin
+		tb_n_rst = 1;
+
+		@(negedge tb_clk)
+		tb_n_rst = 0;
+		@(negedge tb_clk)
+		tb_n_rst = 1;
+	end
+
+endmodule

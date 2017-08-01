@@ -1,0 +1,53 @@
+// $Id: $
+// File name:   sd_tx_data.sv
+// Created:     4/26/2017
+// Author:      Pushkal B. Vaid
+// Lab Section: 5
+// Version:     1.0  Initial Design Entry
+// Description: Parallel to serial shift of Data -- Write to the SD Card
+
+module sd_tx_data
+(
+	input wire clk, 
+	input wire n_rst,
+	input wire rising_edge_sclk,
+	input wire shift_data,
+	input wire shift_command,
+	input wire load_data,
+	input wire load_command,
+	input wire [47:0] command,
+	input wire [7:0] data,
+	output reg MOSI 
+);
+
+	reg MOSI_command;
+	reg MOSI_data;
+	
+	wire enable1, enable2;
+
+	assign enable1 = rising_edge_sclk & shift_command; 
+	assign enable2 = rising_edge_sclk & shift_data; 
+
+	flex_pts_sr #(48,1) FT1 ( .clk(clk), .n_rst(n_rst), .load_enable(load_command), .shift_enable(enable1), .parallel_in(command), .serial_out(MOSI_command));
+
+	flex_pts_sr #(8,1) FT2 ( .clk(clk), .n_rst(n_rst), .load_enable(load_data), .shift_enable(enable2), .parallel_in(data), .serial_out(MOSI_data));
+
+	always_comb
+	begin 
+		MOSI = 1'b1;
+
+		if (shift_command == 1'b0 && shift_data == 1'b0)
+		begin 
+			MOSI = 1'b1;
+		end
+		else if (shift_command == 1'b1 && shift_data == 1'b0)
+		begin 
+			MOSI = MOSI_command;
+		end
+		else if (shift_command == 1'b0 && shift_data == 1'b1)
+		begin 
+			MOSI = MOSI_data;
+		end
+	end 
+
+endmodule

@@ -1,0 +1,128 @@
+// $Id: $
+// File name:   tb_usb_transmitter.sv
+// Created:     4/22/2017
+// Author:      Apoorv Sharma
+// Lab Section: 5
+// Version:     1.0  Initial Design Entry
+// Description: Test bench to test the transmitter unit 
+
+`timescale 1ns / 10ps
+
+module tb_usb_transmitter() ; 
+
+	// Define parameters
+	// basic test bench parameters
+	localparam	CLK_PERIOD	= 10.42;
+
+    	reg 	tb_clk;
+        reg 	tb_n_rst;
+	reg	tb_send_data;
+	reg 	tb_tx_ena; 
+	reg 	tb_tx_nack, tb_write_done, tb_tx_ack; 
+	reg [7:0] tb_write_data;
+	reg 	tb_write_enable;	
+	reg 	tb_d_plus; 
+	reg 	tb_d_minus;
+	reg 	here;	
+
+	always
+	begin
+		tb_clk = 1'b0;
+		#(CLK_PERIOD/2.0);
+		tb_clk = 1'b1;
+		#(CLK_PERIOD/2.0);
+	end
+
+	usb_transmitter DUT (
+    			.clk(tb_clk),
+                       	.n_rst(tb_n_rst),
+			.send_data(tb_send_data), 
+			.tx_ena(tb_tx_ena), 
+			.tx_nack(tb_tx_nack),
+			.write_done(tb_write_done), 
+			.tx_ack(tb_tx_ack), 
+			.buffer_data(tb_write_data),
+			.write_enable(tb_write_enable),
+			.d_plus(tb_d_plus),
+			.d_minus(tb_d_minus) 
+); 
+
+	initial
+	begin
+		tb_n_rst = 1;
+		@(negedge tb_clk)
+		tb_n_rst = 0;
+
+		@(negedge tb_clk)
+		tb_n_rst = 1;	
+		tb_write_enable = 1;
+		tb_write_data = 8'b10101010;
+		@(negedge tb_clk)
+		tb_write_data = 8'b11001100;
+		@(negedge tb_clk)
+		tb_write_data = 8'b11110000;
+		@(negedge tb_clk)
+		tb_write_data = 8'b11110011;
+		@(negedge tb_clk)
+		tb_write_data = 8'b10100011;
+		@(negedge tb_clk)
+		tb_write_data = 8'b10101010;
+		@(negedge tb_clk)
+		tb_write_data = 8'b01011100;
+		@(negedge tb_clk)
+		tb_write_data = 8'b11111110;
+		@(negedge tb_clk)
+		tb_write_enable = 0;
+
+		tb_send_data = 0;
+		tb_tx_ena = 0; 
+		tb_tx_nack = 0; 
+		tb_write_done = 0; 
+		tb_tx_ack = 0; 
+
+		@(negedge tb_clk)
+		tb_tx_ena = 1;
+		tb_send_data = 1;
+
+		@(negedge tb_clk)
+		tb_tx_ena = 0;
+		tb_send_data = 0;
+
+		repeat (150) begin
+			@(negedge tb_clk); 
+		end
+
+		@(negedge tb_clk)
+		tb_write_done = 1;
+
+		@(negedge tb_clk)
+		tb_write_done = 0;
+
+		repeat (80 * 8) begin
+			@(negedge tb_clk); 
+		end
+		repeat (140) begin
+			@(negedge tb_clk); 
+		end
+		tb_tx_ena = 1;
+		tb_tx_ack = 1;
+		@(negedge tb_clk)
+		tb_tx_ena = 0 ;
+		
+		repeat (135) begin
+			@(negedge tb_clk); 
+		end	
+		tb_tx_ack = 0;
+		@(negedge tb_clk);
+		tb_tx_ena = 1;
+		tb_tx_nack = 1;	
+		repeat (100) begin	
+			@(negedge tb_clk); 
+		end	
+		tb_tx_ena = 0;
+		tb_tx_nack = 0;
+		here = 1;
+	end
+
+endmodule
+

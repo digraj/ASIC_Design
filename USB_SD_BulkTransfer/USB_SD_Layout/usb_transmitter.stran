@@ -1,0 +1,92 @@
+# //  Questa Sim-64
+# //  Version 10.3b linux_x86_64 May 29 2014
+# //
+# //  Copyright 1991-2014 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# vsim -Lf /home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Vsim -L /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work -L /home/ecegrid/a/ece337/Class0.5u/GOLD_LIB "+no_glitch_msg" -coverage -voptargs="+acc" -i -t ps source_work.tb_usb_transmitter 
+# Start time: 06:00:57 on Apr 26,2017
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 1 FSM in module "tcu(fast)".
+# ** Warning: source/tb_usb_transmitter.sv(36): (vopt-2685) [TFMPC] - Too few port connections for 'DUT'.  Expected 12, found 11.
+# ** Warning: source/tb_usb_transmitter.sv(36): (vopt-2718) [TFMPC] - Missing connection for port 'trans'.
+# Loading sv_std.std
+# Loading work.tb_usb_transmitter(fast)
+# Loading work.usb_transmitter(fast)
+# Loading work.writeFIFO(fast)
+# Loading work.tcu(fast)
+# Loading work.flex_pts_sr(fast)
+# Loading work.bit_stuffer(fast)
+# Loading work.flex_counter(fast)
+# Loading work.tx_timer(fast)
+# Loading work.flex_counter(fast__1)
+# Loading work.nrzi_encode(fast)
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading /home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Vsim.fifo(rtl)#1
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading /home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Vsim.fiforam(rtl)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Vsim.write_fifo_ctrl(rtl)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Vsim.write_ptr(rtl)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Vsim.read_fifo_ctrl(rtl)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Vsim.read_ptr(rtl)#1
+do wave_tx.do
+run 13000 ns
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_usb_transmitter/DUT/FIFO/F1/URFC
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_usb_transmitter/DUT/FIFO/F1/URFC
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_usb_transmitter/DUT/FIFO/F1/URFC/RPU1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_usb_transmitter/DUT/FIFO/F1/UWFC
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_usb_transmitter/DUT/FIFO/F1/UWFC
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_usb_transmitter/DUT/FIFO/F1/UWFC/WPU1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_usb_transmitter/DUT/FIFO/F1/UFIFORAM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_usb_transmitter/DUT/FIFO/F1/UFIFORAM
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_usb_transmitter/DUT/FIFO/F1/UFIFORAM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_usb_transmitter/DUT/FIFO/F1/UFIFORAM
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /tb_usb_transmitter/DUT/FIFO/F1/UFIFORAM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 2  Instance: /tb_usb_transmitter/DUT/FIFO/F1/UFIFORAM
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 5210 ps  Iteration: 1  Instance: /tb_usb_transmitter/DUT/FIFO/F1/UFIFORAM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 5210 ps  Iteration: 1  Instance: /tb_usb_transmitter/DUT/FIFO/F1/UFIFORAM
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10420 ps  Iteration: 3  Instance: /tb_usb_transmitter/DUT/FIFO/F1/UWFC
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10420 ps  Iteration: 3  Instance: /tb_usb_transmitter/DUT/FIFO/F1/UWFC
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10420 ps  Iteration: 4  Instance: /tb_usb_transmitter/DUT/FIFO/F1/UWFC
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10420 ps  Iteration: 4  Instance: /tb_usb_transmitter/DUT/FIFO/F1/UWFC
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10420 ps  Iteration: 4  Instance: /tb_usb_transmitter/DUT/FIFO/F1/URFC
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10420 ps  Iteration: 4  Instance: /tb_usb_transmitter/DUT/FIFO/F1/URFC
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10420 ps  Iteration: 5  Instance: /tb_usb_transmitter/DUT/FIFO/F1/UWFC
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10420 ps  Iteration: 5  Instance: /tb_usb_transmitter/DUT/FIFO/F1/URFC
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10420 ps  Iteration: 6  Instance: /tb_usb_transmitter/DUT/FIFO/F1/UWFC
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10420 ps  Iteration: 7  Instance: /tb_usb_transmitter/DUT/FIFO/F1/UWFC
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10420 ps  Iteration: 7  Instance: /tb_usb_transmitter/DUT/FIFO/F1/URFC
+# End time: 06:01:22 on Apr 26,2017, Elapsed time: 0:00:25
+# Errors: 0, Warnings: 27

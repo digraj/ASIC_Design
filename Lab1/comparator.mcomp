@@ -1,0 +1,10 @@
+QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+Start time: 16:54:24 on Jan 12,2017
+vlog -sv -work mapped_work mapped/comparator.v 
+-- Compiling module comparator_DW01_cmp6_0
+-- Compiling module comparator
+
+Top level modules:
+	comparator
+End time: 16:54:25 on Jan 12,2017, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0

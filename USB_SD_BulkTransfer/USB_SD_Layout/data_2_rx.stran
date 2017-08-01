@@ -1,0 +1,70 @@
+# 
+# 
+# 
+# 
+# //  Questa Sim-64
+# //  Version 10.3b linux_x86_64 May 29 2014
+# //
+# //  Copyright 1991-2014 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# vsim -Lf /home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Vsim -L /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work -L /home/ecegrid/a/ece337/Class0.5u/GOLD_LIB "+no_glitch_msg" -coverage -voptargs="+acc" -i -t ps source_work.tb_data_2_rx 
+# Start time: 23:14:36 on Apr 20,2017
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading sv_std.std
+# Loading work.tb_data_2_rx(fast)
+# Loading work.data_2_rx(fast)
+# Loading work.serial_2_parallel(fast)
+# Loading work.counter(fast)
+# Loading work.flex_counter(fast)
+do wavesdata2rx.do
+add wave -position insertpoint  \
+sim:/tb_data_2_rx/DUT/CNT/count_out
+# Causality operation skipped due to absence of debug database file
+write format wave -window .main_pane.wave1.interior.cs.body.pw.wf /home/ecegrid/a/mg134/ece337/Project/wavesdata2rx.do
+do wavesdata2rx.do
+run 200 ns
+vlog -sv -work source_work /home/ecegrid/a/mg134/ece337/Project/source/tb_data_2_rx.sv
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 23:16:56 on Apr 20,2017
+# vlog -reportprogress 300 -sv -work source_work /home/ecegrid/a/mg134/ece337/Project/source/tb_data_2_rx.sv 
+# -- Compiling module tb_data_2_rx
+# 
+# Top level modules:
+# 	tb_data_2_rx
+# End time: 23:16:56 on Apr 20,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart -f
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb_data_2_rx(fast)
+# Loading work.data_2_rx(fast)
+# Loading work.serial_2_parallel(fast)
+# Loading work.counter(fast)
+# Loading work.flex_counter(fast)
+run 200 ns
+vlog -sv -work source_work /home/ecegrid/a/mg134/ece337/Project/source/tb_data_2_rx.sv
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 23:18:01 on Apr 20,2017
+# vlog -reportprogress 300 -sv -work source_work /home/ecegrid/a/mg134/ece337/Project/source/tb_data_2_rx.sv 
+# -- Compiling module tb_data_2_rx
+# 
+# Top level modules:
+# 	tb_data_2_rx
+# End time: 23:18:01 on Apr 20,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart -f
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb_data_2_rx(fast)
+# Loading work.data_2_rx(fast)
+# Loading work.serial_2_parallel(fast)
+# Loading work.counter(fast)
+# Loading work.flex_counter(fast)
+run 200 ns
+# End time: 23:20:39 on Apr 20,2017, Elapsed time: 0:06:03
+# Errors: 0, Warnings: 1

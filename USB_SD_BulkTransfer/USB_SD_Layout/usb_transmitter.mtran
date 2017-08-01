@@ -1,0 +1,243 @@
+# //  Questa Sim-64
+# //  Version 10.3b linux_x86_64 May 29 2014
+# //
+# //  Copyright 1991-2014 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# vsim -Lf /home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Vsim -L /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work -L /home/ecegrid/a/ece337/Class0.5u/GOLD_LIB "+no_glitch_msg" -coverage -voptargs="+acc" -i -t ps mapped_work.tb_usb_transmitter 
+# Start time: 06:09:04 on Apr 26,2017
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: source/tb_usb_transmitter.sv(36): (vopt-2685) [TFMPC] - Too few port connections for 'DUT'.  Expected 12, found 11.
+# ** Warning: source/tb_usb_transmitter.sv(36): (vopt-2718) [TFMPC] - Missing connection for port 'trans'.
+# Loading sv_std.std
+# Loading work.tb_usb_transmitter(fast)
+# Loading work.usb_transmitter(fast)
+# Loading work.writeFIFO(fast)
+# Loading work.tcu(fast)
+# Loading work.flex_pts_sr_NUM_BITS8_SHIFT_MSB1(fast)
+# Loading work.bit_stuffer(fast)
+# Loading work.flex_counter_NUM_CNT_BITS3(fast)
+# Loading work.tx_timer(fast)
+# Loading work.flex_counter_NUM_CNT_BITS4_1(fast)
+# Loading work.flex_counter_NUM_CNT_BITS4_0(fast)
+# Loading work.nrzi_encode(fast)
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading /home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Vsim.fifo(rtl)#1
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading /home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Vsim.fiforam(rtl)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Vsim.write_fifo_ctrl(rtl)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Vsim.write_ptr(rtl)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Vsim.read_fifo_ctrl(rtl)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Vsim.read_ptr(rtl)#1
+# Loading ieee.math_real(body)
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.dffsr(metastabilitywrapperarch)#1
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.prim(body)
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.dffsr_core(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.invx1(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.oai21x1(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.or2x1(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.nand3x1(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.nand2x1(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.aoi21x1(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.and2x1(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.nor2x1(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.oai22x1(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.mux2x1(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.aoi22x1(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.xor2x1(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.xnor2x1(behavioral)#1
+do wave_tx.do
+# ** Error: (vish-4014) No objects found matching '/tb_usb_transmitter/DUT/STUFF/temp_pause'.
+# Executing ONERROR command at macro ./wave_tx.do line 50
+# ** Error: (vish-4014) No objects found matching '/tb_usb_transmitter/DUT/STUFF/num_ones'.
+# Executing ONERROR command at macro ./wave_tx.do line 51
+# ** Error: (vish-4014) No objects found matching '/tb_usb_transmitter/DUT/STUFF/found_6'.
+# Executing ONERROR command at macro ./wave_tx.do line 52
+# ** Error: (vish-4014) No objects found matching '/tb_usb_transmitter/DUT/STUFF/temp_out'.
+# Executing ONERROR command at macro ./wave_tx.do line 53
+# ** Error: (vish-4014) No objects found matching '/tb_usb_transmitter/DUT/TIMER/count_up_8'.
+# Executing ONERROR command at macro ./wave_tx.do line 61
+# ** Error: (vish-4014) No objects found matching '/tb_usb_transmitter/DUT/TIMER/count_up_64'.
+# Executing ONERROR command at macro ./wave_tx.do line 62
+run 13000 ns
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_usb_transmitter/DUT/FIFO/F1/URFC
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_usb_transmitter/DUT/FIFO/F1/URFC
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_usb_transmitter/DUT/FIFO/F1/URFC/RPU1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_usb_transmitter/DUT/FIFO/F1/UWFC
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_usb_transmitter/DUT/FIFO/F1/UWFC
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_usb_transmitter/DUT/FIFO/F1/UWFC/WPU1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_usb_transmitter/DUT/FIFO/F1/UFIFORAM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_usb_transmitter/DUT/FIFO/F1/UFIFORAM
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_usb_transmitter/DUT/FIFO/F1/UFIFORAM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_usb_transmitter/DUT/FIFO/F1/UFIFORAM
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /tb_usb_transmitter/DUT/FIFO/F1/UFIFORAM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 2  Instance: /tb_usb_transmitter/DUT/FIFO/F1/UFIFORAM
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 5210 ps  Iteration: 1  Instance: /tb_usb_transmitter/DUT/FIFO/F1/UFIFORAM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 5210 ps  Iteration: 1  Instance: /tb_usb_transmitter/DUT/FIFO/F1/UFIFORAM
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_usb_transmitter/DUT/CONTROLLER/\curr_state_reg[0] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_usb_transmitter/DUT/CONTROLLER/\curr_state_reg[1] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_usb_transmitter/DUT/CONTROLLER/\curr_state_reg[4] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_usb_transmitter/DUT/CONTROLLER/\curr_state_reg[2] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_usb_transmitter/DUT/CONTROLLER/\curr_state_reg[3] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_usb_transmitter/DUT/FLEX_PTS/\curr_state_reg[0] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_usb_transmitter/DUT/FLEX_PTS/\curr_state_reg[1] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_usb_transmitter/DUT/FLEX_PTS/\curr_state_reg[2] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_usb_transmitter/DUT/FLEX_PTS/\curr_state_reg[3] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_usb_transmitter/DUT/FLEX_PTS/\curr_state_reg[4] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_usb_transmitter/DUT/FLEX_PTS/\curr_state_reg[5] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_usb_transmitter/DUT/FLEX_PTS/\curr_state_reg[6] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_usb_transmitter/DUT/FLEX_PTS/\curr_state_reg[7] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_usb_transmitter/DUT/STUFF/BIT_STUFFER_CNTR/\count_out_reg[0] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_usb_transmitter/DUT/STUFF/BIT_STUFFER_CNTR/\count_out_reg[2] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_usb_transmitter/DUT/STUFF/BIT_STUFFER_CNTR/\count_out_reg[1] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_usb_transmitter/DUT/STUFF/BIT_STUFFER_CNTR/rollover_flag_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_usb_transmitter/DUT/TIMER/BIT_TX/\count_out_reg[0] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_usb_transmitter/DUT/TIMER/BIT_TX/\count_out_reg[1] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_usb_transmitter/DUT/TIMER/BIT_TX/\count_out_reg[2] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_usb_transmitter/DUT/TIMER/BIT_TX/\count_out_reg[3] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_usb_transmitter/DUT/TIMER/BIT_TX/rollover_flag_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_usb_transmitter/DUT/TIMER/BYTE_TX/\count_out_reg[0] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_usb_transmitter/DUT/TIMER/BYTE_TX/\count_out_reg[1] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_usb_transmitter/DUT/TIMER/BYTE_TX/\count_out_reg[2] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_usb_transmitter/DUT/TIMER/BYTE_TX/\count_out_reg[3] 
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_usb_transmitter/DUT/TIMER/BYTE_TX/rollover_flag_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_usb_transmitter/DUT/ENCODE/prev_d_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_usb_transmitter/DUT/ENCODE/d_plus_reg
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5870 ps  Iteration: 0  Instance: /tb_usb_transmitter/DUT/ENCODE/d_minus_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_usb_transmitter/DUT/CONTROLLER/\curr_state_reg[0] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_usb_transmitter/DUT/CONTROLLER/\curr_state_reg[1] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_usb_transmitter/DUT/CONTROLLER/\curr_state_reg[4] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_usb_transmitter/DUT/CONTROLLER/\curr_state_reg[2] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_usb_transmitter/DUT/CONTROLLER/\curr_state_reg[3] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_usb_transmitter/DUT/FLEX_PTS/\curr_state_reg[0] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_usb_transmitter/DUT/FLEX_PTS/\curr_state_reg[1] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_usb_transmitter/DUT/FLEX_PTS/\curr_state_reg[2] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_usb_transmitter/DUT/FLEX_PTS/\curr_state_reg[3] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_usb_transmitter/DUT/FLEX_PTS/\curr_state_reg[4] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_usb_transmitter/DUT/FLEX_PTS/\curr_state_reg[5] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_usb_transmitter/DUT/FLEX_PTS/\curr_state_reg[6] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_usb_transmitter/DUT/FLEX_PTS/\curr_state_reg[7] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_usb_transmitter/DUT/STUFF/BIT_STUFFER_CNTR/\count_out_reg[0] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_usb_transmitter/DUT/STUFF/BIT_STUFFER_CNTR/\count_out_reg[2] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_usb_transmitter/DUT/STUFF/BIT_STUFFER_CNTR/\count_out_reg[1] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_usb_transmitter/DUT/STUFF/BIT_STUFFER_CNTR/rollover_flag_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_usb_transmitter/DUT/TIMER/BIT_TX/\count_out_reg[0] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_usb_transmitter/DUT/TIMER/BIT_TX/\count_out_reg[1] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_usb_transmitter/DUT/TIMER/BIT_TX/\count_out_reg[2] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_usb_transmitter/DUT/TIMER/BIT_TX/\count_out_reg[3] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_usb_transmitter/DUT/TIMER/BIT_TX/rollover_flag_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_usb_transmitter/DUT/TIMER/BYTE_TX/\count_out_reg[0] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_usb_transmitter/DUT/TIMER/BYTE_TX/\count_out_reg[1] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_usb_transmitter/DUT/TIMER/BYTE_TX/\count_out_reg[2] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_usb_transmitter/DUT/TIMER/BYTE_TX/\count_out_reg[3] 
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_usb_transmitter/DUT/TIMER/BYTE_TX/rollover_flag_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_usb_transmitter/DUT/ENCODE/prev_d_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_usb_transmitter/DUT/ENCODE/d_plus_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6010 ps  Iteration: 0  Instance: /tb_usb_transmitter/DUT/ENCODE/d_minus_reg
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10420 ps  Iteration: 3  Instance: /tb_usb_transmitter/DUT/FIFO/F1/UWFC
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10420 ps  Iteration: 3  Instance: /tb_usb_transmitter/DUT/FIFO/F1/UWFC
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10420 ps  Iteration: 4  Instance: /tb_usb_transmitter/DUT/FIFO/F1/UWFC
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10420 ps  Iteration: 4  Instance: /tb_usb_transmitter/DUT/FIFO/F1/UWFC
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10420 ps  Iteration: 4  Instance: /tb_usb_transmitter/DUT/FIFO/F1/URFC
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10420 ps  Iteration: 4  Instance: /tb_usb_transmitter/DUT/FIFO/F1/URFC
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10420 ps  Iteration: 5  Instance: /tb_usb_transmitter/DUT/FIFO/F1/UWFC
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10420 ps  Iteration: 5  Instance: /tb_usb_transmitter/DUT/FIFO/F1/URFC
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10420 ps  Iteration: 6  Instance: /tb_usb_transmitter/DUT/FIFO/F1/UWFC
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10420 ps  Iteration: 7  Instance: /tb_usb_transmitter/DUT/FIFO/F1/UWFC
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10420 ps  Iteration: 7  Instance: /tb_usb_transmitter/DUT/FIFO/F1/URFC
+# End time: 06:09:58 on Apr 26,2017, Elapsed time: 0:00:54
+# Errors: 18, Warnings: 87
